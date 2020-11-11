@@ -27,9 +27,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-> You can include small parts of the code from this repo inside any MIT LICENSED project
-> <br> The maybelist npm package can be included in any project but WITHOUT WARRANTY of any kind.
-> <br> IN ALL CASES THE COPYRIGHT AND SHORT NOTICE ABOVE MUST BE INCLUDED.
+>You can include small parts of the code from this repo inside any MIT LICENSED project
+><br>The maybelist npm package can be included in any project but WITHOUT WARRANTY of any kind.
+><br>IN ALL CASES THE COPYRIGHT AND SHORT NOTICE ABOVE MUST BE INCLUDED.
 
 
 © Benjamin Vincent Kasapoglu [@Luxcium](https://github.com/Luxcium)
