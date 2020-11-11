@@ -28,8 +28,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
   > You can include small parts of the code from this repo inside any MIT LICENSED project
-  > The maybelist npm package can be included in any project but WITHOUT WARRANTY of any kind.
-  > IN ALL CASES THE COPYRIGHT AND SHORT NOTICE ABOVE MUST BE INCLUDED.
+  > <br> The maybelist npm package can be included in any project but WITHOUT WARRANTY of any kind.
+  > <br> IN ALL CASES THE COPYRIGHT AND SHORT NOTICE ABOVE MUST BE INCLUDED.
 
 
 © Benjamin Vincent Kasapoglu [@Luxcium](https://github.com/Luxcium)
