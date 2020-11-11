@@ -15,7 +15,7 @@ imported files to this one that you decide to use if such «FULL NOTICE»
 is missing. If you modify the code in a substatial way you may decide to
 include only the «COPYRIGHT» and the «SHORT NOTICE» below.
 
-Copyright © 2020 — Luxcium (Benjamin Vincent Kasapoglu)
+Copyright © 2020 — Benjamin Vincent Kasapoglu ([@Luxcium](https://github.com/Luxcium))
 
 ##### SHORT NOTICE
 
@@ -31,7 +31,4 @@ SOFTWARE.
 ><br>The maybelist npm package can be included in any project but WITHOUT WARRANTY of any kind.
 ><br>IN ALL CASES THE COPYRIGHT AND SHORT NOTICE ABOVE MUST BE INCLUDED.
 
-
-© Benjamin Vincent Kasapoglu [@Luxcium](https://github.com/Luxcium)
-
-†Scientia es lux principium✨ ™ is a Trade Mark of Benjamin Vincent Kasapoglu
+###### †Scientia es lux principium✨ ™ is a Trade Mark of Benjamin Vincent Kasapoglu
