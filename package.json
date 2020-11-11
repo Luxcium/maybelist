@@ -1,12 +1,12 @@
 {
-  "name": "maybe-list",
-  "version": "1.0.0",
-  "description": "",
+  "name": "maybelist",
+  "version": "0.0.0",
+  "description": "MaybeList loose interpretation of a monadic array type or something like that",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Benjamin Vincent Kasapoglu @Luxcium",
   "license": "ISC"
 }
