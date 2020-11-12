@@ -1,0 +1,90 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    /*                                                                        */
+    "rootDir": "./src",
+    "noEmit": false,
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/typings",
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/ts-build-info.lib",
+    /*                                                                        */
+    "composite": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUmdGlobalAccess": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "assumeChangesOnlyAffectDirectDependencies": false,
+    "useDefineForClassFields": false,
+    /*                                                                        */
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    /*                                                                        */
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "isolatedModules": true,
+    /*                                                                        */
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    /*                                                                        */
+    "importHelpers": true,
+    "removeComments": true,
+    "skipDefaultLibCheck": false,
+    "skipLibCheck": true,
+    "pretty": true,
+    /*                                                                        */
+    "watch": false,
+    /*                                                                        */
+    "listFiles": false,
+    "diagnostics": true,
+    "traceResolution": false,
+    "listEmittedFiles": false,
+    "extendedDiagnostics": true,
+    /*                                                                        */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    /*                                                                        */
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ],
+    /* ALWAYS TRUE STRICT TYPE-CHECKING, ADDITIONAL CHECKS MUST ALWAYS BE TRUE*/
+    /* ALWAYS TRUE */ "strict": true /*                         ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "alwaysStrict": true /*                   ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "noImplicitAny": true /*                  ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "noImplicitThis": true /*                 ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "strictBindCallApply": true /*            ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "strictFunctionTypes": true /*            ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "strictNullChecks": true /*               ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "strictPropertyInitialization": true /*   ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "noFallthroughCasesInSwitch": true /*     ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "noImplicitReturns": true /*              ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "noUnusedLocals": true /*                 ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "noUnusedParameters": true /*             ALWAYS TRUE  */,
+    /* ALWAYS TRUE STRICT TYPE-CHECKING, ADDITIONAL CHECKS MUST ALWAYS BE TRUE*/
+    /*                                                                        */
+
+  },
+  "include": [
+    "./src/**/*.*",
+  ],
+  "exclude": [
+    "./.git/**/**.*",
+    "./.github/**/*.*",
+    "./.vscode/**/*.*",
+    "./dist/**/*.*",
+    "./config/**/*.*",
+    "./node_modules/**/*.*",
+    "./scripts/**/*.*"
+  ],
+}

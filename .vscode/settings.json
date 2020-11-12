@@ -1,0 +1,397 @@
+{
+  "files.exclude": {
+    "dist": false,
+    ".directory": true
+  },
+
+  "search.exclude": {
+    "dist": true
+  },
+
+  "errorLens.annotationPrefix": ["🍒 ~> ", "⚠️ => ", "🧩 ", "🎯 -> "],
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.organizeImports",
+    "source.fixAll.eslint"
+  ],
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+
+  "eslint.codeAction.disableRuleComment": {
+    "location": "separateLine",
+    "enable": true
+  },
+
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+
+  "material-icon-theme.files.associations": {
+    "index.ts": "Raml",
+    "index.js": "json",
+  },
+
+  "workbench.colorCustomizations": {
+    "errorLens.errorForeground": "#F36F",
+    "errorLens.errorMessageBackground": "#F366",
+    "errorLens.errorBackground": "#F363",
+    "errorLens.warningForeground": "#CF3F",
+    "errorLens.warningMessageBackground": "#CF36",
+    "errorLens.warningBackground": "#CF33",
+    "errorLens.hintForeground": "#39CF",
+    "errorLens.hintMessageBackground": "#39C6",
+    "errorLens.hintBackground": "#39C3",
+    "errorLens.infoForeground": "#FB0F",
+    "errorLens.infoMessageBackground": "#FB06",
+    "errorLens.infoBackground": "#FB03"
+  },
+
+  "better-comments.tags": [
+    {
+      // WARNING:
+      "tag": "WARNING:",
+      "color": "#FD3E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // !!
+      "tag": "!!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // ?
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // $
+      "tag": "$",
+      "color": "#f48e41",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // IIFE
+      "tag": "IIFE",
+      "color": "#FF3D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // #region
+      "tag": "#region",
+      "color": "#555",
+      "strikethrough": false,
+      "backgroundColor": "#FF3D"
+    },
+
+    {
+      // #endregion
+      "tag": "#endregion",
+      "color": "#222",
+      "strikethrough": false,
+      "backgroundColor": "#F15E"
+    },
+
+    {
+      // #
+      "tag": "#",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // constructor
+      "tag": "constructor",
+      "color": "#F15E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // private
+      "tag": "private",
+      "color": "#F15E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // protected
+      "tag": "protected",
+      "color": "#FD3E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // ‽
+      "tag": "‽",
+      "color": "#6CBC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // TEST_MODULE
+      "tag": "TEST_MODULE",
+      "color": "#6CBC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // public
+      "tag": "public",
+      "color": "#FC5D", // "#FA0E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // readonly
+      "tag": "readonly",
+      "color": "#F70E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // static
+      "tag": "static",
+      "color": "#F70E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // get
+      "tag": "get",
+      "color": "#6BFC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // set
+      "tag": "set",
+      "color": "#85FE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // %
+      "tag": "%",
+      "color": "#41e2f4",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // # -c-54442
+      // †
+      "tag": "†",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // +
+      "tag": "+",
+      "color": "#c5f442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // async
+      "tag": "async",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // http
+      "tag": "http",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // &
+      "tag": "&",
+      "color": "#a041f4",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // todo
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // *
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // # -c-54442
+      // iterator
+      "tag": "iterator",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // ¬
+      "tag": "¬",
+      "color": "#ffa0a0",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // -
+      "tag": "-",
+      "color": "#9BEA",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+
+    {
+      // ====
+      "tag": "====",
+      "color": "#9BEA",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  "editor.rulers": [
+    {
+      "column": 2,
+      "color": "#93FA"
+    },
+
+    {
+      "column": 80,
+      "color": "#F80A"
+    },
+
+    {
+      "column": 81,
+      "color": "#F36A"
+    },
+
+    {
+      "column": 84,
+      "color": "#FFFFFF11"
+    },
+
+    {
+      "column": 89,
+      "color": "#DAF3FF33"
+    },
+
+    {
+      "column": 96,
+      "color": "#DAF3FF55"
+    },
+
+    {
+      "column": 104,
+      "color": "#90BCFF77"
+    },
+
+    {
+      "column": 114,
+      "color": "#90BCFF99"
+    },
+
+    {
+      "column": 120,
+      "color": "#F365"
+    },
+
+    {
+      "column": 121,
+      "color": "#F367"
+    },
+
+    {
+      "column": 122,
+      "color": "#F809"
+    },
+
+    {
+      "column": 123,
+      "color": "#F80B"
+    },
+
+    {
+      "column": 124,
+      "color": "#FF0D"
+    },
+
+    {
+      "column": 125,
+      "color": "#FF0F"
+    },
+
+    {
+      "column": 126,
+      "color": "#0F0F"
+    },
+
+    {
+      "column": 127,
+      "color": "#0F0D"
+    },
+
+    {
+      "column": 128,
+      "color": "#39FB"
+    },
+
+    {
+      "column": 129,
+      "color": "#39F9"
+    },
+
+    {
+      "column": 130,
+      "color": "#93F7"
+    },
+
+    {
+      "column": 131,
+      "color": "#93F5"
+    }
+  ]
+}

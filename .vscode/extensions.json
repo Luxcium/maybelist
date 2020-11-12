@@ -1,0 +1,85 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "CoenraadS.bracket-pair-colorizer-2",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ghmcadams.lintlens",
+    "Luxcium.pop-n-lock-theme-vscode",
+    "ms-vscode.typescript-javascript-grammar",
+    "ms-vscode.vscode-typescript-next",
+    "PKief.material-icon-theme",
+    "SophodorosLLC.codevalet-vscode",
+    "usernamehw.errorlens",
+    ]
+}
+
+// code --install-extension aaron-bond.better-comments
+// code --install-extension CoenraadS.bracket-pair-colorizer-2
+// code --install-extension dbaeumer.vscode-eslint
+// code --install-extension esbenp.prettier-vscode
+// code --install-extension ghmcadams.lintlens
+// code --install-extension Luxcium.pop-n-lock-theme-vscode
+// code --install-extension ms-vscode.typescript-javascript-grammar
+// code --install-extension ms-vscode.vscode-typescript-next
+// code --install-extension PKief.material-icon-theme
+// code --install-extension SophodorosLLC.codevalet-vscode
+// code --install-extension usernamehw.errorlens
+
+// aaron-bond.better-comments
+// alefragnani.Bookmarks
+// bierner.folder-source-actions
+// Burkino.borks-dumper
+// christian-kohler.npm-intellisense
+// christian-kohler.path-intellisense
+// chunsen.bracket-select
+// CoenraadS.bracket-pair-colorizer-2
+// davidbabel.clever
+// dbaeumer.vscode-eslint
+// dlech.chmod
+// donjayamanne.githistory
+// dsznajder.es7-react-js-snippets
+// eamodio.gitlens
+// earshinov.sort-lines-by-selection
+// EditorConfig.EditorConfig
+// eg2.vscode-npm-script
+// ego-digital.vscode-powertools
+// esbenp.prettier-vscode
+// Everspace.rightclick-git
+// fabiospampinato.vscode-diff
+// fknop.vscode-npm
+// formulahendry.code-runner
+// foxundermoon.shell-format
+// fvclaus.sort-json-array
+// ghmcadams.lintlens
+// Gruntfuggly.activitusbar
+// Gruntfuggly.todo-tree
+// herrmannplatz.npm-dependency-links
+// howardzuo.vscode-npm-dependency
+// jerrygoyal.shortcut-menu-bar
+// krainboltgreene.all-builtin-commands
+// leizongmin.node-module-intellisense
+// Luxcium.pop-n-lock-theme-vscode
+// mhutchie.git-graph
+// ms-vscode.typescript-javascript-grammar
+// ms-vscode.vscode-typescript-next
+// msjsdiag.debugger-for-chrome
+// naumovs.color-highlight
+// nicoespeon.abracadabra
+// PKief.material-icon-theme
+// rebornix.toggle
+// richie5um2.vscode-sort-json
+// rid9.datetime
+// ritwickdey.LiveServer
+// ryanlaws.toggle-case
+// ryu1kn.partial-diff
+// SophodorosLLC.codevalet-vscode
+// tombonnike.vscode-status-bar-format-toggle
+// Tyriar.sort-lines
+// ue.alphabetical-sorter
+// usernamehw.errorlens
+// VisualStudioExptTeam.vscodeintellicode
+// WallabyJs.dingo-vscode
+// WallabyJs.quokka-vscode
+// wmaurer.change-case
+// xabikos.JavaScriptSnippets
