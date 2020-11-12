@@ -2,7 +2,7 @@ import { Functor } from '..';
 
 export type FnAtoB<A, B> = (val: A) => B;
 
-export class Monad<MVal = any> extends Functor<MVal> {
+export class Monad<MVal> extends Functor<MVal> {
   public static of<TVal>(value: TVal): Monad<TVal> {
     return new Monad<TVal>(value);
   }
@@ -15,18 +15,18 @@ export class Monad<MVal = any> extends Functor<MVal> {
     super(value);
   }
 
-  public ap<R = unknown>(c: Monad<FnAtoB<MVal, R>>): Monad<R> {
+  public ap<R>(c: Monad<FnAtoB<MVal, R>>): Monad<R> {
     return c.map<Monad<R>>((fn: (val: MVal) => R) => this.map<R>(x => fn(x)))
       .fork;
   }
 
-  public chain<R = any>(fn: FnAtoB<MVal, Monad<R>>): Monad<R> {
+  public chain<R>(fn: FnAtoB<MVal, Monad<R>>): Monad<R> {
     return Monad.of<Monad<R>>(
       this.map<Monad<R>>(x => fn(x)).fork,
     ).fork;
   }
 
-  public map<R>(fn: FnAtoB<MVal, R>): Monad<R> {
+  public map<R>(fn: (val: MVal) => R): Monad<R> {
     // return new Functor<R>(fn(this._value));
     return Monad.of(
       super.map<R>(x => fn(x)).fork,
@@ -46,6 +46,7 @@ export class Monad<MVal = any> extends Functor<MVal> {
   }
 }
 
-const myFunct: Monad = Monad.of(42);
+// can put a sub class in a variable of parent class type
+const myFunct: Functor<number> = Monad.of<number>(42);
 
-myFunct.map(x => x * 2);
+console.log(myFunct.map<number>((x: number) => x * 2)); // Monad { _value: 84 }
