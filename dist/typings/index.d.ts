@@ -1,2 +1,3 @@
-declare const _default: null;
-export default _default;
+import { Functor } from './functor';
+import { Monad } from './monad';
+export { Functor, Monad };
