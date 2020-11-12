@@ -207,3 +207,5 @@ out/
 paket-files/
 publish/
 !/dist
+/luxcium.io
+/assets
