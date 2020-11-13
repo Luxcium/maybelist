@@ -1,4 +1,3 @@
-
 _Chutzpah*
 _NCrunch_*
 _pkginfo.txt
@@ -173,8 +172,6 @@ yarn-error.log*
 __pycache__/
 _ReSharper*/
 _UpgradeReport_Files/
-!*.[Cc]ache/
-!**/[Pp]ackages/build/
 .c9/
 .cr/
 .dynamodb/
@@ -203,9 +200,12 @@ ipch/
 jspm_packages/
 node_modules/
 OpenCover/
-out/
 paket-files/
 publish/
+
 !/dist
+!/out
 /luxcium.io
 /assets
+types.js
+out/ts-build-info.lib

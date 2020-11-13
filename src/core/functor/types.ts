@@ -40,12 +40,13 @@ export interface IFunctor<A = unknown>
   extends IFMap<A>,
     IFork<A>,
     FunctorType<A> {
-  map<B>(fn: (val: A) => B): FunctorType<B>;
+  map<B>(fn: (val: A) => B): IFunctor<B>;
   toString(): string;
   toValue(): A;
   readonly fork: A;
+  readonly clone: A;
 }
 
-type FunctorType<T = unknown> = IFMap<T> & IFork<T>;
+type MapType<A = unknown> = <B>(fn: (val: A) => B) => IFMap<B>;
 
-type MapType<A = unknown> = (fn: (val: A) => unknown) => IFMap;
+type FunctorType<A = unknown> = IFMap<A> & IFork<A>;

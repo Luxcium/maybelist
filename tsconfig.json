@@ -6,11 +6,11 @@
     /*                                                                        */
     "rootDir": "./src",
     "noEmit": false,
-    "outDir": "./dist",
+    "outDir": "./out/dist",
     "declaration": true,
-    "declarationDir": "./dist/typings",
+    "declarationDir": "./out/typings",
     "incremental": true,
-    "tsBuildInfoFile": "./dist/ts-build-info.lib",
+    "tsBuildInfoFile": "./out/ts-build-info.lib",
     /*                                                                        */
     "composite": true,
     "allowSyntheticDefaultImports": true,
@@ -77,15 +77,18 @@
 
   },
   "include": [
-    "./src/**/*.*",
+    "./src/**/*.ts",
   ],
   "exclude": [
     "./.git/**/**.*",
     "./.github/**/*.*",
     "./.vscode/**/*.*",
     "./dist/**/*.*",
+    "./out/**/*.*",
     "./config/**/*.*",
     "./node_modules/**/*.*",
-    "./scripts/**/*.*"
+    "./scripts/**/*.*",
+    "**/*.spec.*",
+    "./src/**/*.test.*",
   ],
 }

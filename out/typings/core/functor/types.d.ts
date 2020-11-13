@@ -5,11 +5,12 @@ interface IFork<A = unknown> {
     readonly fork: A;
 }
 export interface IFunctor<A = unknown> extends IFMap<A>, IFork<A>, FunctorType<A> {
-    map<B>(fn: (val: A) => B): FunctorType<B>;
+    map<B>(fn: (val: A) => B): IFunctor<B>;
     toString(): string;
     toValue(): A;
     readonly fork: A;
+    readonly clone: A;
 }
-declare type FunctorType<T = unknown> = IFMap<T> & IFork<T>;
-declare type MapType<A = unknown> = (fn: (val: A) => unknown) => IFMap;
+declare type MapType<A = unknown> = <B>(fn: (val: A) => B) => IFMap<B>;
+declare type FunctorType<A = unknown> = IFMap<A> & IFork<A>;
 export {};
