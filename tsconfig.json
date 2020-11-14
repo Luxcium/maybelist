@@ -78,6 +78,7 @@
   },
   "include": [
     "./src/**/*.ts",
+    "./test/**/*.ts",
   ],
   "exclude": [
     "./.git/**/**.*",
@@ -89,6 +90,6 @@
     "./node_modules/**/*.*",
     "./scripts/**/*.*",
     "**/*.spec.*",
-    "./src/**/*.test.*",
+    "**/*.test.*",
   ],
 }

@@ -1,4 +1,4 @@
-import { Functor } from '.';
+import { Functor } from '..';
 
 /*
 export interface IFunctor<A = unknown>

@@ -5,6 +5,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended"
   ],
+  "parserOptions.debugLevel": true,
   "parserOptions": {
     "project": "tsconfig.json",
     "ecmaFeatures": {
@@ -215,7 +216,7 @@
     "no-unused-expressions": "off",
     "no-unused-labels": "warn",
     "no-unused-vars": "off",
-    "no-use-before-define": "error",
+    "no-use-before-define": "off",
     "no-useless-call": "error",
     "no-useless-catch": "error",
     "no-useless-computed-key": "warn",
@@ -523,7 +524,7 @@
         "@typescript-eslint/no-namespace": "error",
         "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
         "@typescript-eslint/no-non-null-assertion": "error",
-        "@typescript-eslint/no-parameter-properties": "error",
+        "@typescript-eslint/no-parameter-properties": "off",
         "@typescript-eslint/no-require-imports": "off",
         "@typescript-eslint/no-this-alias": "error",
         "@typescript-eslint/no-throw-literal": "error",
@@ -540,7 +541,7 @@
         "@typescript-eslint/no-unused-expressions": "error",
         // "@typescript-eslint/no-unused-vars-experimental": "warn",
         "@typescript-eslint/no-unused-vars": "error",
-        "@typescript-eslint/no-use-before-define": "error",
+        "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/no-useless-constructor": "error",
         "@typescript-eslint/no-var-requires": "error",
         "@typescript-eslint/prefer-as-const": "warn",
