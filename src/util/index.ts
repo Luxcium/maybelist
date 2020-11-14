@@ -7,5 +7,5 @@ export {
   beWritable,
   configurable,
   enumerable,
-  writable
+  writable,
 } from './decorators';

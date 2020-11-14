@@ -10,20 +10,17 @@ export interface IFunctor<A = unknown>
   toValue(): A;  //--!!
   !readonly fork: A; //--!!
 }*/
-const functor = Functor.of('Spec')
-console.log(functor)
+const functor = Functor.of('Spec');
+console.log(functor);
 
-const maped = functor.map(A => A.length)
-console.log(maped)
+const maped = functor.map(A => A.length);
+console.log(maped);
 
+const tostring = maped.toString();
+console.log(typeof tostring === 'string');
 
-const tostring = maped.toString()
-console.log(typeof tostring === 'string')
+const toval = maped.toValue();
+console.log(typeof toval === 'number');
 
-const toval = maped.toValue()
-console.log(typeof toval === 'number')
-
-
-
-console.log([functor, maped, tostring, toval])
+console.log([functor, maped, tostring, toval]);
 // export const functor = Functor.of('Spec');
