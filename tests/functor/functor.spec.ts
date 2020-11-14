@@ -3,7 +3,7 @@ import { Functor } from '..';
 describe('Functor Class', () => {
   describe('map must be Fantasy Land compliant with Functor specification', () => {
     describe("Identity: u['fantasy-land/map'](a => a) is equivalent to u (identity)", () => {
-      it('[1/4] Functor.of(u) should be equivalent to u', () => {
+      it('[1/3] Functor.of(u) should be equivalent to u', () => {
         expect(Functor.of(41).map(a => a).fork).toBe(41);
       });
 
@@ -52,7 +52,6 @@ describe('Functor Class', () => {
         Functor.of(41)['fantasy-land/map'],
       );
     });
-
   });
 
   /*
@@ -105,7 +104,6 @@ describe('Functor Class', () => {
     });
 
     it('static of', () => {
-
       Functor.of('value')['fantasy-land/map'];
       expect(Functor.of<string>('my string')).toMatchObject({
         _value: 'my string',
