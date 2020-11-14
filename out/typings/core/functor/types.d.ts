@@ -6,6 +6,7 @@ interface IFork<A = unknown> {
 }
 export interface IFunctor<A = unknown> extends IFMap<A>, IFork<A>, FunctorType<A> {
     map<B>(fn: (val: A) => B): IFunctor<B>;
+    'fantasy-land/map'<B>(fn: (val: A) => B): IFunctor<B>;
     toString(): string;
     toValue(): A;
     readonly fork: A;

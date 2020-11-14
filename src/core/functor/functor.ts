@@ -1,10 +1,19 @@
 import { beConfigurable, beEnumerable } from '../../util';
 import type { IFunctor } from './types';
 
-export class Functor<FVal = unknown> implements IFunctor<FVal> {
-  // public _value: FVal;
+export class Functor<FVal = any> implements IFunctor<FVal> {
+  /**
+   * `fn` can return any value.
+   * No parts of `fn` return `R` value should be checked.
+   *
+   * @param fn
+   */
+  public ['fantasy-land/map'];
 
-  public constructor(protected _value: FVal) {}
+  protected constructor(protected _value: FVal) {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    this['fantasy-land/map'] = this.map;
+  }
 
   /**
    * fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b
@@ -13,7 +22,7 @@ export class Functor<FVal = unknown> implements IFunctor<FVal> {
    */
   @beConfigurable
   @beEnumerable
-  public map<R = any>(fn: (val: FVal) => R): IFunctor<R> {
+  public map<R = any>(fn: (val: FVal) => R): Functor<R> {
     return new Functor<R>(fn(this._value));
   }
 
@@ -43,13 +52,13 @@ export class Functor<FVal = unknown> implements IFunctor<FVal> {
 
   @beConfigurable
   @beEnumerable
-  public static fromValueOf<TVal>(value: IFunctor<TVal>): IFunctor<TVal> {
+  public static fromValueOf<TVal>(value: Functor<TVal>): Functor<TVal> {
     return new Functor<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
 
   @beConfigurable
   @beEnumerable
-  public static of<TVal>(value: TVal): IFunctor<TVal> {
+  public static of<TVal>(value: TVal): Functor<TVal> {
     return new Functor<TVal>(value);
   }
 }
