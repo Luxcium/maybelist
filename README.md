@@ -1,5 +1,7 @@
 # MaybeList
 
+[![Coverage Status](https://coveralls.io/repos/github/Luxcium/maybelist/badge.svg?branch=master)](https://coveralls.io/github/Luxcium/maybelist?branch=master)
+
 MaybeList loose interpretation of a monadic array type or something like that
 
 #### LUXCIUM LICENSE — \*NO\* PERMISSION GRANTED — PROVIDED "AS IS" WITHOUT WARRANTY
