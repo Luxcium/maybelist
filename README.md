@@ -1,6 +1,8 @@
 # MaybeList
 
-[![Coverage Status](https://coveralls.io/repos/github/Luxcium/maybelist/badge.svg?branch=master)](https://coveralls.io/github/Luxcium/maybelist?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Luxcium/maybelist/badge.svg?branch=master)](https://coveralls.io/github/Luxcium/maybelist?branch=master) [![Build Status](https://travis-ci.com/Luxcium/maybelist.svg?branch=master)](https://travis-ci.com/Luxcium/maybelist)
+
+## No ducumentation yet please comme back soon
 
 MaybeList loose interpretation of a monadic array type or something like that
 
