@@ -1,1 +1,0 @@
-export { Monad } from './monad';

@@ -1,9 +1,0 @@
-export declare function enumerable(value: boolean): (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
-export declare const beNotEnumerable: (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
-export declare const beEnumerable: (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
-export declare function configurable(value: boolean): (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
-export declare const beNotConfigurable: (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
-export declare const beConfigurable: (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
-export declare function writable(value: boolean): (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
-export declare const beNotWritable: (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
-export declare const beWritable: (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;

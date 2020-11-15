@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "module": "CommonJS",
     "moduleResolution": "Node",
     /*                                                                        */
@@ -18,26 +18,29 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "assumeChangesOnlyAffectDirectDependencies": false,
-    "useDefineForClassFields": false,
+    "useDefineForClassFields": true,
     /*                                                                        */
-    "esModuleInterop": true,
+    "removeComments": true,
+    "esModuleInterop": false,
     "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
+    "newLine": "lf",
     /*                                                                        */
     "inlineSourceMap": true,
     "inlineSources": true,
     "isolatedModules": true,
+    "generateCpuProfile":"./out/cpu-info.cpuprofile",
+    /*                                                                        */
+    "skipLibCheck": false,
+    "noEmitHelpers": false,
+    "importHelpers": true,
+    "importsNotUsedAsValues": "remove",
     /*                                                                        */
     "allowJs": true,
     "checkJs": false,
     "resolveJsonModule": true,
     /*                                                                        */
-    "importHelpers": true,
-    "removeComments": true,
-    "skipDefaultLibCheck": false,
-    "skipLibCheck": true,
     "pretty": true,
-    /*                                                                        */
     "watch": false,
     /*                                                                        */
     "listFiles": false,

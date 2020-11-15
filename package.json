@@ -4,8 +4,13 @@
   "description": "MaybeList loose interpretation of a monadic array type or something like that",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage && coveralls < coverage/lcov.info"
+    "prebuild": "npm run pretty && npm run lint && npm run test || exit 1",
+    "build": "mkdir -p out/performance/; tsc --generateCpuProfile ./out/performance/ && exit 0",
+    "pretty": "prettier -c --write ./src && exit 0",
+    "lint": "eslint ./src --fix && exit 0",
+    "test": "jest && exit 0",
+    "coverage": "jest --coverage && exit 0",
+    "ci":"jest --coverage && coveralls < coverage/lcov.info; npm run build && exit 0"
   },
   "keywords": [],
   "author": "Benjamin Vincent Kasapoglu @Luxcium",

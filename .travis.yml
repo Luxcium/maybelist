@@ -18,9 +18,10 @@ cache:
   directories:
     - 'node_modules'
     - 'coverage'
+    - 'out/performance'
 
 script:
-  - npm run coverage
+  - npm run ci
 
 notifications:
   email: false

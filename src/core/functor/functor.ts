@@ -7,13 +7,11 @@ import {
   beWritable,
   configurable,
   enumerable,
-  writable
+  writable,
 } from '../../util';
 import type { IFunctor } from './types';
 
 export class Functor<FVal = any> implements IFunctor<FVal> {
-
-
   public static of<TVal>(value: TVal): Functor<TVal> {
     return new Functor<TVal>(value);
   }
@@ -75,8 +73,6 @@ export class Functor<FVal = any> implements IFunctor<FVal> {
   public static fromValueOf<TVal>(value: Functor<TVal>): Functor<TVal> {
     return new Functor<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
-
-
 }
 
 void beConfigurable;

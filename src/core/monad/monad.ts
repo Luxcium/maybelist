@@ -1,5 +1,5 @@
-import { Functor } from '../';
-import { FnAtoB } from '../types';
+import { Functor } from '..';
+import type { FnAtoB } from '../types';
 
 export class Monad<MVal> extends Functor<MVal> {
   public static of<TVal>(value: TVal): Monad<TVal> {
