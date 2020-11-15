@@ -1,4 +1,4 @@
-import { Functor } from '../..';
+import { Functor } from '../';
 import { FnAtoB } from '../types';
 
 export class Monad<MVal> extends Functor<MVal> {
@@ -26,7 +26,6 @@ export class Monad<MVal> extends Functor<MVal> {
   }
 
   public map<R>(fn: (val: MVal) => R): Monad<R> {
-    // return new Functor<R>(fn(this._value));
     return Monad.of(
       super.map<R>(x => fn(x)).fork,
     );

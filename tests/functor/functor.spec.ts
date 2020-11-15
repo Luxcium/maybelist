@@ -1,4 +1,4 @@
-import { Functor } from '..';
+import { Functor } from '../../src';
 
 describe('Functor Class', () => {
   describe('map must be Fantasy Land compliant with Functor specification', () => {
