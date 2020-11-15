@@ -10,7 +10,7 @@
     "lint": "eslint ./src --fix && exit 0",
     "test": "jest && exit 0",
     "coverage": "jest --coverage && exit 0",
-    "preci": "([[ '$(npm audit)' = 'found 0 vulnerabilities' ]])",
+    "preci": "([ '$(npm audit)' = 'found 0 vulnerabilities' ])",
     "ci": "npm run build && exit 0",
     "postci": "coveralls < coverage/lcov.info; exit 0"
   },
