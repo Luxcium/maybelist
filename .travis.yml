@@ -6,7 +6,7 @@ node_js:
   - 14 # latest 14.x release
   - 12 # latest 12.x release
   - 10 # latest 10.x release
-  -  8 # latest 8.x release
+
 
 os:
   - linux
