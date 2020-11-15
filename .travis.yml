@@ -1,10 +1,15 @@
 language: node_js
+node_js:
+  - node # latest stable Node.js release
+  - lts/* # latest LTS Node.js release
+  - 15 # latest 15.x release
+  - 14 # latest 14.x release
+  - 12 # latest 12.x release
+  - 10 # latest 10.x release
+  -  8 # latest 8.x release
 
 os:
   - linux
-
-node_js:
-  - node
 
 install:
   - npm install
@@ -14,7 +19,7 @@ cache:
     - 'node_modules'
 
 script:
-  - npm test
+  - npm run coverage
 
 notifications:
   email: false
