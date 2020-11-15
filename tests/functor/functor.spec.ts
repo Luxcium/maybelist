@@ -47,7 +47,7 @@ describe('Functor Class', () => {
       });
     });
 
-    it('should be the same ', () => {
+    it("functor['fantasy-land/map'] should be the same as functor.map ", () => {
       expect(Functor.of(41).map).toStrictEqual(
         Functor.of(41)['fantasy-land/map'],
       );
