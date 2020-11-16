@@ -1,0 +1,36 @@
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "embeddedLanguageFormatting": "auto",
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "ignorePath": ".prettierignore",
+  "insertPragma": true,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "packageManager": "npm",
+  "prettierPath": "",
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "preserve",
+  "rangeStart": 0,
+  "requirePragma": false,
+  "resolveGlobalModules": false,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useEditorConfig": true,
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "withNodeModules": false,
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
