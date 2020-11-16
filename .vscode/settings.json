@@ -1,15 +1,58 @@
 {
+  /*
+  PRETTIER ---------------------------------------------------------------------
+      */
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": true,
+  "prettier.configPath": "",
+  "prettier.disableLanguages": [],
+  "prettier.documentSelectors": [],
+  "prettier.embeddedLanguageFormatting": "auto",
+  "prettier.enable": true,
+  "prettier.endOfLine": "lf",
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.ignorePath": ".prettierignore",
+  "prettier.insertPragma": false,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.packageManager": "npm",
+  "prettier.prettierPath": "",
+  "prettier.printWidth": 80,
+  "prettier.proseWrap": "preserve",
+  "prettier.quoteProps": "preserve",
+  "prettier.requireConfig": true,
+  "prettier.requirePragma": false,
+  "prettier.resolveGlobalModules": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all",
+  "prettier.useEditorConfig": true,
+  "prettier.useTabs": false,
+  "prettier.vueIndentScriptAndStyle": false,
+  "prettier.withNodeModules": false,
+  /*
+  PRETTIER ---------------------------------------------------------------------
+      */
   "files.exclude": {
     "dist": false,
     ".directory": true
   },
-
   "search.exclude": {
     "dist": true
   },
-
-  "errorLens.annotationPrefix": ["🍒 ~> ", "⚠️ => ", "🧩 ", "🎯 -> "],
-  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+  "errorLens.annotationPrefix": [
+    "🍒 ~> ",
+    "⚠️ => ",
+    "🧩 ",
+    "🎯 -> "
+  ],
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "info",
+    "hint"
+  ],
   "editor.codeActionsOnSave": [
     "source.addMissingImports",
     "source.organizeImports",
@@ -18,23 +61,19 @@
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
-
   "eslint.codeAction.disableRuleComment": {
     "location": "separateLine",
     "enable": true
   },
-
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
     "strings": false
   },
-
   "material-icon-theme.files.associations": {
     "index.ts": "Raml",
-    "index.js": "json",
+    "index.js": "json"
   },
-
   "workbench.colorCustomizations": {
     "errorLens.errorForeground": "#F36F",
     "errorLens.errorMessageBackground": "#F366",
@@ -49,7 +88,6 @@
     "errorLens.infoMessageBackground": "#FB06",
     "errorLens.infoBackground": "#FB03"
   },
-
   "better-comments.tags": [
     {
       // WARNING:
@@ -58,7 +96,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // !!
       "tag": "!!",
@@ -66,7 +103,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // ?
       "tag": "?",
@@ -74,7 +110,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // $
       "tag": "$",
@@ -82,7 +117,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // IIFE
       "tag": "IIFE",
@@ -90,7 +124,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // #region
       "tag": "#region",
@@ -98,7 +131,6 @@
       "strikethrough": false,
       "backgroundColor": "#FF3D"
     },
-
     {
       // #endregion
       "tag": "#endregion",
@@ -106,7 +138,6 @@
       "strikethrough": false,
       "backgroundColor": "#F15E"
     },
-
     {
       // #
       "tag": "#",
@@ -114,7 +145,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // constructor
       "tag": "constructor",
@@ -122,7 +152,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // private
       "tag": "private",
@@ -130,7 +159,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // protected
       "tag": "protected",
@@ -138,7 +166,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // ‽
       "tag": "‽",
@@ -146,7 +173,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // TEST_MODULE
       "tag": "TEST_MODULE",
@@ -154,31 +180,27 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // public
       "tag": "public",
-      "color": "#FC5D", // "#FA0E",
+      "color": "#FFAA00CC", // "#FA0E",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // readonly
       "tag": "readonly",
-      "color": "#F70E",
+      "color": "#FF6600AA",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // static
       "tag": "static",
-      "color": "#F70E",
+      "color": "#FF6600",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // get
       "tag": "get",
@@ -186,7 +208,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // set
       "tag": "set",
@@ -194,7 +215,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // %
       "tag": "%",
@@ -202,7 +222,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // # -c-54442
       // †
@@ -211,7 +230,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // +
       "tag": "+",
@@ -219,7 +237,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // async
       "tag": "async",
@@ -227,7 +244,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // http
       "tag": "http",
@@ -235,7 +251,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // &
       "tag": "&",
@@ -243,7 +258,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // todo
       "tag": "todo",
@@ -251,7 +265,6 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
       // *
       "tag": "*",
@@ -259,24 +272,30 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
-      // # -c-54442
       // iterator
       "tag": "iterator",
       "color": "#c54442",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
+      /*
+~~==============================================================================~~
+      */
       // ¬
       "tag": "¬",
-      "color": "#ffa0a0",
+      "color": "#FF6600DD",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
+    {
+      // ~
+      "tag": "~",
+      "color": "#FF6600DD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
     {
       // -
       "tag": "-",
@@ -284,11 +303,112 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-
     {
+      /*
+―5―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――~~
+*/
+      // ――
+      "tag": "――",
+      "color": "#F36B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+―1------------------------------------------------------------------------------~~
+*/
+    {
+      // ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+      // ―1
+      "tag": "―1",
+      "color": "#F36B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // "color": "#F36B"
+    // "color": "#F80B"
+    // "color": "#FF0B"
+    // "color": "#0F0B"
+    // "color": "#39FB"
+    // "color": "#93FB"
+    {
+      /*
+―1==============================================================================~~
+―2------------------------------------------------------------------------------~~
+      */
+      // ―2
+      "tag": "―2",
+      "color": "#F80B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+―2==============================================================================~~
+―3------------------------------------------------------------------------------~~
+      */
+      // ―3
+      "tag": "―3",
+      "color": "#FF0B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+―3==============================================================================~~
+―4------------------------------------------------------------------------------~~
+      */
+      // ―4
+      "tag": "―4",
+      "color": "#0F0B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+―4==============================================================================~~
+―5------------------------------------------------------------------------------~~
+      */
+      // ―5
+      "tag": "―5",
+      "color": "#39FB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+―5==============================================================================~~
+―6------------------------------------------------------------------------------~~
+      */
+      // ―6
+      "tag": "―6",
+      "color": "#93FB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+―6==============================================================================~~
+      */
+    {
+      /*
+―6==============================================================================~~
+―0------------------------------------------------------------------------------~~
+      */
+      // ―0
+      "tag": "―0",
+      "color": "#FFFD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+―0==============================================================================~~
+      */
+    {
+      /*
+  ==============================================================================
+      */
       // ====
       "tag": "====",
-      "color": "#9BEA",
+      "color": "#FFAA00DD",
       "strikethrough": false,
       "backgroundColor": "transparent"
     }
@@ -296,102 +416,107 @@
   "editor.rulers": [
     {
       "column": 2,
-      "color": "#93FA"
+      "color": "#FFAA00DD"
     },
-
     {
       "column": 80,
-      "color": "#F80A"
+      "color": "#FFAA00DD"
     },
-
     {
       "column": 81,
-      "color": "#F36A"
+      "color": "#FF6600DD"
     },
-
     {
-      "column": 85,
-      "color": "#FFFFFF11"
+      "column": 84,
+      "color": "#FF921466"
     },
-
     {
-      "column": 91,
-      "color": "#DAF3FF33"
+      "column": 88,
+      "color": "#FF7A2955"
     },
-
+    {
+      "column": 93,
+      "color": "#FF633D44"
+    },
     {
       "column": 99,
-      "color": "#DAF3FF55"
+      "color": "#FF4B5233"
     },
-
     {
-      "column": 108,
-      "color": "#90BCFF77"
-    },
-
-    {
-      "column": 120,
-      "color": "#90BCFF99"
-    },
-
-    {
-      "column": 122,
-      "color": "#F36A"
-    },
-
-    {
-      "column": 123,
+      "column": 106,
       "color": "#F36B"
     },
-
     {
-      "column": 124,
-      "color": "#F80C"
+      "column": 108,
+      "color": "#F80B"
     },
-
     {
-      "column": 125,
-      "color": "#F80D"
+      "column": 110,
+      "color": "#FF0B"
     },
-
     {
-      "column": 126,
-      "color": "#FF0E"
+      "column": 112,
+      "color": "#0F0B"
     },
-
     {
-      "column": 127,
-      "color": "#FF0F"
+      "column": 114,
+      "color": "#39FB"
     },
-
     {
-      "column": 128,
-      "color": "#0F0F"
-    },
-
-    {
-      "column": 129,
-      "color": "#0F0E"
-    },
-
-    {
-      "column": 130,
-      "color": "#39FD"
-    },
-
-    {
-      "column": 131,
-      "color": "#39FC"
-    },
-
-    {
-      "column": 132,
+      "column": 116,
       "color": "#93FB"
     },
-
     {
-      "column": 133,
-      "color": "#93FA"
-    }
+      "column": 120,
+      "color": "#FFFD"
+    },
+    {
+      "column": 124,
+      "color": "#90BCFF22"
+    },
+    {
+      "column": 129,
+      "color": "#90BCFF33"
+    },
+    {
+      "column": 134,
+      "color": "#90BCFF44"
+    },
+    {
+      "column": 140,
+      "color": "#90BCFF55"
+    },
+    {
+      "column": 147,
+      "color": "#90BCFF66"
+    },
+    {
+      "column": 155,
+      "color": "#90BCFF77"
+    },
+    {
+      "column": 164,
+      "color": "#90BCFF88"
+    },
+    {
+      "column": 174,
+      "color": "#90BCFF99"
+    },
+    {
+      "column": 185,
+      "color": "#90BCFFAA"
+    },
+    {
+      "column": 197,
+      "color": "#90BCFFAA"
+    },
+    {
+      "column": 210,
+      "color": "#90BCFFCC"
+    },
+    {
+      "column": 224,
+      "color": "#90BCFFDD"
+    },
   ]
 }
