@@ -1,3 +1,5 @@
+import type { Functor } from '..';
+
 /**
  * ## Functor
  *
@@ -51,3 +53,13 @@ export interface IFunctor<A = unknown>
 type MapType<A = unknown> = <B>(fn: (val: A) => B) => IFMap<B>;
 
 type FunctorType<A = unknown> = IFMap<A> & IFork<A>;
+
+
+
+type  Of = <TVal>(value: TVal)=>Functor<TVal>
+type FomValueOf = <TVal>(value: Functor<TVal>)=> Functor<TVal>
+
+export interface StaticFunctor  {
+  of:Of;
+  fomValueOf:FomValueOf;
+}

@@ -16,6 +16,10 @@ export class Functor<FVal = any> implements IFunctor<FVal> {
     return new Functor<TVal>(value);
   }
 
+  public static fromValueOf<TVal>(value: Functor<TVal>): Functor<TVal> {
+    return new Functor<TVal>(JSON.parse(JSON.stringify(value.fork)));
+  }
+
   /**
    * `fn` can return any value.
    * No parts of `fn` return `R` value should be checked.
@@ -31,7 +35,7 @@ export class Functor<FVal = any> implements IFunctor<FVal> {
 
   /**
    * fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b
-   *
+   * /
    * @param fn
    */
   @beNotWritable
@@ -65,13 +69,6 @@ export class Functor<FVal = any> implements IFunctor<FVal> {
   @beEnumerable
   public toValue(): FVal {
     return JSON.parse(this.toString());
-  }
-
-  @beNotWritable
-  @beConfigurable
-  @beEnumerable
-  public static fromValueOf<TVal>(value: Functor<TVal>): Functor<TVal> {
-    return new Functor<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
 }
 

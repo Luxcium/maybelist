@@ -1,4 +1,12 @@
 import { Functor } from '../../src';
+import "./functor.spec";
+
+describe('No Test Implemented', () => {
+  it('should implement at leat one test', () => {
+    expect(Functor);
+  });
+});
+
 
 // /*
 // export interface IFunctor<A = unknown>
@@ -26,8 +34,3 @@ import { Functor } from '../../src';
 // // export const functor = Functor.of('Spec');
 
 // // export const functor = Functor.of('Test');
-describe('No Test Implemented', () => {
-  it('should implement at leat one test', () => {
-    expect(Functor);
-  });
-});
