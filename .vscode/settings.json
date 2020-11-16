@@ -1,0 +1,551 @@
+{
+  /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  // */
+  // "files.exclude": {
+  //   ".directory": true,
+  //   "dist": false,
+  //   "out": true
+  // },
+  // "search.exclude": {
+  //   "dist": true,
+  //   "out": true
+  // },
+  // 
+  /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+     ―― FORMAT BEHAVIOUR
+
+  */
+  // "editor.formatOnPaste": true,
+  // "editor.formatOnSave": true,
+  // "editor.formatOnSaveMode": "modifications",
+  // "editor.formatOnType": true,
+  // "Format document with": true,
+  // "html.format.wrapAttributes": "preserve",
+  // "html.format.wrapLineLength": 120,
+  // "javascript.format.enable": true,
+  // "typescript.format.enable": true,
+  /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+     ―― ESLINT
+
+  */
+  // "eslint.run": "onSave",
+  // "eslint.alwaysShowStatus": true,
+  // "eslint.codeActionsOnSave.mode": "all",
+  // "eslint.debug": false,
+  // "eslint.format.enable": true,
+  // "eslint.lintTask.enable": true,
+  // "eslint.onIgnoredFiles": "off",
+  // "eslint.packageManager": "npm",
+  // "eslint.quiet": false,
+  // "eslint.trace.server": "verbose",
+  // "editor.codeActionsOnSave": [
+  //   "source.addMissingImports",
+  //   "source.organizeImports",
+  //   "source.fixAll",
+  //   "source.fixAll.eslint"
+  // ],
+  // "eslint.codeAction.showDocumentation": {
+  //   "enable": true
+  // },
+  // "eslint.codeAction.disableRuleComment": {
+  //   "location": "separateLine",
+  //   "enable": true
+  // },
+  // "eslint.lintTask.options": ".",
+  // "eslint.nodeEnv": null,
+  // "eslint.nodePath": null,
+  // "eslint.options": {},
+  // "eslint.runtime": null,
+  // "eslint.validate": [],
+  // "eslint.workingDirectories": [],
+  /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+     ―― PRETTIER
+
+  */
+  // "prettier.arrowParens": "always",
+  // "prettier.bracketSpacing": true,
+  // "prettier.configPath": "",
+  // "prettier.disableLanguages": [],
+  // "prettier.documentSelectors": [],
+  // "prettier.embeddedLanguageFormatting": "auto",
+  // "prettier.enable": true,
+  // "prettier.endOfLine": "lf",
+  // "prettier.htmlWhitespaceSensitivity": "css",
+  // "prettier.ignorePath": ".prettierignore",
+  // "prettier.insertPragma": false,
+  // "prettier.jsxBracketSameLine": false,
+  // "prettier.jsxSingleQuote": true,
+  // "prettier.packageManager": "npm",
+  // "prettier.prettierPath": "",
+  // "prettier.printWidth": 80,
+  // "prettier.proseWrap": "preserve",
+  // "prettier.quoteProps": "preserve",
+  // "prettier.requireConfig": true,
+  // "prettier.requirePragma": false,
+  // "prettier.resolveGlobalModules": false,
+  // "prettier.semi": false,
+  // "prettier.singleQuote": true,
+  // "prettier.tabWidth": 2,
+  // "prettier.trailingComma": "all",
+  // "prettier.useEditorConfig": true,
+  // "prettier.useTabs": false,
+  // "prettier.vueIndentScriptAndStyle": false,
+  // "prettier.withNodeModules": false,
+  /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  */
+  "better-comments.tags": [
+    {
+      // WARNING:
+      "tag": "WARNING:",
+      "color": "#FD3E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // !!
+      "tag": "!!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ?
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // $
+      "tag": "$",
+      "color": "#f48e41",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // IIFE
+      "tag": "IIFE",
+      "color": "#FF3D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // #region
+      "tag": "#region",
+      "color": "#555",
+      "strikethrough": false,
+      "backgroundColor": "#FF3D"
+    },
+    {
+      // #endregion
+      "tag": "#endregion",
+      "color": "#222",
+      "strikethrough": false,
+      "backgroundColor": "#F15E"
+    },
+    {
+      // #
+      "tag": "#",
+      "color": "#4AE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // constructor
+      "tag": "constructor",
+      "color": "#F15E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // private
+      "tag": "private",
+      "color": "#F15E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // protected
+      "tag": "protected",
+      "color": "#FD3E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ‽
+      "tag": "‽",
+      "color": "#6CBC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // TEST_MODULE
+      "tag": "TEST_MODULE",
+      "color": "#6CBC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // public
+      "tag": "public",
+      "color": "#FFAA00CC", // "#FA0E",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // readonly
+      "tag": "readonly",
+      "color": "#FF6600AA",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // static
+      "tag": "static",
+      "color": "#FF6600",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // get
+      "tag": "get",
+      "color": "#6BFC",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // set
+      "tag": "set",
+      "color": "#85FE",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // %
+      "tag": "%",
+      "color": "#41e2f4",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // # -c-54442
+      // †
+      "tag": "†",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // +
+      "tag": "+",
+      "color": "#c5f442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // async
+      "tag": "async",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // http
+      "tag": "http",
+      "color": "#FB3F",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // &
+      "tag": "&",
+      "color": "#a041f4",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // todo
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // *
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // iterator
+      "tag": "iterator",
+      "color": "#c54442",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+~~==============================================================================~~
+      */
+      // ¬
+      "tag": "¬",
+      "color": "#FF6600DD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // ~
+      "tag": "~",
+      "color": "#FF6600DD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // -
+      "tag": "-",
+      "color": "#9BEA",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+―1------------------------------------------------------------------------------~~
+*/
+    {
+      // ―1
+      "tag": "―1",
+      "color": "#F36D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // "color": "#F36B"
+    // "color": "#F80B"
+    // "color": "#FF0B"
+    // "color": "#0F0B"
+    // "color": "#39FB"
+    // "color": "#93FB"
+    {
+      /*
+―1==============================================================================~~
+―2------------------------------------------------------------------------------~~
+      */
+      // ―2
+      "tag": "―2",
+      "color": "#F80B",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+―2==============================================================================~~
+―3------------------------------------------------------------------------------~~
+      */
+      // ―3
+      "tag": "―3",
+      "color": "#FF0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+―3==============================================================================~~
+―4------------------------------------------------------------------------------~~
+      */
+      // ―4
+      "tag": "―4",
+      "color": "#0F0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+―4==============================================================================~~
+―5------------------------------------------------------------------------------~~
+      */
+      // ―5
+      "tag": "―5",
+      "color": "#39FD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+―5==============================================================================~~
+―6------------------------------------------------------------------------------~~
+      */
+      // ―6
+      "tag": "―6",
+      "color": "#93FD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+―6==============================================================================~~
+      */
+    {
+      /*
+―6==============================================================================~~
+―0------------------------------------------------------------------------------~~
+      */
+      // ―0
+      "tag": "―0",
+      "color": "#FFFD",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+―0==============================================================================~~
+      */
+    {
+      /*
+  ··············································································
+  ==============================================================================
+      */
+      // ====
+      "tag": "====",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+    */
+      // ――
+      "tag": "――",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // |-···
+      "tag": "|-",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+    // ···········································································
+    ,
+    {
+      // ···
+      "tag": "···",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  "editor.rulers": [
+    {
+      "column": 2,
+      "color": "#FA0A"
+    },
+    {
+      "column": 80,
+      "color": "#FA0C"
+    },
+    {
+      "column": 81,
+      "color": "#FF6600DD"
+    },
+    {
+      "column": 84,
+      "color": "#FF921466"
+    },
+    {
+      "column": 88,
+      "color": "#FF7A2955"
+    },
+    {
+      "column": 93,
+      "color": "#FF633D44"
+    },
+    {
+      "column": 99,
+      "color": "#FF4B5233"
+    },
+    {
+      "column": 106,
+      "color": "#F36B"
+    },
+    {
+      "column": 108,
+      "color": "#FA0D"
+    },
+    {
+      "column": 110,
+      "color": "#FF0B"
+    },
+    {
+      "column": 112,
+      "color": "#0F0B"
+    },
+    {
+      "column": 114,
+      "color": "#39FB"
+    },
+    {
+      "column": 116,
+      "color": "#93FB"
+    },
+    {
+      "column": 120,
+      "color": "#FFFD"
+    },
+    {
+      "column": 124,
+      "color": "#90BCFF22"
+    },
+    {
+      "column": 129,
+      "color": "#90BCFF33"
+    },
+    {
+      "column": 134,
+      "color": "#90BCFF44"
+    },
+    {
+      "column": 140,
+      "color": "#90BCFF55"
+    },
+    {
+      "column": 147,
+      "color": "#90BCFF66"
+    },
+    {
+      "column": 155,
+      "color": "#90BCFF77"
+    },
+    {
+      "column": 164,
+      "color": "#90BCFF88"
+    },
+    {
+      "column": 174,
+      "color": "#90BCFF99"
+    },
+    {
+      "column": 185,
+      "color": "#90BCFFAA"
+    },
+    {
+      "column": 197,
+      "color": "#90BCFFAA"
+    },
+    {
+      "column": 210,
+      "color": "#90BCFFCC"
+    },
+    {
+      "column": 224,
+      "color": "#90BCFFDD"
+    }
+  ]
+}
