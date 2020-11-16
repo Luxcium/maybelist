@@ -13,3 +13,4 @@ out
 #  eslint eslint-config-react-app eslint-loader eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
 
 jest.config.js
+jest.config.cjs

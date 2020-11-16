@@ -8,7 +8,7 @@
   "proseWrap": "preserve",
   "rangeStart": 0,
   "printWidth": 80,
-  "semi": true,
+  "semi": false,
   "singleQuote": true,
   "trailingComma": "all",
   "tabWidth": 2,

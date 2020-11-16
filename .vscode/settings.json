@@ -1,7 +1,73 @@
 {
   /*
-  PRETTIER ---------------------------------------------------------------------
-      */
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  */
+  "files.exclude": {
+    ".directory": true,
+    "dist": false,
+    "out": true
+  },
+  "search.exclude": {
+    "dist": true,
+    "out": true
+  },
+  /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+     ―― FORMAT BEHAVIOUR
+
+  */
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnType": true,
+  "Format document with": true,
+  "html.format.wrapAttributes": "preserve",
+  "html.format.wrapLineLength": 120,
+  "javascript.format.enable": true,
+  "typescript.format.enable": true,
+  /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+     ―― ESLINT
+
+  */
+  "eslint.run": "onSave",
+  "eslint.alwaysShowStatus": true,
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.debug": false,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.onIgnoredFiles": "off",
+  "eslint.packageManager": "npm",
+  "eslint.quiet": false,
+  "eslint.trace.server": "verbose",
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.organizeImports",
+    "source.fixAll",
+    "source.fixAll.eslint"
+  ],
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.codeAction.disableRuleComment": {
+    "location": "separateLine",
+    "enable": true
+  },
+  // "eslint.lintTask.options": ".",
+  // "eslint.nodeEnv": null,
+  // "eslint.nodePath": null,
+  // "eslint.options": {},
+  // "eslint.runtime": null,
+  // "eslint.validate": [],
+  // "eslint.workingDirectories": [],
+  /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+     ―― PRETTIER
+
+  */
   "prettier.arrowParens": "always",
   "prettier.bracketSpacing": true,
   "prettier.configPath": "",
@@ -32,62 +98,8 @@
   "prettier.vueIndentScriptAndStyle": false,
   "prettier.withNodeModules": false,
   /*
-  PRETTIER ---------------------------------------------------------------------
-      */
-  "files.exclude": {
-    "dist": false,
-    ".directory": true
-  },
-  "search.exclude": {
-    "dist": true
-  },
-  "errorLens.annotationPrefix": [
-    "🍒 ~> ",
-    "⚠️ => ",
-    "🧩 ",
-    "🎯 -> "
-  ],
-  "errorLens.enabledDiagnosticLevels": [
-    "error",
-    "warning",
-    "info",
-    "hint"
-  ],
-  "editor.codeActionsOnSave": [
-    "source.addMissingImports",
-    "source.organizeImports",
-    "source.fixAll.eslint"
-  ],
-  "eslint.codeAction.showDocumentation": {
-    "enable": true
-  },
-  "eslint.codeAction.disableRuleComment": {
-    "location": "separateLine",
-    "enable": true
-  },
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": false,
-    "strings": false
-  },
-  "material-icon-theme.files.associations": {
-    "index.ts": "Raml",
-    "index.js": "json"
-  },
-  "workbench.colorCustomizations": {
-    "errorLens.errorForeground": "#F36F",
-    "errorLens.errorMessageBackground": "#F366",
-    "errorLens.errorBackground": "#F363",
-    "errorLens.warningForeground": "#CF3F",
-    "errorLens.warningMessageBackground": "#CF36",
-    "errorLens.warningBackground": "#CF33",
-    "errorLens.hintForeground": "#39CF",
-    "errorLens.hintMessageBackground": "#39C6",
-    "errorLens.hintBackground": "#39C3",
-    "errorLens.infoForeground": "#FB0F",
-    "errorLens.infoMessageBackground": "#FB06",
-    "errorLens.infoBackground": "#FB03"
-  },
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  */
   "better-comments.tags": [
     {
       // WARNING:
@@ -303,24 +315,13 @@
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-    {
-      /*
-―5―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――~~
-*/
-      // ――
-      "tag": "――",
-      "color": "#F36B",
-      "strikethrough": false,
-      "backgroundColor": "transparent"
-    },
     /*
 ―1------------------------------------------------------------------------------~~
 */
     {
-      // ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
       // ―1
       "tag": "―1",
-      "color": "#F36B",
+      "color": "#F36D",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
@@ -348,7 +349,7 @@
       */
       // ―3
       "tag": "―3",
-      "color": "#FF0B",
+      "color": "#FF0D",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
@@ -359,7 +360,7 @@
       */
       // ―4
       "tag": "―4",
-      "color": "#0F0B",
+      "color": "#0F0D",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
@@ -370,7 +371,7 @@
       */
       // ―5
       "tag": "―5",
-      "color": "#39FB",
+      "color": "#39FD",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
@@ -381,7 +382,7 @@
       */
       // ―6
       "tag": "―6",
-      "color": "#93FB",
+      "color": "#93FD",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
@@ -404,11 +405,38 @@
       */
     {
       /*
+  ··············································································
   ==============================================================================
       */
       // ====
       "tag": "====",
-      "color": "#FFAA00DD",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      /*
+  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+    */
+      // ――
+      "tag": "――",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // |-···
+      "tag": "|-",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+    // ···········································································
+    ,
+    {
+      // ···
+      "tag": "···",
+      "color": "#FA0D",
       "strikethrough": false,
       "backgroundColor": "transparent"
     }
@@ -416,11 +444,11 @@
   "editor.rulers": [
     {
       "column": 2,
-      "color": "#FFAA00DD"
+      "color": "#FA0A"
     },
     {
       "column": 80,
-      "color": "#FFAA00DD"
+      "color": "#FA0C"
     },
     {
       "column": 81,
@@ -448,7 +476,7 @@
     },
     {
       "column": 108,
-      "color": "#F80B"
+      "color": "#FA0D"
     },
     {
       "column": 110,
@@ -517,6 +545,6 @@
     {
       "column": 224,
       "color": "#90BCFFDD"
-    },
+    }
   ]
 }
