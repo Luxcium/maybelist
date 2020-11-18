@@ -608,5 +608,8 @@ eslint-plugin-node
       "column": 224,
       "color": "#90BCFFDD"
     }
-  ]
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
