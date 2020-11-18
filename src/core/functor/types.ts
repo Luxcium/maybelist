@@ -38,10 +38,7 @@ interface IFork<A = unknown> {
 }
 
 /** A functor must FMap and in our implementation of a functor must Fork */
-export interface IFunctor<A = unknown>
-  extends IFMap<A>,
-    IFork<A>,
-    FunctorType<A> {
+interface IFunctor<A = unknown> extends IFMap<A>, IFork<A>, FunctorType<A> {
   map<B>(fn: (val: A) => B): IFunctor<B>;
   'fantasy-land/map'<B>(fn: (val: A) => B): IFunctor<B>;
   toString(): string;
@@ -57,7 +54,9 @@ type FunctorType<A = unknown> = IFMap<A> & IFork<A>;
 type Of = <TVal>(value: TVal) => Functor<TVal>;
 type FomValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
 
-export interface StaticFunctor {
+interface StaticFunctor {
   of: Of;
   fomValueOf: FomValueOf;
 }
+
+export type { IFunctor, StaticFunctor };

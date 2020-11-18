@@ -11,7 +11,7 @@ import {
 } from '../../util';
 import type { IFunctor } from './types';
 
-export class Functor<FVal = any> implements IFunctor<FVal> {
+class Functor<FVal = any> implements IFunctor<FVal> {
   public static of<TVal>(value: TVal): Functor<TVal> {
     return new Functor<TVal>(value);
   }
@@ -81,3 +81,5 @@ void beWritable;
 void configurable;
 void enumerable;
 void writable;
+
+export { Functor };

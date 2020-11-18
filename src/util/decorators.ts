@@ -1,4 +1,4 @@
-export function enumerable(value: boolean) {
+function enumerable(value: boolean) {
   return function (
     target: any,
     propertyKey: string,
@@ -10,10 +10,10 @@ export function enumerable(value: boolean) {
   };
 }
 
-export const beNotEnumerable = enumerable(false);
-export const beEnumerable = enumerable(true);
+const beNotEnumerable = enumerable(false);
+const beEnumerable = enumerable(true);
 
-export function configurable(value: boolean) {
+function configurable(value: boolean) {
   return function (
     target: any,
     propertyKey: string,
@@ -25,10 +25,10 @@ export function configurable(value: boolean) {
   };
 }
 
-export const beNotConfigurable = configurable(false);
-export const beConfigurable = configurable(true);
+const beNotConfigurable = configurable(false);
+const beConfigurable = configurable(true);
 
-export function writable(value: boolean) {
+function writable(value: boolean) {
   return function (
     target: any,
     propertyKey: string,
@@ -40,5 +40,17 @@ export function writable(value: boolean) {
   };
 }
 
-export const beNotWritable = writable(false);
-export const beWritable = writable(true);
+const beNotWritable = writable(false);
+const beWritable = writable(true);
+
+export {
+  beConfigurable,
+  beEnumerable,
+  beNotConfigurable,
+  beNotEnumerable,
+  beNotWritable,
+  beWritable,
+  configurable,
+  enumerable,
+  writable,
+};
