@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "extends": ["./node_modules/sanctuary-style/eslint-es6.json"],
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "globals": {"Identity": false, "show": false, "type": false},
+      "rules": {
+        "no-unused-vars": ["error", {"varsIgnorePattern": "^type$"}]
+      }
+    },
+    {
+      "files": ["index.js"],
+      "rules": {
+        "multiline-comment-style": ["off"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "sanctuary-type-identifiers",
+  "version": "3.0.0",
+  "description": "Specification for type identifiers",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sanctuary-js/sanctuary-type-identifiers.git"
+  },
+  "scripts": {
+    "doctest": "sanctuary-doctest",
+    "lint": "sanctuary-lint",
+    "release": "sanctuary-release",
+    "test": "npm run lint && sanctuary-test && npm run doctest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "sanctuary-scripts": "4.0.x",
+    "sanctuary-show": "2.0.x",
+    "sanctuary-type-classes": "12.1.x"
+  },
+  "files": [
+    "/LICENSE",
+    "/README.md",
+    "/index.js",
+    "/package.json"
+  ]
+}

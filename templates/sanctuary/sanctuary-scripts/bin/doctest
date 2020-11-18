@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euf -o pipefail
+
+# shellcheck source=functions
+source "${BASH_SOURCE%/*}/../sanctuary-scripts/functions"
+
+run_custom_script doctest "$@"
+
+set +f ; shopt -s nullglob
+# shellcheck disable=SC2207
+files=($(get source-files))
+set -f ; shopt -u nullglob
+
+prefix="$(get comment-prefix)"
+opening="$(get opening-delimiter)"
+closing="$(get closing-delimiter)"
+module="$(get module-type)"
+
+if [[ "$module" == esm ]] && [[ "$(node_major_version)" -lt 9 ]] ; then
+  echo 'Skipping ESM doctests on Node.js version less than v9.0.0' >&2
+  exit 0
+fi
+
+node_modules/.bin/doctest \
+  --module "$module" \
+  --prefix "$prefix" \
+  --opening-delimiter "$opening" \
+  --closing-delimiter "$closing" \
+  -- "${files[@]}"

@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "extends": ["./node_modules/sanctuary-style/eslint-es3.json"],
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "globals": {"$": false, "Either": false, "Left": false, "Right": false, "S": false, "Z": false, "show": false, "type": false},
+      "rules": {
+        "func-style": ["error", "declaration", {"allowArrowFunctions": true}]
+      }
+    },
+    {
+      "files": ["index.js"],
+      "rules": {
+        "multiline-comment-style": ["off"]
+      }
+    }
+  ]
+}

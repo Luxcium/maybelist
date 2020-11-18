@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "extends": ["./node_modules/sanctuary-style/eslint-es3.json"],
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "rules": {
+        "array-element-newline": ["off"],
+        "eqeqeq": ["off"],
+        "func-style": ["error", "declaration", {"allowArrowFunctions": true}],
+        "no-undef": ["off"],
+        "no-unused-vars": ["error", {"varsIgnorePattern": "^Bar$"}]
+      }
+    },
+    {
+      "files": ["index.js"],
+      "rules": {
+        "multiline-comment-style": ["off"]
+      }
+    },
+    {
+      "files": ["bench/**/*.js"],
+      "env": {"node": true},
+      "rules": {
+        "key-spacing": ["off"],
+        "max-len": ["off"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euf -o pipefail
+
+# shellcheck source=functions
+source "${BASH_SOURCE%/*}/../sanctuary-scripts/functions"
+
+run_custom_script prepublish "$@"
+
+license="$(get license-file)"
+
+run update-copyright-year
+git add -- "$license"
+
+run generate-readme
+git add -- README.md

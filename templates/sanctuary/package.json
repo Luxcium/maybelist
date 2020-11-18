@@ -1,0 +1,59 @@
+{
+  "name": "sanctuary",
+  "version": "3.1.0",
+  "description": "Refuge from unsafe JavaScript",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sanctuary-js/sanctuary.git"
+  },
+  "scripts": {
+    "doctest": "sanctuary-doctest",
+    "lint": "sanctuary-lint",
+    "release": "sanctuary-release",
+    "test": "npm run lint && sanctuary-test && npm run doctest"
+  },
+  "dependencies": {
+    "doctest": "^0.17.1",
+    "eslint": "6.8.x",
+    "eslint-plugin-markdown": "1.0.x",
+    "fantasy-laws": "1.2.x",
+    "list": "^2.0.11",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "remark-cli": "^7.0.1",
+    "remark-lint-no-undefined-references": "1.1.x",
+    "remark-lint-no-unused-definitions": "^1.0.6",
+    "sanctuary": "^3.1.0",
+    "sanctuary-benchmark": "1.0.x",
+    "sanctuary-def": "^0.22.0",
+    "sanctuary-either": "~2.1.0",
+    "sanctuary-maybe": "~2.1.0",
+    "sanctuary-pair": "~2.1.0",
+    "sanctuary-show": "~2.0.0",
+    "sanctuary-style": "4.0.x",
+    "sanctuary-type-classes": "~12.1.0",
+    "sanctuary-type-identifiers": "^3.0.0",
+    "sanctuary-useless": "2.0.x",
+    "spdx-expression-parse": "3.0.x",
+    "transcribe": "^1.1.2",
+    "xyz": "4.0.x"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.2.5",
+    "@types/mocha": "^8.0.4",
+    "@types/sanctuary": "^3.0.3",
+    "@types/spdx-expression-parse": "^3.0.0",
+    "fantasy-land": "^4.0.1",
+    "jsverify": "^0.8.4",
+    "sanctuary-descending": "^2.1.0",
+    "sanctuary-identity": "~2.1.0",
+    "sanctuary-scripts": "^2.0.0"
+  },
+  "files": [
+    "/LICENSE",
+    "/README.md",
+    "/index.js",
+    "/package.json"
+  ]
+}

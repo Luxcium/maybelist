@@ -1,0 +1,35 @@
+{
+  "name": "sanctuary-def",
+  "version": "0.22.0",
+  "description": "Run-time type system for JavaScript",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sanctuary-js/sanctuary-def.git"
+  },
+  "scripts": {
+    "doctest": "sanctuary-doctest",
+    "lint": "sanctuary-lint",
+    "release": "sanctuary-release",
+    "test": "npm run lint && sanctuary-test && npm run doctest"
+  },
+  "dependencies": {
+    "sanctuary-either": "2.1.0",
+    "sanctuary-show": "2.0.0",
+    "sanctuary-type-classes": "12.1.0",
+    "sanctuary-type-identifiers": "3.0.0"
+  },
+  "devDependencies": {
+    "sanctuary-descending": "2.1.0",
+    "sanctuary-identity": "2.1.0",
+    "sanctuary-maybe": "2.1.0",
+    "sanctuary-pair": "2.1.0",
+    "sanctuary-scripts": "4.0.x"
+  },
+  "files": [
+    "/LICENSE",
+    "/README.md",
+    "/index.js",
+    "/package.json"
+  ]
+}
