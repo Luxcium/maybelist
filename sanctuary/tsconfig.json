@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": false,
+    "rootDir": ".",
+    "outDir": "out",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowUnusedLabels": true,
+    "strict": false
+  },
+  "exclude": [
+    "node_modules",
+    "index.js"
+  ]
+}
