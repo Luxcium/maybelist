@@ -85,6 +85,8 @@
     "./test/**/*.ts",
   ],
   "exclude": [
+    "templates/either.ts",
+    "templates/maybe.ts",
     "./.git/**/**.*",
     "./.github/**/*.*",
     "./.vscode/**/*.*",
