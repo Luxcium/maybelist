@@ -6,7 +6,7 @@
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "css",
   "ignorePath": ".prettierignore",
-  "insertPragma": true,
+  "insertPragma": false,
   "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
   "packageManager": "npm",
