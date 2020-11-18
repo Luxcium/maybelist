@@ -343,14 +343,23 @@
 
   /* istanbul ignore else */
   if (typeof module === 'object' && typeof module.exports === 'object') {
+    // @ts-ignore
     module.exports = f (require ('sanctuary-def'),
+                        // @ts-ignore
                         require ('sanctuary-either'),
+                        // @ts-ignore
                         require ('sanctuary-maybe'),
+                        // @ts-ignore
                         require ('sanctuary-pair'),
+                        // @ts-ignore
                         require ('sanctuary-show'),
+                        // @ts-ignore
                         require ('sanctuary-type-classes'),
+                        // @ts-ignore
                         require ('sanctuary-type-identifiers'));
+  // @ts-ignore
   } else if (typeof define === 'function' && define.amd != null) {
+    // @ts-ignore
     define (['sanctuary-def',
              'sanctuary-either',
              'sanctuary-maybe',
@@ -360,12 +369,19 @@
              'sanctuary-type-identifiers'],
             f);
   } else {
+    // @ts-ignore
     self.sanctuary = f (self.sanctuaryDef,
+                        // @ts-ignore
                         self.sanctuaryEither,
+                        // @ts-ignore
                         self.sanctuaryMaybe,
+                        // @ts-ignore
                         self.sanctuaryPair,
+                        // @ts-ignore
                         self.sanctuaryShow,
+                        // @ts-ignore
                         self.sanctuaryTypeClasses,
+                        // @ts-ignore
                         self.sanctuaryTypeIdentifiers);
   }
 
@@ -374,16 +390,23 @@
   'use strict';
 
   /* istanbul ignore if */
+  // @ts-ignore
   if (typeof __doctest !== 'undefined') {
     /* eslint-disable no-unused-vars */
+    // @ts-ignore
     var Descending = __doctest.require ('sanctuary-descending');
+    // @ts-ignore
     var Nil = (__doctest.require ('./test/internal/List')).Nil;
+    // @ts-ignore
     var Cons = (__doctest.require ('./test/internal/List')).Cons;
+    // @ts-ignore
     var Sum = __doctest.require ('./test/internal/Sum');
+    // @ts-ignore
     var S = (function(S) {
       var S_ = S.create ({
         checkTypes: true,
         env: S.env.concat ([
+          // @ts-ignore
           (__doctest.require ('./test/internal/List')).Type ($.Unknown),
           Sum.Type
         ])
@@ -1696,6 +1719,7 @@
   //. [42, 42, 42, 42, 42]
   //. ```
   function K(x) {
+    // @ts-ignore
     return function(y) {
       return x;
     };
