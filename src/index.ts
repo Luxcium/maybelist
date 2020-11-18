@@ -1,1 +1,1 @@
-export { Functor, Monad } from './core'
+export { Functor, Monad } from './core';

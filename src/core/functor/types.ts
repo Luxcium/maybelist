@@ -1,4 +1,4 @@
-import type { Functor } from '..'
+import type { Functor } from '..';
 
 /**
  * ## Functor
@@ -29,12 +29,12 @@ import type { Functor } from '..'
 
 interface IFMap<A = unknown> {
   /** fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b */
-  map: MapType<A>
+  map: MapType<A>;
 }
 
 /** A functor must, in our implementation, Fork and return its internat value */
 interface IFork<A = unknown> {
-  readonly fork: A
+  readonly fork: A;
 }
 
 /** A functor must FMap and in our implementation of a functor must Fork */
@@ -42,22 +42,22 @@ export interface IFunctor<A = unknown>
   extends IFMap<A>,
     IFork<A>,
     FunctorType<A> {
-  map<B>(fn: (val: A) => B): IFunctor<B>
-  'fantasy-land/map'<B>(fn: (val: A) => B): IFunctor<B>
-  toString(): string
-  toValue(): A
-  readonly fork: A
-  readonly clone: A
+  map<B>(fn: (val: A) => B): IFunctor<B>;
+  'fantasy-land/map'<B>(fn: (val: A) => B): IFunctor<B>;
+  toString(): string;
+  toValue(): A;
+  readonly fork: A;
+  readonly clone: A;
 }
 
-type MapType<A = unknown> = <B>(fn: (val: A) => B) => IFMap<B>
+type MapType<A = unknown> = <B>(fn: (val: A) => B) => IFMap<B>;
 
-type FunctorType<A = unknown> = IFMap<A> & IFork<A>
+type FunctorType<A = unknown> = IFMap<A> & IFork<A>;
 
-type Of = <TVal>(value: TVal) => Functor<TVal>
-type FomValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>
+type Of = <TVal>(value: TVal) => Functor<TVal>;
+type FomValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
 
 export interface StaticFunctor {
-  of: Of
-  fomValueOf: FomValueOf
+  of: Of;
+  fomValueOf: FomValueOf;
 }

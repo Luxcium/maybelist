@@ -1,1 +1,1 @@
-export { Functor } from './functor'
+export { Functor } from './functor';
