@@ -1,6 +1,7 @@
 {
   /*
-  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+
   */
   "files.exclude": {
     ".directory": true,
@@ -11,13 +12,25 @@
     "dist": true,
     "out": true
   },
-
   /*
-  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
-     ―― FORMAT BEHAVIOUR
+
+  ―― FORMAT BEHAVIOUR
 
   */
+  "eslint.run": "onSave",
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.lintTask.enable": true,
+
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.organizeImports",
+    "source.fixAll",
+    "source.fixAll.eslint"
+  ],
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modifications",
@@ -28,9 +41,10 @@
   "typescript.format.enable": true,
   "typescript.format.semicolons": "ignore",
   /*
-  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
-     ―― PRETTIER
+
+  ―― PRETTIER
 
   */
   "prettier.requireConfig": true,
@@ -38,7 +52,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.semi": false,
   "prettier.insertPragma": true,
-  "prettier.prettierPath": ".prettierrc",
+  // "prettier.prettierPath": ".prettierrc.js",
   "prettier.ignorePath": ".prettierignore",
   // "prettier.arrowParens": "always",
   // "prettier.bracketSpacing": true,
@@ -64,72 +78,24 @@
   // "prettier.vueIndentScriptAndStyle": false,
   // "prettier.withNodeModules": false,
   /*
-  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
-     ―― ESLINT
 
-    https://github.com/typescript-eslint/typescript-eslint
-
-    https://bit.ly/3fgiyZj
-    "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.7.0",
-    "eslint": "^7.13.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-filenames": "^1.3.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^30.7.7",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-simple-import-sort": "^5.0.3",
-    "eslint-plugin-sort-keys-fix": "^1.1.1",
-    "eslint-plugin-unicorn": "^23.0.0",
-
-    https://github.com/prettier/eslint-config-prettier#eslint-config-prettier
-    @typescript-eslint/eslint-plugin
-    eslint-plugin-babel
-    eslint-plugin-flowtype
-    eslint-plugin-react
-    eslint-plugin-standard
-    eslint-plugin-unicorn
-    eslint-plugin-vue
-
-    https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#plugins
-    +Jest testing:
-      eslint-plugin-jest
-    + ESLint comment restrictions:
-      eslint-plugin-eslint-comments
-    + Import/export conventions :
-      eslint-plugin-import
-    +React best practices:
-      eslint-plugin-react
-      eslint-plugin-react-hooks
-    +NodeJS best practices:
-      eslint-plugin-node
+  ―― ESLINT
 
   */
-  // "eslint.run": "onSave",
-  // "eslint.alwaysShowStatus": true,
-  // "eslint.codeActionsOnSave.mode": "all",
+
   // "eslint.debug": false,
-  // "eslint.format.enable": true,
-  // "eslint.lintTask.enable": true,
   // "eslint.onIgnoredFiles": "off",
   // "eslint.packageManager": "npm",
   // "eslint.quiet": false,
   // "eslint.trace.server": "verbose",
-  // "editor.codeActionsOnSave": [
-  //   "source.addMissingImports",
-  //   "source.organizeImports",
-  //   "source.fixAll",
-  //   "source.fixAll.eslint"
-  // ],
   // "eslint.codeAction.showDocumentation": {
-  //   "enable": true
+  // "enable": true
   // },
   // "eslint.codeAction.disableRuleComment": {
-  //   "location": "separateLine",
-  //   "enable": true
+  // "location": "separateLine",
+  // "enable": true
   // },
   // "eslint.lintTask.options": ".",
   // "eslint.nodeEnv": null,
@@ -139,7 +105,53 @@
   // "eslint.validate": [],
   // "eslint.workingDirectories": [],
   /*
-  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+
+ https://github.com/typescript-eslint/typescript-eslint
+
+ https://bit.ly/3fgiyZj
+ "@typescript-eslint/eslint-plugin": "^4.7.0",
+ "@typescript-eslint/parser": "^4.7.0",
+ "eslint": "^7.13.0",
+ "eslint-config-prettier": "^6.15.0",
+ "eslint-plugin-filenames": "^1.3.2",
+ "eslint-plugin-import": "^2.22.1",
+ "eslint-plugin-jsdoc": "^30.7.7",
+ "eslint-plugin-node": "^11.1.0",
+ "eslint-plugin-prettier": "^3.1.4",
+ "eslint-plugin-security": "^1.4.0",
+ "eslint-plugin-simple-import-sort": "^5.0.3",
+ "eslint-plugin-sort-keys-fix": "^1.1.1",
+ "eslint-plugin-unicorn": "^23.0.0",
+
+ https://github.com/prettier/eslint-config-prettier#eslint-config-prettier
+ @typescript-eslint/eslint-plugin
+ eslint-plugin-babel
+ eslint-plugin-flowtype
+ eslint-plugin-react
+ eslint-plugin-standard
+ eslint-plugin-unicorn
+ eslint-plugin-vue
+
+ https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#plugins
+ +Jest testing:
+eslint-plugin-jest
+ + ESLint comment restrictions:
+eslint-plugin-eslint-comments
+ + Import/export conventions :
+eslint-plugin-import
+ +React best practices:
+eslint-plugin-react
+eslint-plugin-react-hooks
+ +NodeJS best practices:
+eslint-plugin-node
+
+*/
+  /*
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+
+  ―― BETTER COMMENTS
+
   */
   "better-comments.highlightPlainText": false,
   "better-comments.multilineComments": true,
@@ -337,7 +349,7 @@
     {
       /*
 ~~==============================================================================~~
-      */
+*/
       // ¬
       "tag": "¬",
       "color": "#FF6600DD",
@@ -378,7 +390,7 @@
       /*
 ―1==============================================================================~~
 ―2------------------------------------------------------------------------------~~
-      */
+*/
       // ―2
       "tag": "―2",
       "color": "#F80B",
@@ -389,7 +401,7 @@
       /*
 ―2==============================================================================~~
 ―3------------------------------------------------------------------------------~~
-      */
+*/
       // ―3
       "tag": "―3",
       "color": "#FF0D",
@@ -400,7 +412,7 @@
       /*
 ―3==============================================================================~~
 ―4------------------------------------------------------------------------------~~
-      */
+*/
       // ―4
       "tag": "―4",
       "color": "#0F0D",
@@ -411,7 +423,7 @@
       /*
 ―4==============================================================================~~
 ―5------------------------------------------------------------------------------~~
-      */
+*/
       // ―5
       "tag": "―5",
       "color": "#39FD",
@@ -422,7 +434,7 @@
       /*
 ―5==============================================================================~~
 ―6------------------------------------------------------------------------------~~
-      */
+*/
       // ―6
       "tag": "―6",
       "color": "#93FD",
@@ -431,12 +443,12 @@
     },
     /*
 ―6==============================================================================~~
-      */
+*/
     {
       /*
 ―6==============================================================================~~
 ―0------------------------------------------------------------------------------~~
-      */
+*/
       // ―0
       "tag": "―0",
       "color": "#FFFD",
@@ -445,12 +457,12 @@
     },
     /*
 ―0==============================================================================~~
-      */
+*/
     {
       /*
   ··············································································
   ==============================================================================
-      */
+*/
       // ====
       "tag": "====",
       "color": "#FA0D",
@@ -459,8 +471,9 @@
     },
     {
       /*
-  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-    */
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+
+ */
       // ――
       "tag": "――",
       "color": "#FA0D",
@@ -473,9 +486,8 @@
       "color": "#FA0D",
       "strikethrough": false,
       "backgroundColor": "transparent"
-    }
+    },
     // ···········································································
-    ,
     {
       // ···
       "tag": "···",
@@ -484,7 +496,12 @@
       "backgroundColor": "transparent"
     }
   ],
+  /*
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
+  ―― EDITOR RULERS
+
+  */
   "editor.rulers": [
     {
       "column": 2,
