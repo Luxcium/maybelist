@@ -8,4 +8,4 @@ export {
   configurable,
   enumerable,
   writable,
-} from './decorators';
+} from './decorators'

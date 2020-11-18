@@ -4,14 +4,14 @@ export function enumerable(value: boolean) {
     propertyKey: string,
     descriptor: PropertyDescriptor,
   ) {
-    descriptor.enumerable = value;
-    void target;
-    void propertyKey;
-  };
+    descriptor.enumerable = value
+    void target
+    void propertyKey
+  }
 }
 
-export const beNotEnumerable = enumerable(false);
-export const beEnumerable = enumerable(true);
+export const beNotEnumerable = enumerable(false)
+export const beEnumerable = enumerable(true)
 
 export function configurable(value: boolean) {
   return function (
@@ -19,14 +19,14 @@ export function configurable(value: boolean) {
     propertyKey: string,
     descriptor: PropertyDescriptor,
   ) {
-    descriptor.configurable = value;
-    void target;
-    void propertyKey;
-  };
+    descriptor.configurable = value
+    void target
+    void propertyKey
+  }
 }
 
-export const beNotConfigurable = configurable(false);
-export const beConfigurable = configurable(true);
+export const beNotConfigurable = configurable(false)
+export const beConfigurable = configurable(true)
 
 export function writable(value: boolean) {
   return function (
@@ -34,11 +34,11 @@ export function writable(value: boolean) {
     propertyKey: string,
     descriptor: PropertyDescriptor,
   ) {
-    descriptor.writable = value;
-    void target;
-    void propertyKey;
-  };
+    descriptor.writable = value
+    void target
+    void propertyKey
+  }
 }
 
-export const beNotWritable = writable(false);
-export const beWritable = writable(true);
+export const beNotWritable = writable(false)
+export const beWritable = writable(true)

@@ -1,1 +1,1 @@
-export type FnAtoB<A, B> = (val: A) => B;
+export type FnAtoB<A, B> = (val: A) => B

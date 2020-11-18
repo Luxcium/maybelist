@@ -1,1 +1,1 @@
-export { Monad } from './monad';
+export { Monad } from './monad'

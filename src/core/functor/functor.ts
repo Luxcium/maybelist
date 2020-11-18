@@ -8,16 +8,16 @@ import {
   configurable,
   enumerable,
   writable,
-} from '../../util';
-import type { IFunctor } from './types';
+} from '../../util'
+import type { IFunctor } from './types'
 
 export class Functor<FVal = any> implements IFunctor<FVal> {
   public static of<TVal>(value: TVal): Functor<TVal> {
-    return new Functor<TVal>(value);
+    return new Functor<TVal>(value)
   }
 
   public static fromValueOf<TVal>(value: Functor<TVal>): Functor<TVal> {
-    return new Functor<TVal>(JSON.parse(JSON.stringify(value.fork)));
+    return new Functor<TVal>(JSON.parse(JSON.stringify(value.fork)))
   }
 
   /**
@@ -26,11 +26,11 @@ export class Functor<FVal = any> implements IFunctor<FVal> {
    *
    * @param fn
    */
-  public ['fantasy-land/map'];
+  public ['fantasy-land/map']
 
   protected constructor(protected _value: FVal) {
     // eslint-disable-next-line @typescript-eslint/unbound-method
-    this['fantasy-land/map'] = this.map;
+    this['fantasy-land/map'] = this.map
   }
 
   /**
@@ -42,42 +42,42 @@ export class Functor<FVal = any> implements IFunctor<FVal> {
   @beConfigurable
   @beEnumerable
   public map<R = any>(fn: (val: FVal) => R): Functor<R> {
-    return new Functor<R>(fn(this._value));
+    return new Functor<R>(fn(this._value))
   }
 
   @beConfigurable
   @beEnumerable
   public get fork(): FVal {
-    return this._value;
+    return this._value
   }
 
   @beConfigurable
   @beEnumerable
   public get clone(): FVal {
-    return this.toValue();
+    return this.toValue()
   }
 
   @beNotWritable
   @beConfigurable
   @beEnumerable
   public toString(): string {
-    return JSON.stringify(this.fork);
+    return JSON.stringify(this.fork)
   }
 
   @beNotWritable
   @beConfigurable
   @beEnumerable
   public toValue(): FVal {
-    return JSON.parse(this.toString());
+    return JSON.parse(this.toString())
   }
 }
 
-void beConfigurable;
-void beEnumerable;
-void beNotConfigurable;
-void beNotEnumerable;
-void beNotWritable;
-void beWritable;
-void configurable;
-void enumerable;
-void writable;
+void beConfigurable
+void beEnumerable
+void beNotConfigurable
+void beNotEnumerable
+void beNotWritable
+void beWritable
+void configurable
+void enumerable
+void writable
