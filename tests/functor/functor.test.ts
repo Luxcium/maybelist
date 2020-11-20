@@ -1,11 +1,11 @@
-import { Functor } from '../../src';
+// import { Functor } from '../../src';
 import "./functor.spec";
 
-describe('No Test Implemented', () => {
-  it('should implement at leat one test', () => {
-    expect(Functor);
-  });
-});
+// describe('No Test Implemented', () => {
+//   it('should implement at leat one test', () => {
+//     expect(Functor);
+//   });
+// });
 
 
 // /*

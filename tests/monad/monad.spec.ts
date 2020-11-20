@@ -1,124 +1,88 @@
-import { Monad } from '../../src';
+import { Functor, Monad } from '../../src';
+import { FatasyMapTest } from '../fantasyland/functor.spec';
 
-describe('No Test Implemented', () => {
-  describe('map must be Fantasy Land compliant with Monad specification', () => {
-    describe("Identity: u['fantasy-land/map'](a => a) is equivalent to u (identity)", () => {
-      it('[1/3] Monad.of(u) should be equivalent to u', () => {
-        expect(Monad.of(41).map(a => a).fork).toBe(41);
+describe('Monad Class:', () => {
+  describe('The Monad Instance must implement theses methods:', () => {
+    const monad = Monad.of('value');
+    // const myFnMonad = Monad.of((val: string) => val.length);
+    describe("The 'map' method:", () => {
+      describe("The 'map' method must be Fantasy Land compliant with Functor specification.", () => {
+        FatasyMapTest(Monad);
       });
 
-      it('[2/3] Monad.of(u).map(a => a) should be strictly equal to Monad.of(u)', () => {
-        expect(Monad.of(41).map(a => a)).toStrictEqual(Monad.of(41));
+      describe("Type of monad.map must be 'function' type.", () => {
+        it("Is typeof 'function'", () => {
+          expect(typeof monad.map).toBe('function');
+        });
       });
-
-      it('[3/3] mySameMonad.map(a => a) should be strictly equal to mySameMonad', () => {
-        const mySameMonad = Monad.of<number>(41);
-        expect(mySameMonad.map(a => a)).toStrictEqual(mySameMonad);
+      describe("Return a Monad: Return type of monad.map must be 'instanceof Monad'.", () => {
+        it('Return a Monad', () => {
+          expect(monad.map((a) => a) instanceof Monad);
+        });
       });
-    });
-    describe("u['fantasy-land/map'](x => f(g(x))) is equivalent to u['fantasy-land/map'](g)['fantasy-land/map'](f) (composition)", () => {
-      function f(x: number) {
-        // mutiplyByTwo
-        return 2 * x;
-      }
-      function g(x: number) {
-        // addTen
-        return x + 10;
-      }
-      it("[1/3] Monad.of(u).map(x => f(g(x))) should compose and be strictly equal to  Monad.of(u).map(g).map(f) u['fantasy-land/map'](x => f(g(x))) is equivalent to u['fantasy-land/map'](g)['fantasy-land/map'](f)", () => {
-        expect(Monad.of(43).map(x => f(g(x)))).toStrictEqual(
-          Monad.of(43).map(g).map(f),
-        );
-      });
-
-      it("[2/3] should compose u['fantasy-land/map'](x => f(g(x))) is equivalent to u['fantasy-land/map'](g)['fantasy-land/map'](f)", () => {
-        const mySameMonad = Monad.of(43);
-        expect(mySameMonad.map(x => f(g(x)))).toStrictEqual(
-          mySameMonad.map(g).map(f),
-        );
-      });
-
-      it('[3/3] fantasy-land/map must return a value of the same Monad', () => {
-        const myMonad = Monad.of(43);
-        const mapedReturnValue = myMonad.map(g);
-        expect(
-          mapedReturnValue instanceof Monad && myMonad instanceof Monad,
-        ).toBe(true);
+      describe("Return a Functor: Return type of monad.map must be 'instanceof Functor'.", () => {
+        it('Return a Functor', () => {
+          expect(monad.map((a) => a) instanceof Functor);
+        });
+        it("[2/3] Monad.of('VALUE').map(a => a).fork should be equivalent to 'VALUE'", () => {
+          expect(Monad.of('VALUE').map((a) => a).fork).toBe('VALUE');
+        }, 4);
       });
     });
 
-    it("Monad['fantasy-land/map'] should be the same as Monad.map ", () => {
-      expect(Monad.of(41).map).toStrictEqual(Monad.of(41)['fantasy-land/map']);
+    describe('ap', () => {
+      it.todo('should  myMonad.ap');//, () => {
+        // expect(typeof monad.ap(myFnMonad).fork).toBe('number');
+      // });
+
+      it.todo('should  myMonad.ap');//, () => {
+        // expect(typeof monad.ap).toBe('function');
+      // });
     });
-  });
 
-  /*
-  Monad
-   u['fantasy-land/map'](a => a) is equivalent to u (identity)
-   u['fantasy-land/map'](x => f(g(x))) is equivalent to u['fantasy-land/map'](g)['fantasy-land/map'](f) (composition)
+    describe('chain', () => {
+      it.todo('should  myMonad.chain');//, () => {
+        // expect(
+          // typeof monad.chain((val: string) => Monad.of(val.length)).fork,
+        // ).toBe('number');
+      // });
 
-   fantasy-land/map method
-   fantasy-land/map :: Monad f => f a ~> (a -> b) -> f b
-   A value which has a Monad must provide a fantasy-land/map method. The fantasy-   land/map method takes one argument:
+      it.todo('should  myMonad.chain');//, () => {
+        // expect(typeof monad.chain).toBe('function');
+      // });
+    });
 
-   u['fantasy-land/map'](fn)
-   fn must be a function,
+    describe('clone', () => {
+      it.todo('should  myMonad.clone');//, () => {
+        // expect(typeof monad.clone).toBe('string');
+      // });
+    });
+    describe('map', () => {});
+    describe('fork', () => {
+      it.todo('should  myMonad.fork');//, () => {
+        // expect(typeof monad.fork).toBe('string');
+      // });
+    });
+    describe('toString', () => {
+      it.todo('should  myMonad.toString');//, () => {
+        // expect(typeof monad.toString).toBe('function');
+      // });
+    });
+    describe('toValue', () => {
+      it.todo('should  myMonad.toValue');//, () => {
+        // expect(typeof monad.toValue).toBe('function');
+      // });
+    });
+    describe("myMonad['fantasy-land/map']", () => {
+      it.todo("should  myMonad['fantasy-land/map']");//, () => {
+        // expect(typeof monad['fantasy-land/map']).toBe('function');
+      // });
+    });
 
-   If fn is not a function, the behaviour of fantasy-land/map is unspecified.
-   fn can return any value.
-   No parts of fn's return value R should be checked.
-   fantasy-land/map must return a value of the same Monad
-
- */
-  // });
-
-  it('should implement at leat one test', () => {
-    expect(Monad);
-  });
-
-  const myMonad = Monad.of('value');
-  const myFnMonad = Monad.of((val: string) => val.length);
-
-  it('should  myMonad.ap', () => {
-    expect(typeof myMonad.ap(myFnMonad).fork).toBe('number');
-  });
-
-  it('should  myMonad.ap', () => {
-    expect(typeof myMonad.ap).toBe('function');
-  });
-
-  it('should  myMonad.chain', () => {
-    expect(
-      typeof myMonad.chain((val: string) => Monad.of(val.length)).fork,
-    ).toBe('number');
-  });
-
-  it('should  myMonad.chain', () => {
-    expect(typeof myMonad.chain).toBe('function');
-  });
-
-  it('should  myMonad.clone', () => {
-    expect(typeof myMonad.clone).toBe('string');
-  });
-  it('should  myMonad.map', () => {
-    expect(typeof myMonad.map).toBe('function');
-  });
-  it('should  myMonad.fork', () => {
-    expect(typeof myMonad.fork).toBe('string');
-  });
-  it('should  myMonad.toString', () => {
-    expect(typeof myMonad.toString).toBe('function');
-  });
-  it('should  myMonad.toValue', () => {
-    expect(typeof myMonad.toValue).toBe('function');
-  });
-  it("should  myMonad['fantasy-land/map']", () => {
-    expect(typeof myMonad['fantasy-land/map']).toBe('function');
-  });
-
-  describe('Static Methodes', () => {
-    it('should produce a monad fromValueOf ', () => {
-      expect(typeof Monad.fromValueOf(myMonad).fork).toBe('string');
+    describe('Static Methodes', () => {
+      it.todo('should produce a monad fromValueOf ');//, () => {
+        // expect(typeof Monad.fromValueOf(monad).fork).toBe('string');
+      // });
     });
   });
 });

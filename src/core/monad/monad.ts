@@ -6,7 +6,7 @@ export class Monad<MVal> extends Functor<MVal> {
     return new Monad<TVal>(value);
   }
 
-  public static fromValueOf<TVal>(value: Monad<TVal>): Monad<TVal> {
+  public static fromValueOf<TVal>(value: Functor<TVal>): Monad<TVal> {
     return new Monad<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
 

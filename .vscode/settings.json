@@ -12,6 +12,22 @@
     "dist": true,
     "out": true
   },
+"coverage-gutters.highlightdark": "#39F0", //"rgba(45, 121, 10, 0.70)",
+"coverage-gutters.noHighlightDark": "#F363", // "rgba(121, 31, 10, 0.70)",
+"coverage-gutters.partialHighlightDark": "#F801", // "rgba(121, 86, 10, 0.70)",
+"coverage-gutters.showLineCoverage": true,
+"coverage-gutters.showRulerCoverage": true,
+"coverage-gutters.showGutterCoverage": true,
+// "color": "#F36B"
+// "color": "#F80B"
+// "color": "#FF0B"
+// "color": "#0F0B"
+// "color": "#39FB"
+// "color": "#93FB"
+// "coverage-gutters.noGutterIconPathDark": "/home/luxcium/dev/maybelist/.vscode/assets/test-tube-faild.svg",
+// "coverage-gutters.gutterIconPathDark": "./.vscode/assets/test-tube-pass.svg",
+// "coverage-gutters.partialGutterIconPathDark": "./app_images/partial-gutter-icon-dark.svg",
+
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 

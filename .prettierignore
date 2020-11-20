@@ -7,7 +7,7 @@ LICENSE
 luxcium.io
 node_modules
 out
-
+*.ts
 !.babelrc
 !.gitignore
 !.prettierignore

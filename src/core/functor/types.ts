@@ -52,11 +52,10 @@ type MapType<A = unknown> = <B>(fn: (val: A) => B) => IFMap<B>;
 type FunctorType<A = unknown> = IFMap<A> & IFork<A>;
 
 type Of = <TVal>(value: TVal) => Functor<TVal>;
-type FomValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
+type FromValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
 
-interface StaticFunctor {
+interface StaticApplicativeFunctor extends Function {
   of: Of;
-  fomValueOf: FomValueOf;
+  fromValueOf: FromValueOf;
 }
-
-export type { IFunctor, StaticFunctor };
+export type { IFunctor, StaticApplicativeFunctor };
