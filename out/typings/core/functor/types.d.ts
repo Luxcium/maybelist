@@ -16,9 +16,9 @@ interface IFunctor<A = unknown> extends IFMap<A>, IFork<A>, FunctorType<A> {
 declare type MapType<A = unknown> = <B>(fn: (val: A) => B) => IFMap<B>;
 declare type FunctorType<A = unknown> = IFMap<A> & IFork<A>;
 declare type Of = <TVal>(value: TVal) => Functor<TVal>;
-declare type FomValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
-interface StaticFunctor {
+declare type FromValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
+interface StaticApplicativeFunctor extends Function {
     of: Of;
-    fomValueOf: FomValueOf;
+    fromValueOf: FromValueOf;
 }
-export type { IFunctor, StaticFunctor };
+export type { IFunctor, StaticApplicativeFunctor };
