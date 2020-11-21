@@ -27,7 +27,6 @@
   // "coverage-gutters.noGutterIconPathDark": "/home/luxcium/dev/maybelist/.vscode/assets/test-tube-faild.svg",
   // "coverage-gutters.gutterIconPathDark": "./.vscode/assets/test-tube-pass.svg",
   // "coverage-gutters.partialGutterIconPathDark": "./app_images/partial-gutter-icon-dark.svg",
-
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
@@ -35,28 +34,29 @@
   ―― FORMAT BEHAVIOUR
 
   */
-  "eslint.run": "onSave",
-  "eslint.format.enable": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.codeActionsOnSave.mode": "all",
-  "eslint.lintTask.enable": true,
-
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": [
     "source.addMissingImports",
     "source.organizeImports",
     "source.fixAll",
     "source.fixAll.eslint"
   ],
+  "editor.formatOnSaveMode": "modifications",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "modifications",
   "editor.formatOnType": true,
-  "html.format.wrapAttributes": "preserve",
-  "html.format.wrapLineLength": 120,
-  "javascript.format.enable": true,
-  "typescript.format.enable": true,
-  "javascript.format.semicolons": "insert",
-  "typescript.format.semicolons": "insert",
+   "javascript.format.enable": true,
+   "typescript.format.enable": true,
+   "javascript.format.semicolons": "insert",
+   "typescript.format.semicolons": "insert",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
@@ -64,13 +64,12 @@
   ―― PRETTIER
 
   */
-  "prettier.requireConfig": true,
+   "prettier.requireConfig": true,
   "prettier.enable": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.semi": false,
+   "prettier.semi": false,
   "prettier.insertPragma": true,
+   "prettier.ignorePath": ".prettierignore",
   // "prettier.prettierPath": ".prettierrc.js",
-  "prettier.ignorePath": ".prettierignore",
   // "prettier.arrowParens": "always",
   // "prettier.bracketSpacing": true,
   // "prettier.configPath": "",
@@ -101,19 +100,34 @@
   ―― ESLINT
 
   */
-
-  // "eslint.debug": false,
-  // "eslint.onIgnoredFiles": "off",
-  // "eslint.packageManager": "npm",
-  // "eslint.quiet": false,
-  // "eslint.trace.server": "verbose",
-  // "eslint.codeAction.showDocumentation": {
-  // "enable": true
-  // },
-  // "eslint.codeAction.disableRuleComment": {
-  // "location": "separateLine",
-  // "enable": true
-  // },
+  "eslint.quiet": false,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.onIgnoredFiles": "off",
+  "eslint.packageManager": "npm",
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.run": "onType",
+  "eslint.debug": true,
+  "eslint.trace.server": "verbose",
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "jsonc",
+    "json"
+  ],
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.codeAction.disableRuleComment": {
+    "location": "separateLine",
+    "enable": true
+  },
   // "eslint.lintTask.options": ".",
   // "eslint.nodeEnv": null,
   // "eslint.nodePath": null,
@@ -624,8 +638,5 @@ eslint-plugin-node
       "column": 224,
       "color": "#90BCFFDD"
     }
-  ],
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  ]
 }
