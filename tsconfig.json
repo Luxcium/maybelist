@@ -5,7 +5,7 @@
     "moduleResolution": "Node",
     /*                                                                        */
     "rootDir": "./src",
-    "noEmit": false,
+    "noEmit": true,
     "outDir": "./out/dist",
     "declaration": true,
     "declarationDir": "./out/typings",

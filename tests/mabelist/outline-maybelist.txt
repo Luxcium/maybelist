@@ -1,0 +1,194 @@
+  public entries() {
+  public keys() {
+  public values() {
+  public every<S extends MLVal>(
+  public filter<S extends MLVal>(
+  public find<S extends MLVal>(
+  public forEach(
+  public reduce<U>(
+  public reduceRight<U>(
+  public some(
+  public concat(...items: ConcatArray<MLVal>[]): MaybeList<MLVal> {
+  public includes(searchElement: MLVal, fromIndex?: number): IMonad<boolean> {
+  public indexOf(searchElement: MLVal, fromIndex?: number): IMonad<number> {
+  public join(separator?: string): string {
+  public lastIndexOf(searchElement: MLVal, fromIndex?: number): IMonad<number> {
+  public slice(start?: number, end?: number): MaybeList<MLVal> {
+  public toString(): string {
+  public toLocaleString(): string {
+  public copyWithin(
+  public fill(value: MLVal, start?: number, end?: number): MaybeList<MLVal> {
+  public reverse(): MaybeList<MLVal> {
+  public sort(compareFn?: (a: MLVal, b: MLVal) => number): MaybeList<MLVal> {
+  public splice(start: number, deleteCount?: number): MaybeList<MLVal> {
+  public pop(): MaybeList<MLVal | null> {
+  public push<R = MLVal>(...items: R[]): MaybeList<R> {
+  public shift(): MaybeList<MLVal | null> {
+  public unshift<R = MLVal>(...items: R[]): MaybeList<R> {
+  public rpush<R = MLVal>(...items: R[]): MaybeList<R> {
+  public rpop(): MaybeList<MLVal | null> {
+  public rpoped(): MaybeList<MLVal | null> {
+  public lpush<R = MLVal>(...items: R[]): MaybeList<R> {
+  public lpop(): MaybeList<MLVal | null> {
+  public lpoped(): MaybeList<MLVal | null> {
+  public poped(): MaybeList<MLVal | null> {
+  public shifted(): MaybeList<MLVal | null> {
+  public ap<R>(M: IMonad<(val: MLVal[]) => R>): IMonad<R> {
+  public fAp<R = any>(
+  public flatAp<R = any>(
+  public chain<R>(fn: (val: MLVal[]) => IMonad<R>): IMonad<R> {
+  public fChain<R = any>(
+  public flatChain<R = any>(
+  public flatMap<R = any>(
+  public fMap<R = any>(fn: FMapper<MLVal, R>): MaybeList<R> {
+  public map<R = any>(fn: (val: MLVal[]) => R): IMonad<R> {
+  public thenMap<R>(fn: FnAtoB<MLVal, R>): MaybeList<Promise<R>> {
+  public thenFMap<R = any>(
+  public [Fantasy.ap]<R>(M: IMonad<(val: MLVal[]) => R>): IMonad<R> {
+  public [Fantasy.chain]<R>(fn: (val: MLVal[]) => IMonad<R>): IMonad<R> {
+  public [Fantasy.map]<R = any>(fn: (val: MLVal[]) => R): IMonad<R> {
+  public *[Symbol.iterator]() {
+  public get fork(): MLVal[] {
+  public get clone(): MaybeList<MLVal> {
+  public get forkSafe(): MLVal[] {
+  public get hasNull(): boolean {
+  public get hasUndefined(): boolean {
+  public get hasNullOrUndefined(): boolean {
+  public get flags() {
+  public get getFlags() {
+  public get first(): MaybeList<MLVal | null> {
+  public get last(): MaybeList<MLVal | null> {
+  public get getTheOnlyOne(): MLVal | null | undefined {
+  public get lhead(): MaybeList<MLVal | null> {
+  public get rtail(): MaybeList<MLVal | null> {
+  public get rhead(): MaybeList<MLVal | null> {
+  public get ltail(): MaybeList<MLVal | null> {
+  public get head(): MaybeList<MLVal | null> {
+  public get tail(): MaybeList<MLVal | null> {
+  public get getHeadOrTail() {
+  public get forkHeadOrTail() {
+  public get forkHeadOrGetTail() {
+  public get getHeadAndTail() {
+  public get forkHeadAndGetTail() {
+  public get forkHeadAndTail(): [MLVal | null, (MLVal | null)[]] {
+  public getClone(): MaybeList<MLVal> {
+  public get promiseOf(): Promise<MaybeList<MLVal>> {
+  public async will() {
+  public async willFMap<R = any>(fn: FMapper<MLVal, R>): Promise<MaybeList<R>> {
+  public static of = <TVal>(...values: TVal[] | [TVal[]]): MaybeList<TVal> => {
+  public static [Fantasy.of] = MaybeList.of;
+  public static from = <TVal>(value: TVal[]): MaybeList<TVal> => {
+  public static unfork<R = unknown>(forkable: Functor<R>): MaybeList<R> {
+  public static fromAsync = <T = any>(value: T[]) => {
+  public static ofAsync = <T = any>(...value: T[]) => {
+  public static async promiseOf<V>(value: V | Promise<V>): Promise<V> {
+  public static listMap: <U>(list: MaybeList<U>) => ListMap<U> =
+  public static listMapMP: <T>(list: MaybeList<T_PT_<T>>) => ListMapMP<T> =
+  public static mapList: <T, R>(mapFunction: FnAtoB<T, R>) => MapList<T, R> =
+  public static mapList_PM: <T, R>(
+  public static mapListMP: <T, R>(
+  public static fnListMap: <T>(list: () => MaybeList<T>) => ListMap<T> =
+  public static fnListMapMP: <T>(
+  public static fnMapList: <T, R>(
+  public static fnMapList_PM: <T, R>(
+  public static fnMapListMP: <U, R>(
+  public static promiseAllList = async <T>(x: MaybeList<Promise<T>>) => {
+  public static listMap_PM: <T>(
+  public static fnListMap_PM: <T>(
+  // public map<U>(
+  // public static valueMap: <T>(value: T) => ValueMap<T> =
+  // public static valueMap_P: <T>(value: T_PT_<T>) => ValueMap_P<T> =
+  // public static listMap_PMP: <T>(
+  // public static mapValue: <T, R>(mapFunction: FnAtoB<T, R>) => MapValue<T, R> =
+  // public static mapValue_P: <T, R>(
+  // public static mapList_PMP: <T, R>(
+  // public static fnValueMap: <T>(value: () => T) => ValueMap<T> =
+  // public static fnValueMap_P: <T>(value: () => T_PT_<T>) => ValueMap_P<T> =
+  // public static fnListMap_PMP: <T>(
+  // public static fnMapValue: <T, R>(
+  // public static fnMapValue_P: <T, R>(
+  // public static fnMapList_PMP: <T, R>(
+  // public get isNull(): boolean {
+  // public get isUndefined(): boolean {
+
+entries
+keys
+values
+every
+filter
+find
+forEach
+reduce
+reduceRight
+some
+concat
+includes
+indexOf
+join
+lastIndexOf
+slice
+toString
+toLocaleString
+copyWithin
+fill
+reverse
+sort
+splice
+pop
+push
+shift
+unshift
+rpush
+rpop
+rpoped
+lpush
+lpop
+lpoped
+poped
+shifted
+ap
+fAp
+flatAp
+chain
+fChain
+flatChain
+flatMap
+fMap
+map
+async
+async
+thenMap
+thenFMap
+
+// #region =======-| Imports |-=================================================≈
+// #region =======-| eslint-disables |-=========================================≈
+// #region =======-| HEADER author copyright license |-=========================≈
+// #region =======-| Types |-===================================================≈
+// #region =======-| Class MaybeList |-=========================================≈
+  // #region =======-| Constructor |-===========================================≈
+
+  // #region =======-| Flags |-=================================================≈
+
+  // #region =======-| Iterator |-==============================================≈
+  // #region =======-| IterationMethods |-======================================≈
+  // #region =======-| AccessorsMethods |-======================================≈
+  // #region =======-| unMutatingMethods |-=====================================≈
+  // #region =======-| QueuesAndStacks |-=======================================≈
+  // #region =======-| HeadsAndTails |-=========================================≈
+
+  // #region =======-| Utilities |-=============================================≈
+
+  // #region =======-| Fantasy |-===============================================≈
+
+  // #region =======-| MISCELLANEOUS |-=========================================≈
+  // #region =======-| ThenableTools |-=========================================≈
+
+  // #region ======= !(A) ==== <R> =============================================≈
+  // #region ======= !(B) ==== Promise<R> ======================================≈
+  // #region =======-|(C) ==== MaybeList<R> ====================================≈
+  // #region ======= (D) ==== MaybeList<Promise<R>> ============================≈
+  // #region ======= (E) ==== Promise<MaybeList<R>> ============================≈
+  // #region ======= !(F) ==== Promise<MaybeList<Promise<R>>> ==================≈
+  // #region ======== (G) ==== as a function ===================================≈
+// #region =======-| Exports |-=================================================≈
+// #region =======-| LUXCIUM-LICENSE |-=========================================≈
