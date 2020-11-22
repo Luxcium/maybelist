@@ -1,9 +1,5 @@
-  {
-    "presets": [
-      "react-app"
-    ],
-    "ts": true,
-    "plugins": [
-      "@babel/plugin-transform-typescript"
-    ]
-  }
+{
+  "presets": ["react-app"],
+  "ts": true,
+  "plugins": ["@babel/plugin-transform-typescript"]
+}

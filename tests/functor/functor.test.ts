@@ -1,12 +1,11 @@
 // import { Functor } from '../../src';
-import "./functor.spec";
+import './functor.spec';
 
 // describe('No Test Implemented', () => {
 //   it('should implement at leat one test', () => {
 //     expect(Functor);
 //   });
 // });
-
 
 // /*
 // export interface IFunctor<A = unknown>

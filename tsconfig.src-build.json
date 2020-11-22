@@ -53,17 +53,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     /*                                                                        */
-    "lib": [
-      "esnext"
-    ],
-    "types": [
-      "node",
-      "jest"
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./typings"
-    ],
+    "lib": ["esnext"],
+    "types": ["node", "jest"],
+    "typeRoots": ["./node_modules/@types", "./typings"],
     /* ALWAYS TRUE STRICT TYPE-CHECKING, ADDITIONAL CHECKS MUST ALWAYS BE TRUE*/
     /* ALWAYS TRUE */ "strict": true /*                         ALWAYS TRUE  */,
     /* ALWAYS TRUE */ "alwaysStrict": true /*                   ALWAYS TRUE  */,
@@ -76,14 +68,11 @@
     /* ALWAYS TRUE */ "noFallthroughCasesInSwitch": true /*     ALWAYS TRUE  */,
     /* ALWAYS TRUE */ "noImplicitReturns": true /*              ALWAYS TRUE  */,
     /* ALWAYS TRUE */ "noUnusedLocals": true /*                 ALWAYS TRUE  */,
-    /* ALWAYS TRUE */ "noUnusedParameters": true /*             ALWAYS TRUE  */,
+    /* ALWAYS TRUE */ "noUnusedParameters": true /*             ALWAYS TRUE  */
     /* ALWAYS TRUE STRICT TYPE-CHECKING, ADDITIONAL CHECKS MUST ALWAYS BE TRUE*/
     /*                                                                        */
   },
-  "include": [
-    "./src/**/*.ts",
-    "./test/**/*.ts",
-  ],
+  "include": ["./src/**/*.ts", "./test/**/*.ts"],
   "exclude": [
     "templates/either.ts",
     "templates/maybe.ts",
@@ -94,8 +83,8 @@
     "./out/**/*.*",
     "./config/**/*.*",
     "./node_modules/**/*.*",
-    "./scripts/**/*.*",
+    "./scripts/**/*.*"
     // "**/*.spec.*",
     // "**/*.test.*",
-  ],
+  ]
 }

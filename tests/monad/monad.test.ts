@@ -1,1 +1,1 @@
-import "./monad.spec";
+import './monad.spec';

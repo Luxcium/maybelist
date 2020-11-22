@@ -1,10 +1,7 @@
-
 // Fantasy Land Specification
 // Build Status Join the chat at https://gitter.im/fantasyland/fantasy-land
 
 // (aka "Algebraic JavaScript Specification")
-
-
 
 // This project specifies interoperability of common algebraic structures:
 
@@ -32,7 +29,6 @@
 // Comonad
 // Bifunctor
 // Profunctor
-
 
 // General
 // An algebra is a set of values, a set of operators that it is closed under and some laws it must obey.
@@ -568,9 +564,8 @@
 
 describe('Fantasy Land Specification', () => {
   it('should implment', () => {
-    expect(true).toBe(true)
+    expect(true).toBe(true);
   });
-})
+});
 
-
-export default null
+export default null;

@@ -35,10 +35,7 @@
     "arrow-body-style": "off",
     "no-confusing-arrow": "off",
     "prefer-arrow-callback": "off",
-    "curly": [
-      "warn",
-      "all"
-    ],
+    "curly": ["warn", "all"],
     // "comma-dangle": [
     //   "warn",
     //   "only-multiline"

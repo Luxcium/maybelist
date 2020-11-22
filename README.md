@@ -31,11 +31,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
->You can include small parts of the code from this repo inside any MIT LICENSED project
-><br>The maybelist npm package can be included in any project but WITHOUT WARRANTY of any kind.
-><br>IN ALL CASES THE COPYRIGHT AND SHORT NOTICE ABOVE MUST BE INCLUDED.
+> You can include small parts of the code from this repo inside any MIT LICENSED project
+> <br>The maybelist npm package can be included in any project but WITHOUT WARRANTY of any kind.
+> <br>IN ALL CASES THE COPYRIGHT AND SHORT NOTICE ABOVE MUST BE INCLUDED.
 
 ###### †Scientia es lux principium✨ ™ is a Trade Mark of Benjamin Vincent Kasapoglu
-
 
 ( [ "$(npm audit)" = 'found 0 vulnerabilities' ] || exit 1)

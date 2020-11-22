@@ -5,14 +5,14 @@ export function FatasyMapTest(MapableApplicative: StaticApplicativeFunctor) {
   describe('Functor (Mapable): (`fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b`)', () => {
     describe("1. Identity u['fantasy-land/map'](a => a) is equivalent to u", () => {
       it("[1/2] MapableApplicative.of('VALUE').map(a => a) is strictly equal to MapableApplicative.of('VALUE')", () => {
-        expect(MapableApplicative.of('VALUE').map((a) => a)).toStrictEqual(
+        expect(MapableApplicative.of('VALUE').map(a => a)).toStrictEqual(
           MapableApplicative.of('VALUE'),
         );
       }, 4);
 
       it('[2/2] mapable.map(a => a) should be strictly equal to mapable', () => {
         const mapable = MapableApplicative.of<number>(41);
-        expect(mapable.map((a) => a)).toStrictEqual(mapable);
+        expect(mapable.map(a => a)).toStrictEqual(mapable);
       }, 4);
     });
 
@@ -26,16 +26,14 @@ export function FatasyMapTest(MapableApplicative: StaticApplicativeFunctor) {
         return x + 10;
       }
       it('[1/3] MapableApplicative.of(u).map(x => f(g(x))) must compose and be strictly equal to MapableApplicative.of(u).map(g).map(f)', () => {
-        expect(MapableApplicative.of(43).map((x) => f(g(x)))).toStrictEqual(
+        expect(MapableApplicative.of(43).map(x => f(g(x)))).toStrictEqual(
           MapableApplicative.of(43).map(g).map(f),
         );
       });
       // u['fantasy-land/map'](x => f(g(x))) is equivalent to u['fantasy-land/map'](g)['fantasy-land/map'](f)
       it("[2/3] must compose u['fantasy-land/map'](x => f(g(x))) is equivalent to u['fantasy-land/map'](g)['fantasy-land/map'](f)", () => {
         const mapable = MapableApplicative.of(43);
-        expect(mapable.map((x) => f(g(x)))).toStrictEqual(
-          mapable.map(g).map(f),
-        );
+        expect(mapable.map(x => f(g(x)))).toStrictEqual(mapable.map(g).map(f));
       });
     });
 
@@ -53,27 +51,23 @@ export function FatasyMapTest(MapableApplicative: StaticApplicativeFunctor) {
       });
 
       describe('2. fantasy-land/map must return a value of the same Functor', () => {
-
-        it("[1/3] mapable.map must return a value of the same Functor as Mapable", () => {
+        it('[1/3] mapable.map must return a value of the same Functor as Mapable', () => {
           const mapable = MapableApplicative.of(41);
           const mapableMapReturnValue = mapable.map(a => a);
           expect(
-            mapableMapReturnValue instanceof MapableApplicative && mapable instanceof MapableApplicative,
+            mapableMapReturnValue instanceof MapableApplicative &&
+              mapable instanceof MapableApplicative,
           ).toBe(true);
         });
-        it("[2/3] mapable.map must return a value of the Functor type", () => {
+        it('[2/3] mapable.map must return a value of the Functor type', () => {
           const mapable = MapableApplicative.of(41);
           const mapableMapReturnValue = mapable.map(a => a);
-          expect(
-            mapableMapReturnValue instanceof Functor ,
-          ).toBe(true);
+          expect(mapableMapReturnValue instanceof Functor).toBe(true);
         });
 
-         it("[3/3] mapable must be of the Functor type", () => {
+        it('[3/3] mapable must be of the Functor type', () => {
           const mapable = MapableApplicative.of('VALUE');
-          expect(
-           mapable instanceof Functor,
-          ).toBe(true);
+          expect(mapable instanceof Functor).toBe(true);
         });
       });
     });
@@ -89,7 +83,7 @@ export function FatasyMapTest(MapableApplicative: StaticApplicativeFunctor) {
   //     );
   // });
   //   });
-    /*
+  /*
        Functor
       u['fantasy-land/map'](a => a) is equivalent to u (identity)
       u['fantasy-land/map'](x => f(g(x))) is equivalent to u['fantasy-land/map'](g)['fantasy-land/map'](f) (composition)

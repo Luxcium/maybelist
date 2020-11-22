@@ -1,4 +1,5 @@
-language: node_js
+language:
+  node_js
 
   # Release  Status           Codename  Initial Release  Active LTS Start  Maintenance LTS Start  End-of-life
   #------------------------------------------------------------------------------------------------------------------
@@ -12,14 +13,6 @@ node_js:
   - lts/* # latest LTS Node.js release
   - 12 # latest 12.x release
   - 10 # latest 10.x release
-
-
-
-
-
-
-
-
 
 os:
   - linux
