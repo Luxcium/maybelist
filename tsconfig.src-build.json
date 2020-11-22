@@ -1,16 +1,17 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "target": "es5",
     "module": "CommonJS",
     "moduleResolution": "Node",
     /*                                                                        */
-    "rootDir": "./",
+    "rootDir": "./src",
     "noEmit": true,
-    "outDir": "./build",
+    "outDir": "./out/src",
     "declaration": true,
-    "declarationDir": "./build/typings",
+    "declarationDir": "./out/typings/src",
     "incremental": true,
-    "tsBuildInfoFile": "./build/ts-build-info.lib",
+    "tsBuildInfoFile": "./out/ts-src-build-info.lib",
     /*                                                                        */
     "composite": true,
     "allowSyntheticDefaultImports": true,
@@ -81,7 +82,7 @@
   },
   "include": [
     "./src/**/*.ts",
-    "./test/**/*.**.ts",
+    "./test/**/*.ts",
   ],
   "exclude": [
     "templates/either.ts",

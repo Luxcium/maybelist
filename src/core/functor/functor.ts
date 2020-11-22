@@ -13,6 +13,8 @@ import type { IFunctor } from './types';
 
 class Functor<FVal = any> implements IFunctor<FVal> {
   public static of<TVal>(value: TVal): Functor<TVal> {
+    void new Functor<TVal>(value);
+    void new Functor<TVal>(value);
     return new Functor<TVal>(value);
   }
 

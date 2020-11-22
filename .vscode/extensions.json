@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "aaron-bond.better-comments",
+    "christian-kohler.path-intellisense",
     "CoenraadS.bracket-pair-colorizer-2",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
@@ -11,21 +12,24 @@
     "PKief.material-icon-theme",
     "SophodorosLLC.codevalet-vscode",
     "usernamehw.errorlens",
-    ]
+  ]
 }
-
-// code --install-extension aaron-bond.better-comments
-// code --install-extension CoenraadS.bracket-pair-colorizer-2
-// code --install-extension dbaeumer.vscode-eslint
-// code --install-extension esbenp.prettier-vscode
-// code --install-extension ghmcadams.lintlens
-// code --install-extension Luxcium.pop-n-lock-theme-vscode
-// code --install-extension ms-vscode.typescript-javascript-grammar
-// code --install-extension ms-vscode.vscode-typescript-next
-// code --install-extension PKief.material-icon-theme
-// code --install-extension SophodorosLLC.codevalet-vscode
-// code --install-extension usernamehw.errorlens
-
+// ## Use '--force' option to update to newer version;
+// ## uncomment the '#' before the --force to enable
+//
+// code --install-extension "aaron-bond.better-comments" # --force
+// code --install-extension "christian-kohler.path-intellisense" # --force
+// code --install-extension "CoenraadS.bracket-pair-colorizer-2" # --force
+// code --install-extension "dbaeumer.vscode-eslint" # --force
+// code --install-extension "esbenp.prettier-vscode" # --force
+// code --install-extension "ghmcadams.lintlens" # --force
+// code --install-extension "Luxcium.pop-n-lock-theme-vscode" # --force
+// code --install-extension "ms-vscode.typescript-javascript-grammar" # --force
+// code --install-extension "ms-vscode.vscode-typescript-next" # --force
+// code --install-extension "PKief.material-icon-theme" # --force
+// code --install-extension "SophodorosLLC.codevalet-vscode" # --force
+// code --install-extension "usernamehw.errorlens" # --force
+//
 // aaron-bond.better-comments
 // alefragnani.Bookmarks
 // bierner.folder-source-actions

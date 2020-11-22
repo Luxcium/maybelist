@@ -1,1 +1,0 @@
-export { Functor } from './functor';

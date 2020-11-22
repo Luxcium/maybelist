@@ -12,7 +12,7 @@
     "json",
     "node"
   ],
-  "collectCoverage": true,
+  "collectCoverage": false,
   "collectCoverageFrom": [
     "./src/**/*.{ts,tsx}",
     "!**/node_modules/**",
@@ -24,6 +24,5 @@
     "lcov",
     "text",
     "clover"
-  ],
-  "verbose": true
+  ]
 }

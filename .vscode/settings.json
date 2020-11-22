@@ -37,18 +37,18 @@
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": [
     "source.addMissingImports",
-    "source.organizeImports",
+    "source.fixAll.eslint",
     "source.fixAll",
-    "source.fixAll.eslint"
   ],
-  "editor.formatOnSaveMode": "modifications",
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
-  "javascript.format.enable": false,
-  "typescript.format.enable": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSaveMode": "file",
+  "javascript.format.enable": true,
+  "typescript.format.enable": true,
   "javascript.format.semicolons": "insert",
   "typescript.format.semicolons": "insert",
+  "prettier.trailingComma": "all",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
     // "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -57,6 +57,17 @@
     "editor.defaultFormatter": "vscode.json-language-features"
     // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  "path-intellisense.extensionOnImport": false,
+  "path-intellisense.absolutePathToWorkspace": true,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.showHiddenFiles": true,
+  "path-intellisense.mappings": {
+    "./": "${workspaceFolder}",
+    "./src": "${workspaceFolder}/src",
+    "./tests": "${workspaceFolder}/tests",
+  },
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
@@ -64,11 +75,11 @@
   ―― PRETTIER
 
   */
-  //  "prettier.requireConfig": true,
-  // "prettier.enable": false,
-  //  "prettier.semi": false,
+  "prettier.enable": true,
+  "prettier.requireConfig": true,
+  // "prettier.semi": false,
   // "prettier.insertPragma": true,
-  //  "prettier.ignorePath": ".prettierignore",
+  // "prettier.ignorePath": ".prettierignore",
   // "prettier.prettierPath": ".prettierrc.js",
   // "prettier.arrowParens": "always",
   // "prettier.bracketSpacing": true,
@@ -100,13 +111,13 @@
   ―― ESLINT
 
   */
-  // "eslint.quiet": false,
-  // "eslint.format.enable": true,
-  // "eslint.lintTask.enable": true,
-  // "eslint.alwaysShowStatus": true,
+  "eslint.quiet": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.codeActionsOnSave.mode": "all",
   // "eslint.onIgnoredFiles": "off",
   // "eslint.packageManager": "npm",
-  // "eslint.codeActionsOnSave.mode": "all",
   // "eslint.run": "onType",
   // "eslint.debug": true,
   // "eslint.trace.server": "verbose",
@@ -175,6 +186,66 @@ eslint-plugin-react-hooks
 eslint-plugin-node
 
 */
+  /*
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+  ―― ERRORLENS
+  */
+  "errorLens.annotationPrefix": [
+    "🍒 ~> ", // ―1 error
+    "⚠️ => ", // ―2 warning
+    "🧩 ", // ―3 hint
+    "🎯 -> ", // ―4 info
+  ],
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "hint",
+    "info",
+  ],
+  "errorLens.exclude": [
+    "may be converted to an ES6 module",
+    "is declared but its value is never read"
+  ],
+  "errorLens.addAnnotationTextPrefixes": true,
+  "errorLens.addNumberOfDiagnostics": true,
+  "errorLens.borderRadius": "10px",
+  "errorLens.delay": 0,
+  "errorLens.errorGutterIconColor": "#F36F",
+  "errorLens.errorGutterIconPath": "",
+  "errorLens.followCursor": "allLines",
+  "errorLens.followCursorMore": 0,
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSet": "defaultOutline",
+  "errorLens.gutterIconsFollowCursorOverride": true,
+  "errorLens.gutterIconSize": "80%",
+  "errorLens.infoGutterIconPath": "",
+  "errorLens.infoGutterIconColor": "#4AEF",
+  "errorLens.light": {},
+  "errorLens.margin": "0.75rem",
+  "errorLens.messageEnabled": true,
+  "errorLens.onSave": false,
+  "errorLens.onSaveTimeout": 1000,
+  "errorLens.padding": "0rem 0.5rem",
+  "errorLens.scrollbarHackEnabled": false,
+  "errorLens.statusBarColorsEnabled": true,
+  "errorLens.statusBarMessageEnabled": true,
+  "errorLens.statusBarMessageType": "closestProblem",
+  "errorLens.warningGutterIconColor": "#BF2",
+  "errorLens.warningGutterIconPath": "",
+  "workbench.colorCustomizations": {
+    "errorLens.errorBackground": "#F363",
+    "errorLens.errorForeground": "#F36F",
+    "errorLens.errorMessageBackground": "#F366",
+    "errorLens.warningBackground": "#CF33",
+    "errorLens.warningForeground": "#CF3F",
+    "errorLens.warningMessageBackground": "#CF36",
+    "errorLens.hintBackground": "#39C3",
+    "errorLens.hintForeground": "#39CF",
+    "errorLens.hintMessageBackground": "#39C6",
+    "errorLens.infoBackground": "#FB03",
+    "errorLens.infoForeground": "#FB0F",
+    "errorLens.infoMessageBackground": "#FB06",
+  },
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
@@ -408,39 +479,46 @@ eslint-plugin-node
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
+    {
+      // ―― END
+      "tag": "―― END",
+      "color": "#F36D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
     // "color": "#F36B"
     // "color": "#F80B"
     // "color": "#FF0B"
     // "color": "#0F0B"
     // "color": "#39FB"
     // "color": "#93FB"
+    /*
+    ―1==============================================================================~~
+    ―2------------------------------------------------------------------------------~~
+    */
     {
-      /*
-―1==============================================================================~~
-―2------------------------------------------------------------------------------~~
-*/
       // ―2
       "tag": "―2",
       "color": "#F80B",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-    {
-      /*
+    /*
 ―2==============================================================================~~
 ―3------------------------------------------------------------------------------~~
-*/
+    */
+    {
       // ―3
       "tag": "―3",
       "color": "#FF0D",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-    {
-      /*
+    /*
 ―3==============================================================================~~
 ―4------------------------------------------------------------------------------~~
-*/
+    */
+    {
       // ―4
       "tag": "―4",
       "color": "#0F0D",
@@ -448,21 +526,28 @@ eslint-plugin-node
       "backgroundColor": "transparent"
     },
     {
-      /*
-―4==============================================================================~~
-―5------------------------------------------------------------------------------~~
-*/
+      // ―4
+      "tag": "―― START",
+      "color": "#0F0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /*
+    ―4==============================================================================~~
+    ―5------------------------------------------------------------------------------~~
+    */
+    {
       // ―5
       "tag": "―5",
       "color": "#39FD",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
+    /*
+    ―5==============================================================================~~
+    ―6------------------------------------------------------------------------------~~
+    */
     {
-      /*
-―5==============================================================================~~
-―6------------------------------------------------------------------------------~~
-*/
       // ―6
       "tag": "―6",
       "color": "#93FD",
@@ -472,11 +557,11 @@ eslint-plugin-node
     /*
 ―6==============================================================================~~
 */
-    {
-      /*
+    /*
 ―6==============================================================================~~
 ―0------------------------------------------------------------------------------~~
 */
+    {
       // ―0
       "tag": "―0",
       "color": "#FFFD",
@@ -486,44 +571,44 @@ eslint-plugin-node
     /*
 ―0==============================================================================~~
 */
-    {
-      /*
-  ··············································································
-  ==============================================================================
+    /*
+··············································································
+==============================================================================
 */
+    {
       // ====
       "tag": "====",
       "color": "#FA0D",
       "strikethrough": false,
       "backgroundColor": "transparent"
     },
-    {
-      /*
-  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+    /*
+    |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
- */
+    */
+    {
       // ――
-"tag": "――",
-"color": "#FA0D",
-"strikethrough": false,
-"backgroundColor": "transparent"
-},
-{
-// |-···
-"tag": "|-",
-"color": "#FA0D",
-"strikethrough": false,
-"backgroundColor": "transparent"
-},
-// ···········································································
-{
-// ···
-"tag": "···",
-"color": "#FA0D",
-"strikethrough": false,
-"backgroundColor": "transparent"
-}
-],
+      "tag": "――",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      // |-···
+      "tag": "|-",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    // ···········································································
+    {
+      // ···
+      "tag": "···",
+      "color": "#FA0D",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 
