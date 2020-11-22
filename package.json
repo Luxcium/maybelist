@@ -10,16 +10,16 @@
     "prebuild": "npm run fix && npm run test || exit 7",
     "build": "mkdir -p \"./out/performance\" && tsc --noEmit false --generateCpuProfile \"./out/performance\" || exit 1",
     "cibuild": "npm run build && tsc --build \"tsconfig.src-build.json\" || exit 3",
-    "postcibuild": "[[ \"${ZE160DDEEx}\" = \"1050D673\" ]] && (coveralls < coverage/lcov.info); exit 0",
-    "coverage": "jest  --verbose false --silent true --coverage || exit 1",
+    "postcibuild": "[ \"${ZE160DDEEx}\" = \"1050D673\" ] && (coveralls < coverage/lcov.info); exit 0",
+    "coverage": "jest --verbose false --silent true --coverage || exit 1",
     "lint": "eslint \"./src/**/*.*\" ---fix-dry-run || exit 1",
     "pretty": "prettier --config \"./.prettierrc\" --loglevel log -c \"./src/**/*.*\"|| exit 1",
     "lint:fix": "eslint \"./src/**/*.*\" --fix || exit 1",
-    "pretty:fix": "prettier --config \"./.prettierrc\" --loglevel log -c --write \"./src/**/*.*\"  || exit 1",
+    "pretty:fix": "prettier --config \"./.prettierrc\" --loglevel log -c --write \"./src/**/*.*\" || exit 1",
     "prefix": "npx eslint --print-config src/index.ts | npx eslint-config-prettier-check || exit 1",
     "fix": "npm run lint:fix && npm run pretty:fix || exit 4",
     "test": "jest --verbose true || exit 1",
-    "precheck": "npm run fix  || exit 5",
+    "precheck": "npm run fix || exit 5",
     "check": "npm run test && tsc --noEmit --listFiles ||exit 3",
     "postcheck": "npm run coverage || exit 2"
   },
@@ -51,6 +51,5 @@
     "ts-node": "^9.0.0",
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"
-  },
-  "dependencies": {}
+  }
 }
