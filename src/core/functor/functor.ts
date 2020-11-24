@@ -36,9 +36,11 @@ class Functor<FVal = any> implements IFunctor<FVal> {
   }
 
   /**
-   * fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b
-   * /
+   * Fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b
+   * /.
+   *
    * @param fn
+   * @example
    */
   @beNotWritable
   @beConfigurable

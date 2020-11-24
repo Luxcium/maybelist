@@ -1,7 +1,7 @@
 import type { Functor } from '..';
 
 /**
- * ## Functor
+ * ## Functor.
  *
  * @see https://github.com/fantasyland/fantasy-land#functor \
  *  \
@@ -28,7 +28,7 @@ import type { Functor } from '..';
  */
 
 interface IFMap<A = unknown> {
-  /** fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b */
+  /** Fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b */
   map: MapType<A>;
 }
 

@@ -5,6 +5,11 @@
     "sourceType": "module"
   },
   "extends": [
+    "plugin:jsonc/base",
+    "plugin:jsonc/recommended-with-json",
+    "plugin:jsonc/recommended-with-jsonc",
+    "plugin:jsonc/recommended-with-json5",
+    "plugin:jsonc/auto-config",
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
     "prettier/babel",
@@ -25,6 +30,7 @@
     "prettier",
     "simple-import-sort",
     "import",
+    "jsdoc",
     "@typescript-eslint"
   ],
   "rules": {
@@ -35,7 +41,10 @@
     "arrow-body-style": "off",
     "no-confusing-arrow": "off",
     "prefer-arrow-callback": "off",
-    "curly": ["warn", "all"],
+    "curly": [
+      "warn",
+      "all"
+    ],
     // "comma-dangle": [
     //   "warn",
     //   "only-multiline"
@@ -196,6 +205,59 @@
     "import/no-amd": 0,
     "import/no-commonjs": 0,
     "import/no-nodejs-modules": 0,
-    "import/unambiguous": 0
-  }
+    "import/unambiguous": 0,
+    /*
+  ―――――――― eslint-plugin-jsdoc ―――――――――――――――――――――――――――――――――――――――――――――――――
+    */
+    "jsdoc/check-access": 0, // "error", // Recommended
+    "jsdoc/check-alignment": 0, // "warn", // Recommended
+    "jsdoc/check-examples": "off",
+    "jsdoc/check-indentation": "off",
+    "jsdoc/check-line-alignment": 0, // "warn",
+    "jsdoc/check-param-names": 0, // "warn", // Recommended
+    "jsdoc/check-property-names": 0, // "warn", // Recommended
+    "jsdoc/check-syntax": "off",
+    "jsdoc/check-tag-names": 0, // "warn", // Recommended
+    "jsdoc/check-types": 0, // "warn", // Recommended
+    "jsdoc/check-values": 0, // "error", // Recommended
+    "jsdoc/empty-tags": 0, // "warn", // Recommended
+    "jsdoc/implements-on-classes": 0, // "error", // Recommended
+    "jsdoc/match-description": "off",
+    "jsdoc/newline-after-description": 0, // "warn", // Recommended
+    "jsdoc/no-bad-blocks": 0, // "warn",
+    "jsdoc/no-defaults": 0, // "warn",
+    "jsdoc/no-types": 0, // "warn",
+    "jsdoc/no-undefined-types": 0, // "error", // Recommended
+    "jsdoc/require-description": "off",
+    "jsdoc/require-description-complete-sentence": 0, // "warn",
+    "jsdoc/require-example": 0, // "warn",
+    "jsdoc/require-file-overview": "off",
+    "jsdoc/require-hyphen-before-param-description": 0, // "warn",
+    "jsdoc/require-jsdoc": 0, // "warn", // Recommended
+    "jsdoc/require-param": 0, // "warn", // Recommended
+    "jsdoc/require-param-description": 0, // "error", // Recommended
+    "jsdoc/require-param-name": 0, // "error", // Recommended
+    "jsdoc/require-param-type": 0, // "error", // Recommended
+    "jsdoc/require-property": 0, // "warn", // Recommended
+    "jsdoc/require-property-description": 0, // "error", // Recommended
+    "jsdoc/require-property-name": 0, // "error", // Recommended
+    "jsdoc/require-property-type": 0, // "error", // Recommended
+    "jsdoc/require-returns": 0, // "error", // Recommended
+    "jsdoc/require-returns-check": 0, // "error", // Recommended
+    "jsdoc/require-returns-description": 0, // "error", // Recommended
+    "jsdoc/require-returns-type": 0, // "error", // Recommended
+    "jsdoc/valid-types": 0 // "error" // Recommended
+  },
+  "overrides": [
+    {
+      // enable the rule specifically for json files
+      "files": [
+        "*.json",
+        "*.jsonc"
+      ],
+      "rules": {
+        "semi": 0
+      }
+    }
+  ]
 }

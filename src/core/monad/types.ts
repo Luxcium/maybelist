@@ -9,13 +9,13 @@ import type { IFunctor } from '../functor/types';
 // import { IFunctor, ValueType } from './i-functor';
 
 interface IApply<A = any, U = any> extends IFunctor<A> {
-  /** fantasy-land/ap :: Apply f => f A ~> f (A -> B) -> f B */
+  /** Fantasy-land/ap :: Apply f => f A ~> f (A -> B) -> f B */
   ap: ApType<A, U>;
 }
 type ApType<A = any, U = any> = <B = U>(Ap: IApply<(val: A) => B>) => IApply<U>;
 
 interface IApplicative {
-  /** fantasy-land/of :: Applicative f => a -> f a */
+  /** Fantasy-land/of :: Applicative f => a -> f a */
   readonly of: Applicative;
 }
 type Applicative<RType = IApply> = <TVal>(value?: TVal) => RType;
@@ -47,7 +47,7 @@ type Option<A> =
 
 interface IChain<A = any> {
   // extends Monad<A>
-  /** fantasy-land/chain :: Chain m => m A ~> (A -> m B) -> m B */
+  /** Fantasy-land/chain :: Chain m => m A ~> (A -> m B) -> m B */
   chain: ChainType<A>;
 }
 type ChainType<A = any> = <B = any>(fn: (val: A) => IChain<B>) => IChain<B>;

@@ -1,3 +1,7 @@
+/**
+ * @param value
+ * @example
+ */
 function enumerable(value: boolean) {
   return function (
     target: any,
@@ -13,6 +17,10 @@ function enumerable(value: boolean) {
 const beNotEnumerable = enumerable(false);
 const beEnumerable = enumerable(true);
 
+/**
+ * @param value
+ * @example
+ */
 function configurable(value: boolean) {
   return function (
     target: any,
@@ -28,6 +36,10 @@ function configurable(value: boolean) {
 const beNotConfigurable = configurable(false);
 const beConfigurable = configurable(true);
 
+/**
+ * @param value
+ * @example
+ */
 function writable(value: boolean) {
   return function (
     target: any,
