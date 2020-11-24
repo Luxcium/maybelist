@@ -1,4 +1,4 @@
-import type { IFunctor } from './functor/types';
+import { IFunctor } from './functor/types';
 
 type FnAtoB<A, B> = (val: A) => B;
 

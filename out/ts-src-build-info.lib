@@ -217,23 +217,18 @@
         "affectsGlobalScope": false
       },
       "../src/core/functor/types.ts": {
-        "version": "916584ed2c76eb97c49747105bcdb9021c68d35f7404196f85973821cf35b51e",
-        "signature": "a37086f50bf18bfa1ffff076579f557dcaebaa2dd80d954a10657e44ee936d5b",
-        "affectsGlobalScope": false
-      },
-      "../src/core/types.ts": {
-        "version": "66d1a0889f77a40e3fdbe3dc7787510c60e107673cd050b5185b0522421a66a5",
-        "signature": "00e3ff33d24c428e55e6310ceff016c93538d0f4bd042a080df3c076ffd46d58",
-        "affectsGlobalScope": false
-      },
-      "../src/core/functor/f-type.ts": {
         "version": "4d8ca61d3818a9bf606c3896977a09a6bf212f88d46a55122b1958048cbc0442",
         "signature": "9250f3a609e17022f8fafa01682796d59336193d638d5fc094e43c11b6423d63",
         "affectsGlobalScope": false
       },
+      "../src/core/types.ts": {
+        "version": "e4a9121c8ccfcd26c0c407bc39cfddb363b74109e1c36bc3291772de0565aa11",
+        "signature": "cd6de1748366d9f69a8fff4bccdb04bb93efed21173cfa3d70887b3345a5e432",
+        "affectsGlobalScope": false
+      },
       "../src/core/functor/functor.ts": {
-        "version": "dcadf88dcaf0675ea5df91e86f92d9fed1f716ef8725bece7517a5feaf6e6db2",
-        "signature": "fc3e0c992754dba1279a235b8a0b15970a52605cfbcde491952db6f54c96e02b",
+        "version": "cd7f2a2f001b4cab2792f7969e0abb3e20da57d9f295e72b615d45b972fffb73",
+        "signature": "a68da7b3d2358936e059406636cf0e26dfe66ba6833889307a65d06d647c2adc",
         "affectsGlobalScope": false
       },
       "../src/core/functor/index.ts": {
@@ -299,11 +294,6 @@
       "../src/util/index.ts": {
         "version": "d59d858ca0156fb98cefd73178e308c800966dfd1af4baffc61167d505d63b9c",
         "signature": "6ef6a3cbf09074ef2a1820830521e688ba926224cfe4961dfcd47aa893001f82",
-        "affectsGlobalScope": false
-      },
-      "../src/core/functor/functor.bak.ts": {
-        "version": "b14d16e65adad4d77f02d2ffb38add30b7e3dabd079c247f43bcdfcbeab44a6e",
-        "signature": "536aa3d03b71a2cddbec0e3deb4ddd784745e93c014bfc9c6e60d3334e436e43",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -865,18 +855,9 @@
         "../src/core/index.ts",
         "../src/core/types.ts"
       ],
-      "../src/core/functor/f-type.ts": [
-        "../node_modules/tslib/tslib.d.ts",
-        "../src/core/types.ts"
-      ],
-      "../src/core/functor/functor.bak.ts": [
-        "../node_modules/tslib/tslib.d.ts",
-        "../src/core/functor/types.ts",
-        "../src/util/index.ts"
-      ],
       "../src/core/functor/functor.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/core/functor/f-type.ts",
+        "../src/core/functor/types.ts",
         "../src/core/types.ts"
       ],
       "../src/core/functor/index.ts": [
@@ -884,7 +865,8 @@
         "../src/core/functor/functor.ts"
       ],
       "../src/core/functor/types.ts": [
-        "../node_modules/tslib/tslib.d.ts"
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/types.ts"
       ],
       "../src/core/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -1131,18 +1113,15 @@
         "../src/core/index.ts",
         "../src/core/types.ts"
       ],
-      "../src/core/functor/f-type.ts": [
-        "../src/core/types.ts"
-      ],
-      "../src/core/functor/functor.bak.ts": [
-        "../src/core/functor/types.ts"
-      ],
       "../src/core/functor/functor.ts": [
-        "../src/core/functor/f-type.ts",
+        "../src/core/functor/types.ts",
         "../src/core/types.ts"
       ],
       "../src/core/functor/index.ts": [
         "../src/core/functor/functor.ts"
+      ],
+      "../src/core/functor/types.ts": [
+        "../src/core/types.ts"
       ],
       "../src/core/index.ts": [
         "../src/core/functor/index.ts",
@@ -1275,8 +1254,6 @@
       "../src/core/apply/working-notes.ts",
       "../src/core/chain/chain.ts",
       "../src/core/chain/types.ts",
-      "../src/core/functor/f-type.ts",
-      "../src/core/functor/functor.bak.ts",
       "../src/core/functor/functor.ts",
       "../src/core/functor/index.ts",
       "../src/core/functor/types.ts",

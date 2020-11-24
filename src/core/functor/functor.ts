@@ -1,5 +1,5 @@
 import type { FnAtoB } from '../types';
-import { IFunctor } from './f-type';
+import { IFunctor } from './types';
 
 export class Functor<FVal = unknown> implements IFunctor<FVal> {
   public static of<TVal>(value: TVal): Functor<TVal> {

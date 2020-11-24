@@ -8,8 +8,8 @@ import {
   configurable,
   enumerable,
   writable,
-} from '../../util';
-import type { IFunctor } from './types';
+} from '../src/util';
+import type { IFunctor } from './types.bak.txt';
 
 class Functor<FVal = any> implements IFunctor<FVal> {
   public static of<TVal>(value: TVal): Functor<TVal> {
