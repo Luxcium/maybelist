@@ -1,12 +1,8 @@
 import { Functor } from '..';
 import { Chain } from '../chain/chain';
 import type { FnAtoB } from '../types';
+import { IMonad } from './types';
 
-interface IMonad<CVal> {
-  map<R>(fn: (val: CVal) => R): Monad<R>;
-  ap<R>(functor: Functor<FnAtoB<CVal, R>>): Monad<R>;
-  chain<R>(fn: FnAtoB<CVal, Monad<R>>): Monad<R>;
-}
 class Monad<MVal> extends Chain<MVal> implements IMonad<MVal> {
   public static of<TVal>(value: TVal): Monad<TVal> {
     return new Monad<TVal>(value);

@@ -1,12 +1,7 @@
 import { Functor } from '..';
 import { Apply } from '../apply/apply';
 import type { FnAtoB } from '../types';
-
-interface IChain<CVal> {
-  map<R>(fn: (val: CVal) => R): Chain<R>;
-  ap<R>(functor: Functor<FnAtoB<CVal, R>>): Chain<R>;
-  chain<R>(fn: FnAtoB<CVal, Chain<R>>): Chain<R>;
-}
+import { IChain } from './types';
 
 class Chain<CVal = unknown> extends Apply<CVal> implements IChain<CVal> {
   public static of<TVal>(value: TVal): Chain<TVal> {

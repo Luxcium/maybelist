@@ -1,5 +1,4 @@
 import type { FnAtoB } from '../types';
-import { Functor } from '.';
 
 type MapType<A = unknown> = <B>(fn: FnAtoB<A, B>) => IFMap<B>;
 
@@ -15,8 +14,8 @@ interface IFork<A = unknown> {
 type FunctorType<A = unknown> = IFMap<A> & IFork<A>;
 
 interface IFunctor<A = unknown> extends IFMap<A>, IFork<A>, FunctorType<A> {
-  map<B>(fn: FnAtoB<A, B>): Functor<B>;
-  ['fantasy-land/map']<B>(fn: FnAtoB<A, B>): Functor<B>;
+  map<B>(fn: FnAtoB<A, B>): IFunctor<B>;
+  ['fantasy-land/map']<B>(fn: FnAtoB<A, B>): IFunctor<B>;
   readonly fork: A;
 }
 
