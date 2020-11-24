@@ -1,5 +1,5 @@
 import { Functor, Monad } from '../../src';
-import { FatasyMapTest } from '../fantasyland/functor.spec';
+import { fantasyMapTest } from '../fantasyland/functor.spec';
 
 describe('Monad Class:', () => {
   describe('The Monad Instance must implement theses methods:', () => {
@@ -7,7 +7,7 @@ describe('Monad Class:', () => {
     // const myFnMonad = Monad.of((val: string) => val.length);
     describe("The 'map' method:", () => {
       describe("The 'map' method must be Fantasy Land compliant with Functor specification.", () => {
-        FatasyMapTest(Monad);
+        fantasyMapTest(Monad);
       });
 
       describe("Type of monad.map must be 'function' type.", () => {

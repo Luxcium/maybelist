@@ -1,4 +1,4 @@
-import type { Functor } from '..';
+// import type { Functor } from '..';
 
 /**
  * ## Functor.
@@ -51,11 +51,4 @@ type MapType<A = unknown> = <B>(fn: (val: A) => B) => IFMap<B>;
 
 type FunctorType<A = unknown> = IFMap<A> & IFork<A>;
 
-type Of = <TVal>(value: TVal) => Functor<TVal>;
-type FromValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
-
-interface StaticApplicativeFunctor extends Function {
-  of: Of;
-  fromValueOf: FromValueOf;
-}
-export type { IFunctor, StaticApplicativeFunctor };
+export type { IFunctor };

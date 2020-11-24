@@ -1,25 +1,86 @@
 /*
+describe ("Applicative",()=>{})
+describe ("A value that implements the Applicative specification must also implement the Apply specification.",()=>{})
+describe // ("",()=>{})
+describe ("v['fantasy-land/ap'](A['fantasy-land/of'](x => x)) is equivalent to v (identity)",()=>{})
+describe ("A['fantasy-land/of'](x)['fantasy-land/ap'](A['fantasy-land/of'](f)) is equivalent to A['fantasy-land/of'](f(x)) "describe (homomorphism)",()=>{})
+describe ("A['fantasy-land/of'](y)['fantasy-land/ap'](u) is equivalent to u['fantasy-land/ap'](A['fantasy-land/of'](f => f(y))) describe (interchange)",()=>{})
+describe // ("",()=>{})
+describe ("fantasy-land/of method",()=>{})
+describe ("fantasy-land/of :: Applicative f => a -> f a",()=>{})
+describe ("A value which has an Applicative must provide a `fantasy-land/of` function on its type representative. The fantasy-describe land/of "function takes one argument:",()=>{})
+describe // ("",()=>{})
+describe ("F['fantasy-land/of'](a)",()=>{})
+describe ("Given a value f, one can access its type representative via the constructor property:",()=>{})
+describe // ("",()=>{})
+describe ("f.constructor['fantasy-land/of'](a)",()=>{})
+describe ("fantasy-land/of must provide a value of the same Applicative",()=>{})
+describe // ("",()=>{})
+describe ("No parts of a should be checked",()=>{})
+
+
 Applicative
 A value that implements the Applicative specification must also implement the Apply specification.
 
-v['fantasy-land/ap'](A['fantasy-land/of'](x => x)) is equivalent to v (identity)
-A['fantasy-land/of'](x)['fantasy-land/ap'](A['fantasy-land/of'](f)) is equivalent to A['fantasy-land/of'](f(x)) (homomorphism)
-A['fantasy-land/of'](y)['fantasy-land/ap'](u) is equivalent to u['fantasy-land/ap'](A['fantasy-land/of'](f => f(y))) (interchange)
+1. v['fantasy-land/ap'](A['fantasy-land/of'](x => x)) is equivalent to v (identity)
+2. A['fantasy-land/of'](x)['fantasy-land/ap'](A['fantasy-land/of'](f)) is equivalent to A['fantasy-land/of'](f(x)) (homomorphism)
+3. A['fantasy-land/of'](y)['fantasy-land/ap'](u) is equivalent to u['fantasy-land/ap'](A['fantasy-land/of'](f => f(y))) (interchange)
 
 fantasy-land/of method
 fantasy-land/of :: Applicative f => a -> f a
-A value which has an Applicative must provide a fantasy-land/of function on its type representative. The fantasy-land/of function takes one argument:
+A value which has an Applicative must provide a `fantasy-land/of` function on its type representative. The `fantasy-land/of` function takes one argument:
 
 F['fantasy-land/of'](a)
 Given a value f, one can access its type representative via the constructor property:
 
 f.constructor['fantasy-land/of'](a)
-fantasy-land/of must provide a value of the same Applicative
+1. `fantasy-land/of` must provide a value of the same Applicative
 
-No parts of a should be checked
+  i. No parts of a should be checked
 
+
+type
 */
+interface Applicative {
+  of<T>(value: T): any;
+}
 
+export function fatasyOfTest(applicative: Applicative) {
+  describe('Applicative `fantasy-land/of` :: Applicative f => a -> f a', () => {
+    describe('A value that implements the Applicative specification must also implement the Apply specification.', () => {
+      describe("1. Identity: v['fantasy-land/ap'](A['fantasy-land/of'](x => x)) is equivalent to v", () => {});
+
+      describe("2. Homomorphism: A['fantasy-land/of'](x)['fantasy-land/ap'](A['fantasy-land/of'](f)) is equivalent to A['fantasy-land/of'](f(x))", () => {});
+
+      describe("3. Interchange: A['fantasy-land/of'](y)['fantasy-land/ap'](u) is equivalent to u['fantasy-land/ap'](A['fantasy-land/of'](f => f(y)))", () => {});
+
+      describe('fantasy-land/of have a static method caled of', () => {});
+
+      // describe('fantasy-land/of :: Applicative f => a -> f a', () => {});
+
+      describe("A value which has an Applicative must provide a `fantasy-land/of` function on its type representative. The `fantasy-land/of` function takes one argument: F['fantasy-land/of'](a)", () => {
+        it('Must have a static method caled of (fantasy-land/of)', () => {
+          expect(applicative.of);
+        });
+      });
+
+      describe('Given a value f, one can access its type representative via the constructor property:', () => {});
+
+      describe("f.constructor['fantasy-land/of'](a)", () => {});
+
+      describe('1. Same Applicative `fantasy-land/of` must return a value of the same Applicative', () => {});
+
+      describe('No parts of `a` should be checked', () => {});
+      // ----------
+      describe('Applicative', () => {
+        describe('A value that implements the Applicative specification must also \
+implement the Apply specification.', () => {
+          it('should ', () => {});
+        });
+      });
+    });
+  });
+}
 // Fantasy Land Specification
 // Build Status Join the chat at https://gitter.im/fantasyland/fantasy-land
 
@@ -281,15 +342,15 @@ No parts of a should be checked
 // A['fantasy-land/of'](x)['fantasy-land/ap'](A['fantasy-land/of'](f)) is equivalent to A['fantasy-land/of'](f(x)) (homomorphism)
 // A['fantasy-land/of'](y)['fantasy-land/ap'](u) is equivalent to u['fantasy-land/ap'](A['fantasy-land/of'](f => f(y))) (interchange)
 
-// fantasy-land/of method
-// fantasy-land/of :: Applicative f => a -> f a
-// A value which has an Applicative must provide a fantasy-land/of function on its type representative. The fantasy-land/of function takes one argument:
+// `fantasy-land/of` method
+// `fantasy-land/of` :: Applicative f => a -> f a
+// A value which has an Applicative must provide a `fantasy-land/of` function on its type representative. The `fantasy-land/of` function takes one argument:
 
 // F['fantasy-land/of'](a)
 // Given a value f, one can access its type representative via the constructor property:
 
 // f.constructor['fantasy-land/of'](a)
-// fantasy-land/of must provide a value of the same Applicative
+// `fantasy-land/of` must provide a value of the same Applicative
 
 // No parts of a should be checked
 // Alt

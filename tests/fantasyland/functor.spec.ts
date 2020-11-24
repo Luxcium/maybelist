@@ -1,7 +1,29 @@
 import { Functor } from '../../src';
-import type { StaticApplicativeFunctor } from '../../src/core/functor/types';
+import { fatasyOfTest } from './applicative.spec';
 
-export function FatasyMapTest(MapableApplicative: StaticApplicativeFunctor) {
+type Of = <TVal>(value: TVal) => Functor<TVal>;
+// type FromValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
+
+interface StaticApplicativeFunctor extends Function {
+  of: Of;
+  // fromValueOf: FromValueOf;
+}
+
+function f(x: number) {
+  // mutiplyByTwo
+  return 2 * x;
+}
+function g(x: number) {
+  // addTen
+  return x + 10;
+}
+
+export function fantasyMapTest(MapableApplicative: StaticApplicativeFunctor) {
+  describe('it must be an applicative in  our implementation', () => {
+    describe('Have a `of` Static Method', () => {
+      fatasyOfTest(MapableApplicative);
+    });
+  });
   describe('Functor (Mapable): (`fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b`)', () => {
     describe("1. Identity u['fantasy-land/map'](a => a) is equivalent to u", () => {
       it("[1/2] MapableApplicative.of('VALUE').map(a => a) is strictly equal to MapableApplicative.of('VALUE')", () => {
@@ -17,14 +39,6 @@ export function FatasyMapTest(MapableApplicative: StaticApplicativeFunctor) {
     });
 
     describe("2. Composition u['fantasy-land/map'](x => f(g(x))) is equivalent to u['fantasy-land/map'](g)['fantasy-land/map'](f) ", () => {
-      function f(x: number) {
-        // mutiplyByTwo
-        return 2 * x;
-      }
-      function g(x: number) {
-        // addTen
-        return x + 10;
-      }
       it('[1/3] MapableApplicative.of(u).map(x => f(g(x))) must compose and be strictly equal to MapableApplicative.of(u).map(g).map(f)', () => {
         expect(MapableApplicative.of(43).map(x => f(g(x)))).toStrictEqual(
           MapableApplicative.of(43).map(g).map(f),

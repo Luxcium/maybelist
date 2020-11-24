@@ -19,8 +19,53 @@ fantasy-land/ap must apply the function in Apply b to the value in Apply a
 
 No parts of return value of that function should be checked.
 The Apply returned by fantasy-land/ap must be the same as a and b
- */
 
+  public ap<R>(c: Apply<FnAtoB<MVal, R>>): Monad<R> {
+    return c.map<Monad<R>>((fn: (val: MVal) => R) => this.map<R>(x => fn(x)))
+      .fork;
+  }
+
+*/
+
+// import { Functor } from '../../src';
+
+type Of = <TVal>(value: TVal) => Apply<TVal>;
+// type FromValueOf = <TVal>(value: Functor<TVal>) => Functor<TVal>;
+
+interface StaticApplicative extends Function {
+  of: Of;
+  // fromValueOf: FromValueOf;
+}
+
+// import { fantasyMapTest } from './functor.spec';
+
+interface Apply<AVal> {
+  map<R>(fn: (val: AVal) => R): Apply<R>;
+  ap<R>(apply: Apply<(val: AVal) => R>): Apply<R>;
+}
+
+export function fantasyApTest(Apply: StaticApplicative) {
+  describe('Apply', () => {
+    describe('A value that implements the Apply specification must also implement the Functor specification.', () => {
+      it("Must construct from 'of' static method and stuff", () => {
+        const apply = Apply.of('VALUE');
+      });
+
+      describe("v['fantasy-land/ap'](u['fantasy-land/ap'](a['fantasy-land/map'](f => g => x => f(g(x))))) is equivalent to v['fantasy-land/ap'](u)['fantasy-land/ap'](a) (composition)", () => {});
+      describe('fantasy-land/ap method', () => {});
+      describe('fantasy-land/ap :: Apply f => f a ~> f (a -> b) -> f b', () => {});
+      describe('A value which has an Apply must provide a fantasy-land/ap method. The fantasy-land/ap method takes one argument:', () => {});
+      describe("a['fantasy-land/ap'](b)", () => {});
+      describe('b must be an Apply of a function', () => {});
+      describe('If b does not represent a function, the behaviour of fantasy-land/ap is unspecified.', () => {});
+      describe('b must be same Apply as a.', () => {});
+      describe('a must be an Apply of any value', () => {});
+      describe('fantasy-land/ap must apply the function in Apply b to the value in Apply a', () => {});
+      describe('No parts of return value of that function should be checked.', () => {});
+      describe('The Apply returned by fantasy-land/ap must be the same as a and b', () => {});
+    });
+  });
+}
 // Fantasy Land Specification
 // Build Status Join the chat at https://gitter.im/fantasyland/fantasy-land
 
