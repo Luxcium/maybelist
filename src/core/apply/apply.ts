@@ -1,4 +1,4 @@
-import { Functor } from '..';
+import { Functor } from '../functor';
 import type { FnAtoB } from '../types';
 import type { IApply } from './types';
 

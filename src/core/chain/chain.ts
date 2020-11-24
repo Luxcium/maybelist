@@ -1,5 +1,5 @@
-import { Functor } from '..';
 import { Apply } from '../apply/apply';
+import { Functor } from '../functor';
 import type { FnAtoB } from '../types';
 import { IChain } from './types';
 
