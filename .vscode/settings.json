@@ -12,43 +12,47 @@
     "dist": true,
     "out": true
   },
-  "coverage-gutters.highlightdark": "#39F0", //"rgba(45, 121, 10, 0.70)",
-  "coverage-gutters.noHighlightDark": "#F363", // "rgba(121, 31, 10, 0.70)",
-  "coverage-gutters.partialHighlightDark": "#F801", // "rgba(121, 86, 10, 0.70)",
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.showRulerCoverage": true,
   "coverage-gutters.showGutterCoverage": true,
-  // "color": "#F36B"
-  // "color": "#F80B"
-  // "color": "#FF0B"
-  // "color": "#0F0B"
-  // "color": "#39FB"
-  // "color": "#93FB"
-  // "coverage-gutters.noGutterIconPathDark": "/home/luxcium/dev/maybelist/.vscode/assets/test-tube-faild.svg",
-  // "coverage-gutters.gutterIconPathDark": "./.vscode/assets/test-tube-pass.svg",
-  // "coverage-gutters.partialGutterIconPathDark": "./app_images/partial-gutter-icon-dark.svg",
+  "coverage-gutters.highlightdark": "#39F1", // rgba (45, 121, 10, 0.70)
+  "coverage-gutters.noHighlightDark": "#F363", // rgba (121, 31, 10, 0.70)
+  "coverage-gutters.partialHighlightDark": "#F802", // rgba (121, 86, 10, 0.70)
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
-
-
   ―― FORMAT BEHAVIOUR
-
   */
-  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": true,
+  "editor.suggest.showFiles": true,
+  "editor.suggest.showFolders": true,
+  //                                                                          ―― ~
+  // ―― FILES BEHAVIOUR
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  //                                                                          ―― ~
+  // ―― JAVASCRIPT BEHAVIOUR
+  "javascript.format.enable": true,
+  "javascript.format.semicolons": "insert",
+  "javascript.suggest.paths": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  //                                                                          ―― ~
+  // ―― TYPESCRIPT BEHAVIOUR
+  "typescript.format.enable": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.suggest.paths": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  //                                                                          ―― ~
+  // ―― CODEACTIONSONSAVE BEHAVIOUR
   "editor.codeActionsOnSave": [
     "source.addMissingImports",
     "source.fixAll.eslint",
     "source.fixAll",
   ],
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.formatOnSaveMode": "file",
-  "javascript.format.enable": true,
-  "typescript.format.enable": true,
-  "javascript.format.semicolons": "insert",
-  "typescript.format.semicolons": "insert",
-  "prettier.trailingComma": "all",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
     // "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -57,35 +61,22 @@
     "editor.defaultFormatter": "vscode.json-language-features"
     // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "typescript.suggest.paths": false,
-  "javascript.suggest.paths": false,
-  "path-intellisense.extensionOnImport": false,
-  "path-intellisense.absolutePathToWorkspace": true,
-  "path-intellisense.autoSlashAfterDirectory": true,
-  "path-intellisense.showHiddenFiles": true,
-  "path-intellisense.mappings": {
-    "./": "${workspaceFolder}",
-    "./src": "${workspaceFolder}/src",
-    "./tests": "${workspaceFolder}/tests",
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.suggest.showFolders": true,
-  "editor.suggest.showFiles": true,
-  "editor.foldingStrategy": "auto",
-  "files.eol": "\n",
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
-
-
+  ―― PATH-INTELLISENSE
+  */
+  "path-intellisense.extensionOnImport": false,
+  "path-intellisense.absolutePathToWorkspace": false,
+  "path-intellisense.autoSlashAfterDirectory": false,
+  "path-intellisense.showHiddenFiles": true,
+  /*
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
   ―― PRETTIER
-
   */
   "prettier.enable": true,
   "prettier.requireConfig": true,
+  "prettier.trailingComma": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   // "prettier.semi": false,
   // "prettier.insertPragma": true,
   // "prettier.ignorePath": ".prettierignore",
@@ -115,10 +106,7 @@
   // "prettier.withNodeModules": false,
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
-
-
   ―― ESLINT
-
   */
   "eslint.quiet": true,
   "eslint.format.enable": true,
@@ -257,10 +245,14 @@ eslint-plugin-node
   },
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
-
   ―― BETTER COMMENTS
-
   */
+  // "color": "#F36B"
+  // "color": "#F80B"
+  // "color": "#FF0B"
+  // "color": "#0F0B"
+  // "color": "#39FB"
+  // "color": "#93FB"
   "better-comments.highlightPlainText": false,
   "better-comments.multilineComments": true,
   "better-comments.tags": [
@@ -596,7 +588,7 @@ eslint-plugin-node
 
     */
     {
-      // ――
+      //                                                                          ―― ~~
       "tag": "――",
       "color": "#FA0D",
       "strikethrough": false,
@@ -620,9 +612,7 @@ eslint-plugin-node
   ],
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
-
   ―― EDITOR RULERS
-
   */
   "editor.rulers": [
     {

@@ -1,4 +1,4 @@
-import type { FnAtoB } from '../../core/types';
+import type { FnAtoB } from '../../types';
 import { Apply } from '../apply/apply';
 import { Functor } from '../functor';
 import { IChain } from './types';
@@ -40,9 +40,5 @@ class Chain<CVal = unknown> extends Apply<CVal> implements IChain<CVal> {
     ).fork;
   }
 }
-
-/** Only for your information */
-const Monad = Chain;
-void Monad;
 
 export { Chain };

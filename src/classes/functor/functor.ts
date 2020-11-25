@@ -1,4 +1,4 @@
-import type { FnAtoB } from '../../core/types';
+import type { FnAtoB } from '../../types';
 import { IFunctor } from './types';
 
 export class Functor<FVal = unknown> implements IFunctor<FVal> {

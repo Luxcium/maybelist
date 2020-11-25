@@ -1,4 +1,4 @@
-import type { FnAtoB } from '../../core/types';
+import type { FnAtoB } from '../../types';
 import { Functor } from '../functor';
 import type { IApply } from './types';
 
@@ -31,9 +31,5 @@ class Apply<AVal = unknown> extends Functor<AVal> implements IApply<AVal> {
     ).fork;
   }
 }
-
-/** Only for your information */
-const Applicative = Apply;
-void Applicative;
 
 export { Apply };

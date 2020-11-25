@@ -1,7 +1,9 @@
-import { Functor } from '../../core';
-import type { FnAtoB } from '../../core/types';
+import type { FnAtoB } from '../../types';
+import { Functor } from '..';
 
-export interface IApply<AVal> {
+interface IApply<AVal> {
   map<R>(fn: (val: AVal) => R): IApply<R>;
   ap<R>(functor: Functor<FnAtoB<AVal, R>>): IApply<R>;
 }
+
+export type { IApply };

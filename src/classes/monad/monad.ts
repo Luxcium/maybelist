@@ -1,5 +1,5 @@
-import { Functor } from '../../core';
-import type { FnAtoB } from '../../core/types';
+import type { FnAtoB } from '../../types';
+import { Functor } from '..';
 import { Chain } from '../chain/chain';
 import { IMonad } from './types';
 
