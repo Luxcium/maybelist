@@ -11,7 +11,7 @@
     "build": "mkdir -p \"./out/performance\" && tsc --noEmit false --generateCpuProfile \"./out/performance\" || exit 1",
     "precibuild": "npm run build || exit 2",
     "cibuild": "tsc --build \"tsconfig.src-build.json\" || exit 1",
-    "postcibuild": "[ \"${ZE160DDEEx}\" = \"1050D673\" ] && (coveralls < coverage/lcov.info); exit 0",
+    "postcibuild": " ( [ \"$(npm audit)\" = 'found 0 vulnerabilities' ] && echo 'found 0 vulnerabilities' || exit 1) &&  [ \"${ZE160DDEEx}\" = \"1050D673\" ] && (coveralls < coverage/lcov.info); exit 0",
     "coverage": "jest --verbose false --silent true --coverage || exit 1",
     "lint": "eslint \"./src/**/*.*\" --fix-dry-run || exit 1",
     "lint:json": "eslint \"**/*.{jsonc,json}\" --fix-dry-run || exit 1",

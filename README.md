@@ -37,4 +37,4 @@ SOFTWARE.
 
 ###### †Scientia es lux principium✨ ™ is a Trade Mark of Benjamin Vincent Kasapoglu
 
-( [ "$(npm audit)" = 'found 0 vulnerabilities' ] || exit 1)
+<!--( [ "$(npm audit)" = 'found 0 vulnerabilities' ] || exit 1)-->
