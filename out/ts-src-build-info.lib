@@ -252,8 +252,8 @@
         "affectsGlobalScope": false
       },
       "../src/classes/functor/functor.ts": {
-        "version": "c47aa5ae34e3d7baca9911b792b06ca3401e43710fe72b12d1064855c0553347",
-        "signature": "c3b101055df2d2aaef9e46ef200ebbb72c1bc4c98f1e4dce0b293f5ad393e157",
+        "version": "c56be489f6056376bb1f4877b92fe63f90e0fee6f59e68f42135b5c36f4a0076",
+        "signature": "2ff8927138fe1a4bebeb71b7b5eb407f8c00de8540728e4ff52f76aa987eebfe",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/index.ts": {
@@ -337,8 +337,8 @@
         "affectsGlobalScope": false
       },
       "../src/core/maybelist/maybelist.ts": {
-        "version": "929068bc0b60b4f950422252b983760ce3c1473972884f8378a525664971122f",
-        "signature": "677d1977184b7a2484026bbced3091ace385cd7e13cb35a0ab707228b6b4cac4",
+        "version": "9b9897bfac4ecb16bcd10b579cc314191f55c5beab5bee5051f2c12c30f56787",
+        "signature": "8551976f93c81b1312aed07150068cccba5c0a9daef8fe1963212c01b377587b",
         "affectsGlobalScope": false
       },
       "../src/util/decorators.ts": {
@@ -985,7 +985,8 @@
       ],
       "../src/core/maybelist/maybelist.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/index.ts"
+        "../src/classes/index.ts",
+        "../src/index.ts"
       ],
       "../src/core/types.ts": [
         "../node_modules/tslib/tslib.d.ts"
@@ -1258,7 +1259,8 @@
         "../src/classes/monad/types.ts"
       ],
       "../src/core/maybelist/maybelist.ts": [
-        "../src/classes/index.ts"
+        "../src/classes/index.ts",
+        "../src/index.ts"
       ],
       "../src/index.ts": [
         "../src/classes/index.ts",
