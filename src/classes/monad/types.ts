@@ -1,5 +1,5 @@
-import { Functor } from '..';
-import { FnAtoB } from '../types';
+import { Functor } from '../../core';
+import { FnAtoB } from '../../core/types';
 
 interface IMonad<MVal> {
   map<R>(fn: (val: MVal) => R): IMonad<R>;

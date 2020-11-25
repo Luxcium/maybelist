@@ -1,5 +1,5 @@
+import type { FnAtoB } from '../../core/types';
 import { Functor } from '../functor';
-import type { FnAtoB } from '../types';
 import type { IApply } from './types';
 
 class Apply<AVal = unknown> extends Functor<AVal> implements IApply<AVal> {

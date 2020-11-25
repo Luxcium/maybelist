@@ -1,4 +1,4 @@
-import type { FnAtoB } from '../types';
+import type { FnAtoB } from '../../core/types';
 
 type MapType<A = unknown> = <B>(fn: FnAtoB<A, B>) => IFMap<B>;
 

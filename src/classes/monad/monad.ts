@@ -1,6 +1,6 @@
-import { Functor } from '..';
+import { Functor } from '../../core';
+import type { FnAtoB } from '../../core/types';
 import { Chain } from '../chain/chain';
-import type { FnAtoB } from '../types';
 import { IMonad } from './types';
 
 class Monad<MVal> extends Chain<MVal> implements IMonad<MVal> {

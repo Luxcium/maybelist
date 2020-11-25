@@ -68,6 +68,15 @@
     "./src": "${workspaceFolder}/src",
     "./tests": "${workspaceFolder}/tests",
   },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggest.showFolders": true,
+  "editor.suggest.showFiles": true,
+  "editor.foldingStrategy": "auto",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
 

@@ -1,5 +1,5 @@
-import { Functor } from '..';
-import { FnAtoB } from '../types';
+import { Functor } from '../../core';
+import { FnAtoB } from '../../core/types';
 
 interface IChain<CVal> {
   map<R>(fn: (val: CVal) => R): IChain<R>;

@@ -1,6 +1,6 @@
+import type { FnAtoB } from '../../core/types';
 import { Apply } from '../apply/apply';
 import { Functor } from '../functor';
-import type { FnAtoB } from '../types';
 import { IChain } from './types';
 
 class Chain<CVal = unknown> extends Apply<CVal> implements IChain<CVal> {
