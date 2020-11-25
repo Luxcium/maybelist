@@ -291,6 +291,31 @@
         "signature": "0545ac06913d1d72169a8d3cb5db83499e1f3062b17e9f8f501ce042ed194b18",
         "affectsGlobalScope": false
       },
+      "../src/core/apply/applicative.spec.ts": {
+        "version": "4eedc26fe4889401c1baac03a95b922466a7b967e16fe3be10bff43fb5ea4520",
+        "signature": "b968fb851b5b463c8c8f35c3704726b34ca533e8bd88211ee40abcbd7cd6c975",
+        "affectsGlobalScope": false
+      },
+      "../src/core/apply/apply.spec.ts": {
+        "version": "1b113abd7fbb205fc844dc20ffe50feb163e6755a5ee19580b84fde34095b5e3",
+        "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
+        "affectsGlobalScope": false
+      },
+      "../src/core/chain/chain.spec.ts": {
+        "version": "1ea197f22425caa5cf23c08ef4f76416c2a1f9b425711aac74904667aa46310a",
+        "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
+        "affectsGlobalScope": false
+      },
+      "../src/core/functor/functor.spec.ts": {
+        "version": "5a31b1cadc836aa38a10b2de58c0fd7f735d1a3c91757c1c25864d4519c4205a",
+        "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
+        "affectsGlobalScope": false
+      },
+      "../src/core/monad/monad.spec.ts": {
+        "version": "bcbd8d420df8f6e2018b9a21847ed3a1680b8090dec3a8d0b64d7a703661ade5",
+        "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
+        "affectsGlobalScope": false
+      },
       "../src/util/decorators.ts": {
         "version": "f18fe169c5eaf36765aa37aa9ff747085237e58bb6491bdfd68c5ab6ad2b113b",
         "signature": "085706aacefd3d58ef5b8d2698ceefde68d305623d51e478865ca570aa3bc119",
@@ -834,6 +859,13 @@
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
       ],
+      "../src/core/apply/applicative.spec.ts": [
+        "../node_modules/tslib/tslib.d.ts"
+      ],
+      "../src/core/apply/apply.spec.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/apply/index.ts"
+      ],
       "../src/core/apply/apply.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/core/apply/types.ts",
@@ -848,6 +880,10 @@
         "../node_modules/tslib/tslib.d.ts",
         "../src/core/index.ts",
         "../src/core/types.ts"
+      ],
+      "../src/core/chain/chain.spec.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/chain/index.ts"
       ],
       "../src/core/chain/chain.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -864,6 +900,10 @@
         "../node_modules/tslib/tslib.d.ts",
         "../src/core/index.ts",
         "../src/core/types.ts"
+      ],
+      "../src/core/functor/functor.spec.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/functor/index.ts"
       ],
       "../src/core/functor/functor.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -888,6 +928,10 @@
       "../src/core/monad/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/core/monad/monad.ts"
+      ],
+      "../src/core/monad/monad.spec.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/monad/index.ts"
       ],
       "../src/core/monad/monad.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -1265,17 +1309,22 @@
       "../node_modules/typescript/lib/lib.esnext.promise.d.ts",
       "../node_modules/typescript/lib/lib.esnext.string.d.ts",
       "../node_modules/typescript/lib/lib.esnext.weakref.d.ts",
+      "../src/core/apply/applicative.spec.ts",
+      "../src/core/apply/apply.spec.ts",
       "../src/core/apply/apply.ts",
       "../src/core/apply/index.ts",
       "../src/core/apply/types.ts",
+      "../src/core/chain/chain.spec.ts",
       "../src/core/chain/chain.ts",
       "../src/core/chain/index.ts",
       "../src/core/chain/types.ts",
+      "../src/core/functor/functor.spec.ts",
       "../src/core/functor/functor.ts",
       "../src/core/functor/index.ts",
       "../src/core/functor/types.ts",
       "../src/core/index.ts",
       "../src/core/monad/index.ts",
+      "../src/core/monad/monad.spec.ts",
       "../src/core/monad/monad.ts",
       "../src/core/monad/types.ts",
       "../src/core/types.ts",
@@ -1537,6 +1586,14 @@
         1
       ],
       [
+        "../src/core/apply/applicative.spec.ts",
+        1
+      ],
+      [
+        "../src/core/apply/apply.spec.ts",
+        1
+      ],
+      [
         "../src/core/apply/apply.ts",
         1
       ],
@@ -1550,6 +1607,10 @@
       ],
       [
         "../src/core/apply/working-notes.ts",
+        1
+      ],
+      [
+        "../src/core/chain/chain.spec.ts",
         1
       ],
       [
@@ -1573,6 +1634,10 @@
         1
       ],
       [
+        "../src/core/functor/functor.spec.ts",
+        1
+      ],
+      [
         "../src/core/functor/functor.ts",
         1
       ],
@@ -1590,6 +1655,10 @@
       ],
       [
         "../src/core/monad/index.ts",
+        1
+      ],
+      [
+        "../src/core/monad/monad.spec.ts",
         1
       ],
       [

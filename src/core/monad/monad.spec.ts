@@ -1,3 +1,13 @@
+import { Monad } from '.';
+
+describe('Monad Class', () => {
+  it('should implement specs & tests for our Monad Class', () => {
+    expect(Monad);
+  });
+});
+
+export default null;
+
 /*
 Monad
 A value that implements the Monad specification must also implement the Applicative and Chain specifications.
@@ -628,10 +638,10 @@ fantasy-land/chain must return a value of the same Chain
 // Alternatives
 // There also exists Static Land Specification with exactly the same ideas as Fantasy Land but based on static methods instead of instance methods.
 
-describe('Fantasy Land Specification', () => {
-  it('should implment', () => {
-    expect(true).toBe(true);
-  });
-});
+// describe('Fantasy Land Specification', () => {
+//   it('should implment', () => {
+//     expect(true).toBe(true);
+//   });
+// });
 
-export default null;
+// export default null;
