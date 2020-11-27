@@ -1,10 +1,10 @@
-import { FnAtoB } from '../../types';
+import { FnAtoB, IApply, IFMap } from '../../types';
 import { Functor } from '..';
 
-interface IChain<CVal> {
-  map<R>(fn: (val: CVal) => R): IChain<R>;
-  ap<R>(functor: Functor<FnAtoB<CVal, R>>): IChain<R>;
-  chain<R>(fn: FnAtoB<CVal, IChain<R>>): IChain<R>;
+interface IChain<A = unknown> extends IFMap<A>, IApply<A> {
+  map<B = unknown>(fn: FnAtoB<A, B>): IChain<B>;
+  ap<B = unknown>(functor: Functor<FnAtoB<A, B>>): IChain<B>;
+  chain<B = unknown>(fn: FnAtoB<A, IChain<B>>): IChain<B>;
 }
 
 export type { IChain };

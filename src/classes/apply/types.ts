@@ -1,9 +1,9 @@
-import type { FnAtoB } from '../../types';
+import type { FnAtoB, IFMap } from '../../types';
 import { Functor } from '..';
 
-interface IApply<AVal> {
-  map<R>(fn: (val: AVal) => R): IApply<R>;
-  ap<R>(functor: Functor<FnAtoB<AVal, R>>): IApply<R>;
+interface IApply<A = unknown> extends IFMap<A> {
+  map<B = unknown>(fn: FnAtoB<A, B>): IApply<B>;
+  ap<B = unknown>(functor: Functor<FnAtoB<A, B>>): IApply<B>;
 }
 
 export type { IApply };

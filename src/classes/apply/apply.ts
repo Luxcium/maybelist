@@ -21,7 +21,7 @@ class Apply<AVal = unknown, UVal = AVal>
   }
 
   public declare ['fantasy-land/map'];
-  public map<R = unknown>(fn: (val: AVal) => R): Apply<R> {
+  public map<R = unknown>(fn: FnAtoB<AVal, R>): Apply<R> {
     return Apply.of<R>(
       super.map<R>(x => fn(x)).fork,
     );

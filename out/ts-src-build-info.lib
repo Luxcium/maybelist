@@ -217,23 +217,23 @@
         "affectsGlobalScope": false
       },
       "../src/classes/apply/types.ts": {
-        "version": "0ce3e2f106e5eb17c642bad0daa813e6a2b9d44dd657f72e873d0c553f904a31",
-        "signature": "c75ef088d9a86833ee54c2ce6716d1a0ed38a3e1be4c4d503f74874176077c59",
+        "version": "12158bdb938034ebed559f80821510e6025f37cbc198b3feaf9eea3b4d28ab46",
+        "signature": "2c0551d9a5c18e105a34be5c8594b349e43d184de879e3a3cfff0bbdce47e5d0",
         "affectsGlobalScope": false
       },
       "../src/classes/chain/types.ts": {
-        "version": "d1569944d88d728b8dbcd5bf4d9cc2a45db799e46daa862bcb71c7babc02b117",
-        "signature": "35cabfb56c994ff3c248136382ae65cb83fe989960f700faaecff9f54cfa2532",
+        "version": "e43a91530f34915373dcbcd2b675563619c7b472548939f4c3abad7f6c3864e1",
+        "signature": "b0e97f3355378b2b73b1e18cbed0739ce6813c1d7e221d4b51b8a77e59a8bbd0",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/types.ts": {
-        "version": "1962fffb2166c82b90797868fb46a90bf39db012f643c145d112ffdf8d2d6512",
-        "signature": "d994a726841622574f01750207a78fe8edbea970c43c15d2f8e69045abb10feb",
+        "version": "9020e0fc30f3bd29a4d1cc4767ce607777f6b38f782b1ec083c643026e9bf641",
+        "signature": "3ccb24a487ca927c3771f8b81d2b92992828e1431baf2d01a6b31bee1578b4d7",
         "affectsGlobalScope": false
       },
       "../src/classes/monad/types.ts": {
-        "version": "ff60fb27e6ac9c9ed62b988ec67c171371c3bec1d3d06f1001780260f2a49760",
-        "signature": "e180255bbbb7a354a749177528906f74414db38cedd0563c2b3110b1a4d18613",
+        "version": "91fcc12b89dbe8b527a0b23722f9be24f96021609f284d777a5361ff2c3dd96f",
+        "signature": "ce6f00f892dae5f4b411181156f00092eb86582a994ca91e10afad973a5c0f49",
         "affectsGlobalScope": false
       },
       "../src/classes/types.ts": {
@@ -252,8 +252,8 @@
         "affectsGlobalScope": false
       },
       "../src/classes/functor/functor.ts": {
-        "version": "de249bf4de6b9cd24b475f122b37956bb7e20c1ee0f42423b2af6bf91c1ea4b3",
-        "signature": "7e5290f7bff962a9de300571af170e89bd4a0963de19f2c1b8abb551dd8859f4",
+        "version": "e12ad5119d8c6ce377162287e5f6a04afc31d16184c790a02f8f3bb718d8931d",
+        "signature": "e403067f6b1339437482a497ab0d3bf2ae5f90f734323c864bc8246ce6eb26ee",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/index.ts": {
@@ -262,8 +262,8 @@
         "affectsGlobalScope": false
       },
       "../src/classes/apply/apply.ts": {
-        "version": "633260ce401bfc65e6d96161f595085afdb8bde6db54dba592ddd705b1b8d796",
-        "signature": "e854ec5f356ee4a4cafaf14a6afa7ee95da836974a60b8dc31414b211bdabe98",
+        "version": "c847a7bc42866f2eaa3aaf1e6913c4d89a74a6a085a975639c12d28b55533ca0",
+        "signature": "fba69b0c246dcf4cf54db5ea804098e6797c7a1567beb7350ea4eb7ff4e19a51",
         "affectsGlobalScope": false
       },
       "../src/classes/apply/index.ts": {
@@ -336,9 +336,14 @@
         "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
         "affectsGlobalScope": false
       },
+      "../src/core/maybelist/types.ts": {
+        "version": "fbc342a1f0c2b960058f179c1567ef166749229e518b7065c3302355a6b648d0",
+        "signature": "26a7d6bc0bf38940139a0eeb296ea30ecf63429813aa75fca310a60786170c94",
+        "affectsGlobalScope": false
+      },
       "../src/core/maybelist/maybelist.ts": {
-        "version": "d00051f172dce6109a7225b15fe4df196a50c3ee56b45180d2f8b7a055630308",
-        "signature": "77ee580c344c2553dbbb69747f9201175d8a4b929c6fa2183c25edb0081f2531",
+        "version": "13492c263930439caba50da22c1d9f1cd48f88dad3f139b43b9f0256946fe74a",
+        "signature": "240d0769f0a70c2f01404a9749709ddf8d3c3fcd96b492486bd575ff94eb964f",
         "affectsGlobalScope": false
       },
       "../src/util/decorators.ts": {
@@ -349,6 +354,11 @@
       "../src/util/index.ts": {
         "version": "d59d858ca0156fb98cefd73178e308c800966dfd1af4baffc61167d505d63b9c",
         "signature": "6ef6a3cbf09074ef2a1820830521e688ba926224cfe4961dfcd47aa893001f82",
+        "affectsGlobalScope": false
+      },
+      "../src/util/types.ts": {
+        "version": "9e6d600bd7999808bebde61242c271ddc952e6cd99a07a471a2eebff82c2297e",
+        "signature": "3336c61d96c827da629c4824d3118272141d8df32e8706baf8853dc6c5d4fd7e",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -986,6 +996,13 @@
       "../src/core/maybelist/maybelist.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/classes/functor/functor.ts",
+        "../src/core/maybelist/types.ts",
+        "../src/index.ts"
+      ],
+      "../src/core/maybelist/types.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/classes/functor/types.ts",
+        "../src/index.ts",
         "../src/types.ts"
       ],
       "../src/core/types.ts": [
@@ -1007,6 +1024,9 @@
       "../src/util/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/util/decorators.ts"
+      ],
+      "../src/util/types.ts": [
+        "../node_modules/tslib/tslib.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -1260,6 +1280,12 @@
       ],
       "../src/core/maybelist/maybelist.ts": [
         "../src/classes/functor/functor.ts",
+        "../src/core/maybelist/types.ts",
+        "../src/index.ts"
+      ],
+      "../src/core/maybelist/types.ts": [
+        "../src/classes/functor/types.ts",
+        "../src/index.ts",
         "../src/types.ts"
       ],
       "../src/index.ts": [
@@ -1395,11 +1421,13 @@
       "../src/core/index.ts",
       "../src/core/maybelist/index.ts",
       "../src/core/maybelist/maybelist.ts",
+      "../src/core/maybelist/types.ts",
       "../src/core/types.ts",
       "../src/index.ts",
       "../src/types.ts",
       "../src/util/decorators.ts",
-      "../src/util/index.ts"
+      "../src/util/index.ts",
+      "../src/util/types.ts"
     ],
     "affectedFilesPendingEmit": [
       [
@@ -1807,6 +1835,10 @@
         1
       ],
       [
+        "../src/core/maybelist/types.ts",
+        1
+      ],
+      [
         "../src/core/monad/index.ts",
         1
       ],
@@ -1840,6 +1872,10 @@
       ],
       [
         "../src/util/index.ts",
+        1
+      ],
+      [
+        "../src/util/types.ts",
         1
       ]
     ]

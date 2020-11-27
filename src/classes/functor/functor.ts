@@ -4,7 +4,7 @@ import { IFunctor } from './types';
 /*
 ~~=···~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~···= ~~
 */
-class Functor<FVal = unknown, UVal = FVal> implements IFunctor<FVal, UVal> {
+class Functor<FVal = unknown, UVal = FVal> implements IFunctor<FVal> {
   // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
   public static of<TVal, Tx = TVal>(value: Tx): Functor<TVal, Tx> {
     return new Functor<TVal, Tx>(value);
@@ -24,10 +24,15 @@ class Functor<FVal = unknown, UVal = FVal> implements IFunctor<FVal, UVal> {
     return this._value;
   }
 
+  // public |-···―――――――――――――――――――――――――――――――――――――――――···-| clone() |-···――― ~
+  public clone(): UVal {
+    return JSON.parse(JSON.stringify(this.fork));
+  }
+
   public declare ['fantasy-land/map'];
   // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
   public map<Rx>(fn: FnAtoB<FVal, Rx>) {
-    return Functor.of<Rx>(fn((this._value as any) as FVal));
+    return Functor.of<Rx>(fn(this._value as any));
   }
 }
 /*
