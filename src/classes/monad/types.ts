@@ -1,10 +1,10 @@
-import { FnAtoB } from '../../types';
+import { FnAtoB, IApply, IChain } from '../../types';
 import { Functor } from '..';
 
-interface IMonad<MVal> {
-  map<R>(fn: (val: MVal) => R): IMonad<R>;
-  ap<R>(functor: Functor<FnAtoB<MVal, R>>): IMonad<R>;
-  chain<R>(fn: FnAtoB<MVal, IMonad<R>>): IMonad<R>;
+interface IMonad<A = any> extends IChain<A>, IApply<A> {
+  map<B = any>(fn: (val: A) => B): IMonad<B>;
+  ap<B = any>(functor: Functor<FnAtoB<A, B>>): IMonad<B>;
+  chain<B = any>(fn: FnAtoB<A, IMonad<B>>): IMonad<B>;
 }
 
 export type { IMonad };

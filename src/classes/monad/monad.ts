@@ -4,9 +4,9 @@ import { Chain } from '../chain/chain';
 import { IMonad } from './types';
 
 class Monad<MVal> extends Chain<MVal> implements IMonad<MVal> {
-  public static of<TVal>(value: TVal): Monad<TVal> {
+  public static of = <TVal>(value: TVal): Monad<TVal> => {
     return new Monad<TVal>(value);
-  }
+  };
   public static fromValueOf<TVal>(value: Functor<TVal>): Monad<TVal> {
     return Monad.of<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
