@@ -27,27 +27,27 @@ export type { FromArray, IMaybelist, Unbox };
 
 /*
  ~~==~···~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~···~==~ ~
+ //+ T is a type  of valut `T`.
+ //+ Ts is a type of value `T[]`.
+ //+ Tx is an incoming type similar to `T` but not directly related to `T`.
+ //+ Rx is a resulting type similar to `T` but not directly related to `T`.
 */
 class Maybelist<T, Ts extends Array<T> = T[]> {
   // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
-  public static of = <T>(...values: T[] | [T[]]) => {
+  public static of = <Tx>(...values: Tx[] | [Tx[]]): Maybelist<Tx> => {
     if (values.length === 1) {
       const value = values[0];
       if (Array.isArray(value)) {
-        return new Maybelist<T>([...value]);
+        return new Maybelist<Tx>([...value]);
       }
     }
 
-    return new Maybelist<T>([...(values as T[])]);
+    return new Maybelist<Tx>([...(values as Tx[])]);
   };
 
-  // public static of<TVal>(value: TVal): Maybelist<TVal> {
-  //   return new Maybelist<TVal>(value);
-  // }
-
   // static |-···―――――――――――――――――――――――――――――――――――···-| fromValueOf() |-···――― ~
-  public static fromValueOf = <TVal>(value: Functor<TVal>) => {
-    return Maybelist.of<TVal>(JSON.parse(JSON.stringify(value.fork)));
+  public static fromValueOf = <Tx>(value: Functor<Tx>): Maybelist<Tx> => {
+    return Maybelist.of<Tx>(JSON.parse(JSON.stringify(value.fork)));
   };
 
   // protected |-···―――――――――――――――――――――――――――――――――――――――···-| _value |-···――― ~
@@ -66,22 +66,26 @@ class Maybelist<T, Ts extends Array<T> = T[]> {
     return this._value;
   }
 
+  public clone(): Ts {
+    return JSON.parse(JSON.stringify(this.fork));
+  }
+
   public declare ['fantasy-land/map'];
   // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
-  public map<R>(fn: (val: Ts) => R) {
-    return Maybelist.of<R>(fn(this._value));
+  public map<Rx>(fn: FnAtoB<T, Rx>): Maybelist<Rx> {
+    return Maybelist.of<Rx>(this.fork.map(fn));
   }
 
   public declare ['fantasy-land/ap'];
   // public |-···――――――――――――――――――――――――――――――――――――――――――――···-| ap() |-···――― ~
-  public ap<R>(functor: Functor<FnAtoB<Ts, R>>) {
-    return functor.map((fn: FnAtoB<Ts, R>) => this.map<R>(x => fn(x))).fork;
+  public ap<Rx>(functor: Functor<FnAtoB<T, Rx>>): Maybelist<Rx> {
+    return functor.map((fn: FnAtoB<T, Rx>) => this.map<Rx>(x => fn(x))).fork;
   }
 
   public declare ['fantasy-land/chain'];
   // public |-···―――――――――――――――――――――――――――――――――――――――――···-| chain() |-···――― ~
-  public chain<R>(fn: FnAtoB<Ts, Maybelist<R>>) {
-    return Maybelist.of<Maybelist<R>>(this.map(x => fn(x)).fork).fork;
+  public chain<Rx>(fn: FnAtoB<T, Maybelist<Rx>>): Maybelist<Rx> {
+    return Maybelist.of<Rx>(this.fork.flatMap<Rx>(x => fn(x).fork));
   }
 }
 

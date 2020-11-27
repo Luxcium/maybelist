@@ -337,8 +337,8 @@
         "affectsGlobalScope": false
       },
       "../src/core/maybelist/maybelist.ts": {
-        "version": "a32ec045fbc91dceb9a3a10de4a00f7bf175334630f6c4b221768b2a1a2f5ade",
-        "signature": "bc9830105644130cbf3e1db6eddfcd4a5ca3ba87782781ec0fa67d0e4d63de0a",
+        "version": "0a1d974193d3b6bb3c54e5872b6e5ab15bacbe4bfeedc61fafd2eb4398215818",
+        "signature": "3c6afbe852d9db17ac45b6d1fce125800c36bc9de98647d7cf5173cb39585106",
         "affectsGlobalScope": false
       },
       "../src/util/decorators.ts": {
