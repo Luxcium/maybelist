@@ -3,16 +3,19 @@ import { Apply } from '../apply/apply';
 import { Functor } from '../functor';
 import { IChain } from './types';
 
-class Chain<CVal = unknown> extends Apply<CVal> implements IChain<CVal> {
-  public static of<TVal>(value: TVal): Chain<TVal> {
-    return new Chain<TVal>(value);
+class Chain<CVal = unknown, UVal = CVal>
+  extends Apply<CVal, UVal>
+  implements IChain<CVal> {
+  // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
+  public static of<TVal, Tx = TVal>(value: Tx): Chain<TVal, Tx> {
+    return new Chain<TVal, Tx>(value);
   }
 
   public static fromValueOf<TVal>(value: Functor<TVal>): Chain<TVal> {
     return Chain.of<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
 
-  protected constructor(value: CVal) {
+  protected constructor(value: UVal) {
     super(value);
     this['fantasy-land/map'] = this.map;
     this['fantasy-land/ap'] = this.ap;

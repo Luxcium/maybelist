@@ -3,14 +3,18 @@ import { Functor } from '..';
 import { Chain } from '../chain/chain';
 import { IMonad } from './types';
 
-class Monad<MVal> extends Chain<MVal> implements IMonad<MVal> {
-  public static of = <TVal>(value: TVal): Monad<TVal> => {
-    return new Monad<TVal>(value);
-  };
+class Monad<MVal, UVal = MVal>
+  extends Chain<MVal, UVal>
+  implements IMonad<MVal> {
+  // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
+  public static of<TVal, Tx = TVal>(value: Tx): Monad<TVal, Tx> {
+    return new Monad<TVal, Tx>(value);
+  }
+
   public static fromValueOf<TVal>(value: Functor<TVal>): Monad<TVal> {
     return Monad.of<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
-  public constructor(value: MVal) {
+  public constructor(value: UVal) {
     super(value);
     this['fantasy-land/map'] = this.map;
     this['fantasy-land/ap'] = this.ap;

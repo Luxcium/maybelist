@@ -2,16 +2,19 @@ import type { FnAtoB } from '../../types';
 import { Functor } from '../functor';
 import type { IApply } from './types';
 
-class Apply<AVal = unknown> extends Functor<AVal> implements IApply<AVal> {
-  public static of<TVal>(value: TVal): Apply<TVal> {
-    return new Apply<TVal>(value);
+class Apply<AVal = unknown, UVal = AVal>
+  extends Functor<AVal, UVal>
+  implements IApply<AVal> {
+  // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
+  public static of<TVal, Tx = TVal>(value: Tx): Apply<TVal, Tx> {
+    return new Apply<TVal, Tx>(value);
   }
 
   public static fromValueOf<TVal>(value: Functor<TVal>): Apply<TVal> {
     return Apply.of<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
 
-  protected constructor(value: AVal) {
+  protected constructor(value: UVal) {
     super(value);
     this['fantasy-land/map'] = this.map;
     this['fantasy-land/ap'] = this.ap;
