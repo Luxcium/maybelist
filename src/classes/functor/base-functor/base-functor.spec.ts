@@ -1,4 +1,3 @@
-import { MapableConstructor } from '../../util/types';
 import { BaseFunctor } from './base-functor';
 
 const VALUE = 'VALUE';
@@ -13,7 +12,7 @@ const g = function getStringLength(x: string): number {
   return x.length;
 };
 
-export function fantasyBaseMapTest(Mapable: MapableConstructor) {
+export function fantasyBaseMapTest(Mapable: any) {
   describe('Our BaseFunctor (Mapable) must comply with Fantasy Land Specification of a Functor.', () => {
     describe("A Functor in Fantasy Land Specification is mapable using the ['fantasy-land/map'] method: `fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b`", () => {
       describe("1. Identity: `u['fantasy-land/map'](a => a)` is equivalent to `u` (identity)", () => {

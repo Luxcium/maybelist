@@ -1,16 +1,14 @@
-import type { FnAtoB } from '../../types';
-import { IFunctor } from './types';
+import { FnAtoB } from '../../..';
+import { IBaseFunctor } from './types';
 
 /*
 ~~=···~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~···= ~~
 */
-class BaseFunctor<BFVal = unknown> implements IFunctor<BFVal> {
+class BaseFunctor<BFVal = unknown> implements IBaseFunctor<BFVal> {
   // constructor |-···――――――――――――――――――――――――――――――――――···-| Functor() |-···――― ~
-  public constructor(protected _value: BFVal) {
-    this['fantasy-land/map'] = this.fMap;
-  }
+  public constructor(protected _value: BFVal) {}
 
-  public declare ['fantasy-land/map'];
+  public ['fantasy-land/map'] = this.fMap;
   // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
   public fMap<R>(fn: FnAtoB<BFVal, R>) {
     return new BaseFunctor(fn(this._value));

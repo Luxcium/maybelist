@@ -251,9 +251,19 @@
         "signature": "6691f7201e5af9af110545856d5ffa90b8704012d9c0676da332067a6197a50d",
         "affectsGlobalScope": false
       },
-      "../src/classes/functor/base-functor.ts": {
-        "version": "49fe112d092b9e70b85e72d456b4d5ee856db8f332f3e4cd68c3afc0416608c6",
-        "signature": "47281b76ef733fcb210239a27bae56c8bc40292028cc008a5f89eb5c378e0952",
+      "../src/classes/functor/base-functor/types.ts": {
+        "version": "a38454e0098b7a3c833f5a781726d4c008e2e58b1cc7607ba15ad376be7c3cb6",
+        "signature": "43170172333955ba4e3a4c9204f266b2bae81318a73d0b0b8344433602dd7063",
+        "affectsGlobalScope": false
+      },
+      "../src/classes/functor/base-functor/base-functor.ts": {
+        "version": "59121d8363e6a3c82535000a6adb8959c9f1f19d99e42573ab344c4e267b1014",
+        "signature": "ccc4d6c59b55a48dc3e19d4f9ba2e72ff20f95dad2afb3ae85cbaf95b70921de",
+        "affectsGlobalScope": false
+      },
+      "../src/classes/functor/base-functor/index.ts": {
+        "version": "467da3d5c40ef5fc1e3fab595ee6e3b1e5d28d34653f5fcf848b0f8fcd9b3ecd",
+        "signature": "467da3d5c40ef5fc1e3fab595ee6e3b1e5d28d34653f5fcf848b0f8fcd9b3ecd",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/functor.ts": {
@@ -321,24 +331,9 @@
         "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
         "affectsGlobalScope": false
       },
-      "../src/util/types.ts": {
-        "version": "39ed4dcc1a068d7298193991bc661d00507e940aed415eec7160db53939ae3bd",
-        "signature": "1aae427cb992a0d7dba1966364e1bdf3445eea254580f838fe660406be75673d",
-        "affectsGlobalScope": false
-      },
-      "../src/classes/functor/base-functor.spec.ts": {
-        "version": "b0a7f49558d58534cd660c47de1dc0523ea855e6597c3689cf479cdf106f2e2b",
-        "signature": "4f4535798d7cc776c90fde9f3bd7dfa3b811d2ec348d03fa82333e8c7f09c53b",
-        "affectsGlobalScope": false
-      },
-      "../src/classes/functor/base-functor.test.ts": {
-        "version": "4560e948a2857c4b8aee4e94b980984b34a757d2a9e4404181f0b98b62126c19",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "affectsGlobalScope": false
-      },
-      "../src/classes/functor/functor.test.ts": {
-        "version": "28ecb10aa5b0ec40e33cb92b2acda4991eaea0bd9f7cfa50b0ee56d517d61fcd",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "../src/classes/functor/base-functor/base-functor.spec.ts": {
+        "version": "0ffc505d64654e76e05d4028397c6db71dd69a069a6a8d4bf74641ffa4cfd91d",
+        "signature": "e6049232afe11731f65ba8feecab3cb19c6421c6dfa03f628fad7d752841d130",
         "affectsGlobalScope": false
       },
       "../src/classes/monad/monad.spec.ts": {
@@ -374,6 +369,11 @@
       "../src/util/index.ts": {
         "version": "d59d858ca0156fb98cefd73178e308c800966dfd1af4baffc61167d505d63b9c",
         "signature": "6ef6a3cbf09074ef2a1820830521e688ba926224cfe4961dfcd47aa893001f82",
+        "affectsGlobalScope": false
+      },
+      "../src/util/types.ts": {
+        "version": "39ed4dcc1a068d7298193991bc661d00507e940aed415eec7160db53939ae3bd",
+        "signature": "1aae427cb992a0d7dba1966364e1bdf3445eea254580f838fe660406be75673d",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -951,25 +951,23 @@
         "../src/classes/index.ts",
         "../src/types.ts"
       ],
-      "../src/classes/functor/base-functor.spec.ts": [
+      "../src/classes/functor/base-functor/base-functor.spec.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor.ts",
-        "../src/util/types.ts"
+        "../src/classes/functor/base-functor/base-functor.ts"
       ],
-      "../src/classes/functor/base-functor.test.ts": [
+      "../src/classes/functor/base-functor/base-functor.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor.spec.ts",
-        "../src/classes/functor/base-functor.ts"
+        "../src/classes/functor/base-functor/types.ts",
+        "../src/index.ts"
       ],
-      "../src/classes/functor/base-functor.ts": [
+      "../src/classes/functor/base-functor/index.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/classes/functor/base-functor/base-functor.ts"
+      ],
+      "../src/classes/functor/base-functor/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/classes/functor/types.ts",
-        "../src/types.ts"
-      ],
-      "../src/classes/functor/functor.test.ts": [
-        "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor.spec.ts",
-        "../src/classes/functor/functor.ts"
+        "../src/index.ts"
       ],
       "../src/classes/functor/functor.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -979,7 +977,7 @@
       ],
       "../src/classes/functor/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor.ts",
+        "../src/classes/functor/base-functor/index.ts",
         "../src/classes/functor/functor.ts"
       ],
       "../src/classes/functor/types.ts": [
@@ -1276,12 +1274,16 @@
         "../src/classes/index.ts",
         "../src/types.ts"
       ],
-      "../src/classes/functor/base-functor.spec.ts": [
-        "../src/util/types.ts"
+      "../src/classes/functor/base-functor/base-functor.ts": [
+        "../src/classes/functor/base-functor/types.ts",
+        "../src/index.ts"
       ],
-      "../src/classes/functor/base-functor.ts": [
+      "../src/classes/functor/base-functor/index.ts": [
+        "../src/classes/functor/base-functor/base-functor.ts"
+      ],
+      "../src/classes/functor/base-functor/types.ts": [
         "../src/classes/functor/types.ts",
-        "../src/types.ts"
+        "../src/index.ts"
       ],
       "../src/classes/functor/functor.ts": [
         "../src/classes/functor/index.ts",
@@ -1289,7 +1291,7 @@
         "../src/index.ts"
       ],
       "../src/classes/functor/index.ts": [
-        "../src/classes/functor/base-functor.ts",
+        "../src/classes/functor/base-functor/index.ts",
         "../src/classes/functor/functor.ts"
       ],
       "../src/classes/functor/types.ts": [
@@ -1450,10 +1452,10 @@
       "../src/classes/chain/chain.ts",
       "../src/classes/chain/index.ts",
       "../src/classes/chain/types.ts",
-      "../src/classes/functor/base-functor.spec.ts",
-      "../src/classes/functor/base-functor.test.ts",
-      "../src/classes/functor/base-functor.ts",
-      "../src/classes/functor/functor.test.ts",
+      "../src/classes/functor/base-functor/base-functor.spec.ts",
+      "../src/classes/functor/base-functor/base-functor.ts",
+      "../src/classes/functor/base-functor/index.ts",
+      "../src/classes/functor/base-functor/types.ts",
       "../src/classes/functor/functor.ts",
       "../src/classes/functor/index.ts",
       "../src/classes/functor/types.ts",
@@ -1764,19 +1766,19 @@
         1
       ],
       [
-        "../src/classes/functor/base-functor.spec.ts",
+        "../src/classes/functor/base-functor/base-functor.spec.ts",
         1
       ],
       [
-        "../src/classes/functor/base-functor.test.ts",
+        "../src/classes/functor/base-functor/base-functor.ts",
         1
       ],
       [
-        "../src/classes/functor/base-functor.ts",
+        "../src/classes/functor/base-functor/index.ts",
         1
       ],
       [
-        "../src/classes/functor/functor.test.ts",
+        "../src/classes/functor/base-functor/types.ts",
         1
       ],
       [

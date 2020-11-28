@@ -83,6 +83,7 @@
     "./src/**/*.ts",
     "./test/**/*.**.ts",
     "backup/types.bak.ts",
+    "tests/functor.test.ts",
   ],
   "exclude": [
     "templates/either.ts",
