@@ -32,7 +32,7 @@ class Functor<FVal = unknown, UVal = FVal> implements IFunctor<FVal> {
   public declare ['fantasy-land/map'];
   // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
   public map<Rx>(fn: FnAtoB<FVal, Rx>) {
-    return Functor.of<Rx>(fn(this._value as any));
+    return Functor.of<Rx>(fn((this._value as any) as FVal));
   }
 }
 /*
