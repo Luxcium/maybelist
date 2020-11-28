@@ -1,5 +1,5 @@
 import { FnAtoB } from '../..';
-import { Functor } from '../../classes/functor/functor';
+import { Functor } from '../../classes';
 import { IMaybelist } from './types';
 
 /*
@@ -57,14 +57,14 @@ class Maybelist<T, Ts extends Array<T> = T[]> implements IMaybelist<T, Ts> {
 
   // public declare ['fantasy-land/map'];
   // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
-  public map<Rx>(fn: FnAtoB<T, Rx>) {
+  public fMap<Rx>(fn: FnAtoB<T, Rx>) {
     return Maybelist.of<Rx>(this.fork.map(fn));
   }
 
   // public declare ['fantasy-land/ap'];
   // public |-···――――――――――――――――――――――――――――――――――――――――――――···-| ap() |-···――― ~
   public ap<Rx>(functor: Functor<FnAtoB<T, Rx>>) {
-    return functor.map((fn: FnAtoB<T, Rx>) => this.map<Rx>(x => fn(x))).fork;
+    return functor.fMap((fn: FnAtoB<T, Rx>) => this.fMap<Rx>(x => fn(x))).fork;
   }
 
   // public declare ['fantasy-land/chain'];

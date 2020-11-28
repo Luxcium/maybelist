@@ -9,7 +9,7 @@ interface IMaybelist<A, As extends Array<A> = A[]>
     IClone<As>,
     IMonad<A>,
     IApply<A> {
-  map<B = unknown>(fn: FnAtoB<A, B>): IMaybelist<B, B[]>;
+  fMap<B = unknown>(fn: FnAtoB<A, B>): IMaybelist<B, B[]>;
   ap<B = unknown>(functor: Functor<FnAtoB<A, B>>): IMaybelist<B, B[]>;
   chain<B = unknown>(fn: FnAtoB<A, IMaybelist<B, B[]>>): IMaybelist<B, B[]>;
 }

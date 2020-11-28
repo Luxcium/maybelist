@@ -3,8 +3,15 @@
     "^.+\\.ts?$": "ts-jest"
   },
   "testEnvironment": "node",
-  "testRegex": "/tests/.*\\.(test)?\\.(ts|tsx|js)$",
-  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "testRegex": ".*\\.(test)?\\.(ts|tsx|js)$",
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json",
+    "node"
+  ],
   "collectCoverage": false,
   "collectCoverageFrom": [
     "./src/**/*.{ts,tsx}",
@@ -12,5 +19,10 @@
     "!**/vendor/**"
   ],
   "coverageDirectory": "./coverage",
-  "coverageReporters": ["json", "lcov", "text", "clover"]
+  "coverageReporters": [
+    "json",
+    "lcov",
+    "text",
+    "clover"
+  ]
 }

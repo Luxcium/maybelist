@@ -10,4 +10,12 @@ type FromArray = UnboxArray<typeof something>; // string
 
 // ――――――――
 
-export type { FromArray, Unbox };
+interface MapableConstructor extends Function {
+  new (_value: any): IMapable;
+}
+
+interface IMapable {
+  ['fantasy-land/map']: any;
+}
+
+export type { FromArray, IMapable, MapableConstructor, Unbox };

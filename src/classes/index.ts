@@ -1,4 +1,4 @@
 export { Apply } from './apply';
 export { Chain } from './chain';
-export { Functor } from './functor';
+export { BaseFunctor, Functor } from './functor';
 export { Monad } from './monad';
