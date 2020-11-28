@@ -1,5 +1,7 @@
 import { FnAtoB } from '../..';
 import { Functor } from '../../classes/functor/functor';
+import { FunctorType, IClone } from '../../classes/functor/types';
+import { IMonad } from '../../classes/types';
 import { IMaybelist } from './types';
 
 /*
@@ -80,3 +82,10 @@ class Maybelist<T, Ts extends Array<T> = T[]> implements IMaybelist<T, Ts> {
 
 export { Maybelist };
 export default null;
+
+const Something: IMonad<number> &
+  FunctorType<number, number[]> &
+  IClone<number[]> = Maybelist.of(41);
+
+const Something2 = Something;
+void Something2;

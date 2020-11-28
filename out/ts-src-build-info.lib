@@ -227,8 +227,8 @@
         "affectsGlobalScope": false
       },
       "../src/classes/functor/types.ts": {
-        "version": "9020e0fc30f3bd29a4d1cc4767ce607777f6b38f782b1ec083c643026e9bf641",
-        "signature": "3ccb24a487ca927c3771f8b81d2b92992828e1431baf2d01a6b31bee1578b4d7",
+        "version": "b4396124d2a8275ed15c68f5e6ea1d81f911615b145e0907f588fb9f3a8c3936",
+        "signature": "45af050f813f27d52460a116fce0837934663094349524229896294c62e3d8aa",
         "affectsGlobalScope": false
       },
       "../src/classes/monad/types.ts": {
@@ -342,7 +342,7 @@
         "affectsGlobalScope": false
       },
       "../src/core/maybelist/maybelist.ts": {
-        "version": "13492c263930439caba50da22c1d9f1cd48f88dad3f139b43b9f0256946fe74a",
+        "version": "83bd30a27a28bfa2a635ed28d75670c8f8f37bafeab38b1745be18d15955bc16",
         "signature": "240d0769f0a70c2f01404a9749709ddf8d3c3fcd96b492486bd575ff94eb964f",
         "affectsGlobalScope": false
       },
@@ -996,6 +996,8 @@
       "../src/core/maybelist/maybelist.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/classes/functor/functor.ts",
+        "../src/classes/functor/types.ts",
+        "../src/classes/types.ts",
         "../src/core/maybelist/types.ts",
         "../src/index.ts"
       ],
