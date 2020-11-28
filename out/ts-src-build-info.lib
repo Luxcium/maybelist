@@ -257,7 +257,7 @@
         "affectsGlobalScope": false
       },
       "../src/classes/functor/base-functor/base-functor.ts": {
-        "version": "59121d8363e6a3c82535000a6adb8959c9f1f19d99e42573ab344c4e267b1014",
+        "version": "8f25022b822ec66cdac786d5da58a2f313ae54ea09759d11fb8aed17f7268873",
         "signature": "ccc4d6c59b55a48dc3e19d4f9ba2e72ff20f95dad2afb3ae85cbaf95b70921de",
         "affectsGlobalScope": false
       },
@@ -267,8 +267,8 @@
         "affectsGlobalScope": false
       },
       "../src/classes/functor/functor.ts": {
-        "version": "ee0be6475514403e42b1185b9abd0f3dca090b55bdbb5ed5446a4ddd34d9403c",
-        "signature": "35df45a3e1680a7cce6e6a16a3e3184fec1a204bf4bc8cf58cd2fa8096baf62c",
+        "version": "bdfd8368973c13e1bf6f213a04c12e2e15afd7ea599ef4d1a3593bd21d9ff217",
+        "signature": "27d40048cafd5278ce133e183ef469720d534bda2419abe178c980a1602b3cdd",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/index.ts": {
@@ -277,7 +277,7 @@
         "affectsGlobalScope": false
       },
       "../src/classes/apply/apply.ts": {
-        "version": "81ca89b52cffc45a32435803eb233697bfedc2e99d282e33b036022c772a24d1",
+        "version": "ba8c03a71ad57dbc4ff8c704d01197c7a285de4ed20141e75a1c8b17605349c4",
         "signature": "0412158c5e3d804534716c99f1a85e77a610eb65648fa2e5675fe651d4c1e7f8",
         "affectsGlobalScope": false
       },
@@ -971,7 +971,7 @@
       ],
       "../src/classes/functor/functor.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/index.ts",
+        "../src/classes/functor/base-functor/index.ts",
         "../src/classes/functor/types.ts",
         "../src/index.ts"
       ],
@@ -1286,7 +1286,7 @@
         "../src/index.ts"
       ],
       "../src/classes/functor/functor.ts": [
-        "../src/classes/functor/index.ts",
+        "../src/classes/functor/base-functor/index.ts",
         "../src/classes/functor/types.ts",
         "../src/index.ts"
       ],

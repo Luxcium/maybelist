@@ -19,8 +19,3 @@ export { BaseFunctor };
 /*
 ~~=···~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~···= ~~
 */
-
-// // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
-// public static of<TVal, Tx = TVal>(value: Tx): Functor<TVal, Tx> {
-//   return new Functor<TVal, Tx>(value);
-// }

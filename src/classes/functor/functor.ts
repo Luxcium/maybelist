@@ -1,5 +1,5 @@
 import { FnAtoB } from '../..';
-import { BaseFunctor } from '.';
+import { BaseFunctor } from './base-functor';
 import { IClone, IFork } from './types';
 
 class Functor<FVal = unknown>
