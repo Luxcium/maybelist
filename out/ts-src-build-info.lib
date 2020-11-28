@@ -252,13 +252,13 @@
         "affectsGlobalScope": false
       },
       "../src/classes/functor/base-functor.ts": {
-        "version": "656d879bbf019eee5e4005fc18790b429c97e6aded7dd5e9f1e74670a6e20cf0",
-        "signature": "88ecef6eef22ba459f828f6c1f64c3c6a3256f0319867c2ac1bb5a3ff80b1454",
+        "version": "49fe112d092b9e70b85e72d456b4d5ee856db8f332f3e4cd68c3afc0416608c6",
+        "signature": "47281b76ef733fcb210239a27bae56c8bc40292028cc008a5f89eb5c378e0952",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/functor.ts": {
-        "version": "8d741eb5c029306d2a1fd19ec3facfd009bdb3f444d84a0f653e2e5968b53ad3",
-        "signature": "081cfa4174b28926555be364c1a84e4dea37927628e63414da58580278a6c3d0",
+        "version": "ee0be6475514403e42b1185b9abd0f3dca090b55bdbb5ed5446a4ddd34d9403c",
+        "signature": "35df45a3e1680a7cce6e6a16a3e3184fec1a204bf4bc8cf58cd2fa8096baf62c",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/index.ts": {
@@ -277,8 +277,8 @@
         "affectsGlobalScope": false
       },
       "../src/classes/chain/chain.ts": {
-        "version": "e39a6dd5b867f7e837f8421b9d86a15d25b7b96ccd62c39447663c330aea8ab4",
-        "signature": "7a0e459409c254b3cc69565da5c425b0cf34d581a5c21f38fb17580e3abe7d9a",
+        "version": "890abb6f31b3a65a12c6f17b2d7699c4b87f59d66ffc60ebaf1d80297e66fbf6",
+        "signature": "14e09643a94a42992f56bbc7b273b3b018624eb813f5ec333587d5156d47431a",
         "affectsGlobalScope": false
       },
       "../src/classes/chain/index.ts": {
@@ -362,8 +362,8 @@
         "affectsGlobalScope": false
       },
       "../src/core/maybelist/maybelist.ts": {
-        "version": "ff541910fefc74bf9c2425b8adae94348193d05ceffb4d30f20e979ccc55434d",
-        "signature": "d3fdd769e394c1b7f8312dc15bc5d2dad44eae95a3a3ea408f0526db32b2605b",
+        "version": "83258349155ef4fd11b5b732b7b6be101e51689649fa7d782b059da535024f82",
+        "signature": "ae7d8fc8c1e128e6216005c8a44a1c6c5f27159a494997be43d247dbcec9e2b6",
         "affectsGlobalScope": false
       },
       "../src/util/decorators.ts": {

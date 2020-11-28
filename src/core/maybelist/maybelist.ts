@@ -13,7 +13,8 @@ import { IMaybelist } from './types';
  //+ Rx is the resulting type from a transform on `T`.
  //+ Tx is an incoming type similar to `T` but not directly related to `T`.
 */
-class Maybelist<T, Ts extends Array<T> = T[]> implements IMaybelist<T, Ts> {
+class Maybelist<T = unknown, Ts extends Array<T> = T[]>
+  implements IMaybelist<T, Ts> {
   // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
   public static of = <Tx>(...values: Tx[] | [Tx[]]): Maybelist<Tx> => {
     if (values.length === 1) {

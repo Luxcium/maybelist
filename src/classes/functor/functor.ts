@@ -2,7 +2,7 @@ import { FnAtoB } from '../..';
 import { BaseFunctor } from '.';
 import { IClone, IFork } from './types';
 
-class Functor<FVal>
+class Functor<FVal = unknown>
   extends BaseFunctor<FVal>
   implements IFork<FVal>, IClone<FVal> {
   // get |-···―――――――――――――――――――――――――――――――――――――――――――――――···-| fork |-···――― ~

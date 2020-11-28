@@ -4,15 +4,15 @@ import { IFunctor } from './types';
 /*
 ~~=···~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~···= ~~
 */
-class BaseFunctor<FVal = unknown> implements IFunctor<FVal> {
+class BaseFunctor<BFVal = unknown> implements IFunctor<BFVal> {
   // constructor |-···――――――――――――――――――――――――――――――――――···-| Functor() |-···――― ~
-  public constructor(protected _value: FVal) {
+  public constructor(protected _value: BFVal) {
     this['fantasy-land/map'] = this.fMap;
   }
 
   public declare ['fantasy-land/map'];
   // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
-  public fMap<R>(fn: FnAtoB<FVal, R>) {
+  public fMap<R>(fn: FnAtoB<BFVal, R>) {
     return new BaseFunctor(fn(this._value));
   }
 }

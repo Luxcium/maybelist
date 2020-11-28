@@ -3,7 +3,7 @@ import { Apply } from '../apply/apply';
 import { Functor } from '../functor';
 import { IChain } from './types';
 
-class Chain<CVal> extends Apply<CVal> implements IChain<CVal> {
+class Chain<CVal = unknown> extends Apply<CVal> implements IChain<CVal> {
   // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
   public static of<TVal>(value: TVal): Chain<TVal> {
     return new Chain<TVal>(value);
