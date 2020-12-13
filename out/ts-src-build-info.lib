@@ -216,34 +216,44 @@
         "signature": "9eb0ae9fa333acfc2dcbe6a7eaa2ab8be46b97ca259982c797c39167823235d5",
         "affectsGlobalScope": false
       },
+      "../src/classes/base/types.ts": {
+        "version": "be8d46569790e0b83ce614ef9858d47957bba63b01d1683a89acf95419f75ca4",
+        "signature": "a2ebd0c510b71b3fa392cf9ce8067b4620a9971f35213a787374f5c2cfa14384",
+        "affectsGlobalScope": false
+      },
       "../src/classes/apply/types.ts": {
-        "version": "2e73c1effdffa5c0aa4427afd1a6c67abac48922c2f4ff3f7179160501078736",
-        "signature": "1dfd046f50c207f027a9bf5bbd70ae421aac0f019e4358c37300a9bb9a6d5cf5",
+        "version": "2756c8cbe597a20472e43d9bf259ce8e4102d3bac088f9e0877b19e5b68f14e5",
+        "signature": "87c726c922f3b7c3885acceaa4659fdebfb3eb002660f834c52f29648d1ae1ae",
         "affectsGlobalScope": false
       },
       "../src/classes/chain/types.ts": {
-        "version": "17609b95f9980f6fb5306bfdff0b985397a40fb20124aeef5b980e26cf11dd52",
-        "signature": "4a124ef7955c814fe010f8e4d08c8ada25f1d7d701bb435556f479df85570614",
+        "version": "30d41d76307fa49c768f518edac967fb24fd7501259099753f19d0e003f8fb2e",
+        "signature": "364f11530bb248598d2a82c7371907206487148a48ccd830d732b49282bd1ba0",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/types.ts": {
-        "version": "67e204435ed425658a8a7f6bff59897093e883e777d6bc1a61a2a407e153e947",
-        "signature": "ba315ea5e8e7d954c7a0ff7bd568bcdb9aca245cc2d810a61b8db01865bd53c4",
+        "version": "c457d1fffd89df6cba667f7d3c5c6544f898256403ffa4769a3e150e1072c28f",
+        "signature": "33cfdbf596b9198bd8675d3d0c0b166d305a0c2ae6574ea55b5610f373af0fd7",
         "affectsGlobalScope": false
       },
       "../src/classes/monad/types.ts": {
-        "version": "73e73f310bb7d6ea894afbb224243471dab2497485adf881ef1df0b82edbbca9",
-        "signature": "a1e283390ff9d106871216a8492d602b05af83e948eeab2517cbc7be27630c9e",
+        "version": "300ffe476bcad7667beef4ce1ba8e67dc7dd3443ac09db74e90e82b53709fed4",
+        "signature": "70d4a9bd473cb72991c8f2115aa71aeb4e05664f0e51bd6ba4efc195a3a10340",
         "affectsGlobalScope": false
       },
       "../src/classes/types.ts": {
-        "version": "54517cbaec0ad707d00a5a0d021546a664c8ca7f8dd7523c05f253f1af05f3fc",
-        "signature": "453be4fffeeb16440e8adbdd018632d1891c59ddeb54bd9d53fef350bd335d2e",
+        "version": "c5b819607f9ae6be59659fa2ca0b36502ee655226dfc5ead2ae3c7087d6216e9",
+        "signature": "c5b819607f9ae6be59659fa2ca0b36502ee655226dfc5ead2ae3c7087d6216e9",
+        "affectsGlobalScope": false
+      },
+      "../src/core/maybelist/types.ts": {
+        "version": "f6bbcbaa19bd1605ed1896c3b3b11d47b493aebfd6dc26588128a8abc83f82b8",
+        "signature": "9ccf9ac242340c1700d3c186ce4943af076a7f958a18bab8185e27b103569bf6",
         "affectsGlobalScope": false
       },
       "../src/core/types.ts": {
-        "version": "a39ffe7229fc402a9ef39bc4aed653497f75f2b3914a00c199362a74b328822e",
-        "signature": "36f5a233dbd606c303dbc9bc9f4143fd69acf58783cd3a42e86325091d65b1c5",
+        "version": "842dae6c645e2993466352df76ba609579c38ce6c28a0de437af9a4b151e14b5",
+        "signature": "136b04bcbc7b2face5fe032b7c200464f6ddfdbe5b94b9fe5f2a697de5cdc63d",
         "affectsGlobalScope": false
       },
       "../src/types.ts": {
@@ -251,34 +261,19 @@
         "signature": "6691f7201e5af9af110545856d5ffa90b8704012d9c0676da332067a6197a50d",
         "affectsGlobalScope": false
       },
-      "../src/classes/functor/base-functor/types.ts": {
-        "version": "a38454e0098b7a3c833f5a781726d4c008e2e58b1cc7607ba15ad376be7c3cb6",
-        "signature": "43170172333955ba4e3a4c9204f266b2bae81318a73d0b0b8344433602dd7063",
-        "affectsGlobalScope": false
-      },
-      "../src/classes/functor/base-functor/base-functor.ts": {
-        "version": "8f25022b822ec66cdac786d5da58a2f313ae54ea09759d11fb8aed17f7268873",
-        "signature": "ccc4d6c59b55a48dc3e19d4f9ba2e72ff20f95dad2afb3ae85cbaf95b70921de",
-        "affectsGlobalScope": false
-      },
-      "../src/classes/functor/base-functor/index.ts": {
-        "version": "467da3d5c40ef5fc1e3fab595ee6e3b1e5d28d34653f5fcf848b0f8fcd9b3ecd",
-        "signature": "467da3d5c40ef5fc1e3fab595ee6e3b1e5d28d34653f5fcf848b0f8fcd9b3ecd",
-        "affectsGlobalScope": false
-      },
       "../src/classes/functor/functor.ts": {
-        "version": "828656a76aa455ae0f769ad7ad3d90e09ecf8063bf0c68eeef43a8c0a9f02ff4",
-        "signature": "f568a92e59b7490646a57a6691821d264277ca7b52a1870da17b03b9e1921936",
+        "version": "73e66410422c36d7d83d751eb433e5a0715c7b70467188b9adb4909e61b14672",
+        "signature": "9a2bfcb1cfd2caa5c60b6994c66e8d3da28db5b32ebb16a29d41d37936512bb1",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/index.ts": {
-        "version": "2c509a538c25e68347a9665ceed9ae3a05a2f52860f83a73a2facd8b4b7f774a",
-        "signature": "2c509a538c25e68347a9665ceed9ae3a05a2f52860f83a73a2facd8b4b7f774a",
+        "version": "e626658b5590bc96d799687776c3b09eff339328cc70b9133c7f559813b8722b",
+        "signature": "e626658b5590bc96d799687776c3b09eff339328cc70b9133c7f559813b8722b",
         "affectsGlobalScope": false
       },
       "../src/classes/apply/apply.ts": {
-        "version": "ba8c03a71ad57dbc4ff8c704d01197c7a285de4ed20141e75a1c8b17605349c4",
-        "signature": "0412158c5e3d804534716c99f1a85e77a610eb65648fa2e5675fe651d4c1e7f8",
+        "version": "9c3ea6205b8e2adb3012e2b990a78ccc3e09c33e4fdfe84b769577f7fcf0829e",
+        "signature": "45e24b6cc83336b3b1701d02e70747d8c28a874fa1269ca5c7f3486c5e3ff7ba",
         "affectsGlobalScope": false
       },
       "../src/classes/apply/index.ts": {
@@ -286,24 +281,19 @@
         "signature": "62543e08c790f2a860c7574c6f4bf2f0e889ec6f9ade34429b383895434969e4",
         "affectsGlobalScope": false
       },
-      "../src/classes/base/types.ts": {
-        "version": "b2d7a12c1fde37d7eabe5054e62b7ec1f64c3d339ec155639eda7359499b22da",
-        "signature": "c979835c862f3ce3a6a2fcbe910d67bdfeb360171fb203b8d764da0f9ff2d964",
-        "affectsGlobalScope": false
-      },
       "../src/classes/base/base.ts": {
-        "version": "76fb1d534cbebb7e4eeb7e509f1dc62cb8c43db7628537d933ae969daeb3df82",
-        "signature": "a08a361c7ea0b0c3529d822f734ad0f1f53786db92e561178f394e9daa46d61e",
+        "version": "986a815e2ae9ccb70a704d0e999b3938b16f7169e8751d9aa97fbef61652aa3d",
+        "signature": "1d1ca501a11c7939a29faeea07752afb297ddeae2989df9cd22a82deac4c720a",
         "affectsGlobalScope": false
       },
       "../src/classes/base/index.ts": {
-        "version": "a074a5484f58f8612868c7d29b220a7084460d92295bab3e6323fc18b9469ed1",
-        "signature": "a074a5484f58f8612868c7d29b220a7084460d92295bab3e6323fc18b9469ed1",
+        "version": "425a4636e16e77875b8f4192d756e046f8da0f8c9a2cbc7becf27b0fc93b0283",
+        "signature": "425a4636e16e77875b8f4192d756e046f8da0f8c9a2cbc7becf27b0fc93b0283",
         "affectsGlobalScope": false
       },
       "../src/classes/chain/chain.ts": {
-        "version": "890abb6f31b3a65a12c6f17b2d7699c4b87f59d66ffc60ebaf1d80297e66fbf6",
-        "signature": "14e09643a94a42992f56bbc7b273b3b018624eb813f5ec333587d5156d47431a",
+        "version": "bc3a74026585ce8c1651d5b53c3defb9a18202822373f72964d33e0ae1723a58",
+        "signature": "0070becb1666b3a8accbb3d9c81bc21095f48798bba8eed09f4f97eb74eabcfb",
         "affectsGlobalScope": false
       },
       "../src/classes/chain/index.ts": {
@@ -322,13 +312,13 @@
         "affectsGlobalScope": false
       },
       "../src/classes/index.ts": {
-        "version": "d53db5efed68fbcfe0c3ffe32aa59cec5e374f31e8bd87f1eaf9f85150fa2a38",
-        "signature": "d53db5efed68fbcfe0c3ffe32aa59cec5e374f31e8bd87f1eaf9f85150fa2a38",
+        "version": "03fcbafe4bc4a3c03bcd4a821d00c6a02871cddb33e5685353cc05c0dba57ac8",
+        "signature": "03fcbafe4bc4a3c03bcd4a821d00c6a02871cddb33e5685353cc05c0dba57ac8",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "0f4aaf30319b3ff09c11ea26ca3583373e74692619e6778339b459d65f9c3a73",
-        "signature": "0f4aaf30319b3ff09c11ea26ca3583373e74692619e6778339b459d65f9c3a73",
+        "version": "4cc627da521caafcc76f332888938ce6a86e5962be90618ab5fedfb7128e022d",
+        "signature": "4cc627da521caafcc76f332888938ce6a86e5962be90618ab5fedfb7128e022d",
         "affectsGlobalScope": false
       },
       "../src/classes/apply/applicative.spec.ts": {
@@ -336,13 +326,13 @@
         "signature": "5eeeffee14d73412a2845ce1235fa4f989e8b9fc78620792b69bf46dd08f5eb5",
         "affectsGlobalScope": false
       },
-      "../src/classes/functor/base-functor/base-functor.spec.ts": {
-        "version": "0ffc505d64654e76e05d4028397c6db71dd69a069a6a8d4bf74641ffa4cfd91d",
+      "../src/classes/functor/functor.spec.ts": {
+        "version": "2adc66f2e4aecbed2bf382b22913d19d77264b996ae9a95db06013b002c246c8",
         "signature": "e6049232afe11731f65ba8feecab3cb19c6421c6dfa03f628fad7d752841d130",
         "affectsGlobalScope": false
       },
       "../src/classes/apply/apply.spec.ts": {
-        "version": "7d27520d25ba67186ca4b0acb766405bc7fb5968c8b1290c868b614f69741191",
+        "version": "68d97808f7d4f6a45ef6ff6d8cef79187cd450d95c2ba8ba3ad3a0d2ee0d20e4",
         "signature": "61a00a7bea6e6dd5a47d7642b8be8e1ce363ca0bb426afa864afd80232c4ae40",
         "affectsGlobalScope": false
       },
@@ -361,29 +351,29 @@
         "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
         "affectsGlobalScope": false
       },
-      "../src/core/index.ts": {
-        "version": "fabf6997a3adf11e45d11e3c4d58d0634ab98f9d72f3116f3694123818ccd457",
-        "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
+      "../src/core/maybelist/maybelist.ts": {
+        "version": "523cb4fe0850cf18f2ed8d8482df7bcb4831b02b34ac5a1ac972d4df3756b0b0",
+        "signature": "ecced8c9c50d8a86a9590493132b9f4284a78633064c32263c0fb6c2f4a0a121",
         "affectsGlobalScope": false
       },
       "../src/core/maybelist/index.ts": {
-        "version": "fabf6997a3adf11e45d11e3c4d58d0634ab98f9d72f3116f3694123818ccd457",
-        "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
+        "version": "4afc4e00ddb3516d82464931aaa51279ae3625344be8af034f97a4bfe6d0129c",
+        "signature": "4afc4e00ddb3516d82464931aaa51279ae3625344be8af034f97a4bfe6d0129c",
         "affectsGlobalScope": false
       },
-      "../src/core/maybelist/types.ts": {
-        "version": "a2540470ce4a34dce26b6e0ecffd62223d926ef79d5d9be92681f7faa448e611",
-        "signature": "c4e5f45ceef5cce91257ff025ea65979dda628555205d6cef69f72c17d62755b",
+      "../src/core/index.ts": {
+        "version": "4afc4e00ddb3516d82464931aaa51279ae3625344be8af034f97a4bfe6d0129c",
+        "signature": "4afc4e00ddb3516d82464931aaa51279ae3625344be8af034f97a4bfe6d0129c",
         "affectsGlobalScope": false
       },
-      "../src/core/maybelist/maybelist.ts": {
-        "version": "1b20a0f68f5529e5779e24ddfe5036fffd0ccb6378290dc303ec81b7e74aa392",
-        "signature": "b951df82335c5afc3385fa852f0ff3964e4a824d95617a686e95b8968db8de35",
+      "../src/core/maybelist/mabelist-base.ts": {
+        "version": "dd74f7a93612a1276c9b436009d7668c7207bf250c6dcb93bef7333ff507a021",
+        "signature": "f2c215ebcc941489d7d4d7fc83a4e76027b55f7f36fc61df913c26f70e3d1941",
         "affectsGlobalScope": false
       },
       "../src/core/maybelist/maybelist3.ts": {
-        "version": "5b6ebf2cd81a2f6001591eba40b2939c2d586309112443c1493c40597af4dd2f",
-        "signature": "a846711ced261472cbaf93bf01e9ea3708e8ea435d1a0e1d40d43b9d0cf4a5f7",
+        "version": "b33ec4d65eaa1258d493b0e684eff571711cb6db3336244968c9cf340cfd80d9",
+        "signature": "89ea4aea8ca8f706696d79c8e7baabb9aa3c9ff646b0ecb6eae6af0ad2c79473",
         "affectsGlobalScope": false
       },
       "../src/util/decorators.ts": {
@@ -944,7 +934,7 @@
       ],
       "../src/classes/apply/apply.spec.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor/base-functor.spec.ts"
+        "../src/classes/functor/functor.spec.ts"
       ],
       "../src/classes/apply/apply.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -958,6 +948,7 @@
       ],
       "../src/classes/apply/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
+        "../src/classes/base/types.ts",
         "../src/classes/index.ts",
         "../src/types.ts"
       ],
@@ -966,9 +957,7 @@
       ],
       "../src/classes/base/base.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/base/types.ts",
-        "../src/classes/functor/types.ts",
-        "../src/classes/types.ts"
+        "../src/classes/base/types.ts"
       ],
       "../src/classes/base/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -994,40 +983,26 @@
       ],
       "../src/classes/chain/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/index.ts",
+        "../src/classes/base/types.ts",
         "../src/types.ts"
       ],
-      "../src/classes/functor/base-functor/base-functor.spec.ts": [
+      "../src/classes/functor/functor.spec.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor/base-functor.ts"
-      ],
-      "../src/classes/functor/base-functor/base-functor.ts": [
-        "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor/types.ts",
-        "../src/index.ts"
-      ],
-      "../src/classes/functor/base-functor/index.ts": [
-        "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor/base-functor.ts"
-      ],
-      "../src/classes/functor/base-functor/types.ts": [
-        "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/types.ts",
-        "../src/index.ts"
+        "../src/classes/functor/functor.ts"
       ],
       "../src/classes/functor/functor.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor/index.ts",
         "../src/classes/functor/types.ts",
+        "../src/classes/index.ts",
         "../src/index.ts"
       ],
       "../src/classes/functor/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/base-functor/index.ts",
         "../src/classes/functor/functor.ts"
       ],
       "../src/classes/functor/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
+        "../src/classes/base/types.ts",
         "../src/types.ts"
       ],
       "../src/classes/index.ts": [
@@ -1056,20 +1031,31 @@
       "../src/classes/monad/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/classes/index.ts",
+        "../src/classes/types.ts",
         "../src/types.ts"
       ],
       "../src/classes/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/classes/apply/types.ts",
+        "../src/classes/base/types.ts",
         "../src/classes/chain/types.ts",
         "../src/classes/functor/types.ts",
         "../src/classes/monad/types.ts"
       ],
       "../src/core/index.ts": [
-        "../node_modules/tslib/tslib.d.ts"
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/maybelist/index.ts"
       ],
       "../src/core/maybelist/index.ts": [
-        "../node_modules/tslib/tslib.d.ts"
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/maybelist/maybelist.ts"
+      ],
+      "../src/core/maybelist/mabelist-base.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/classes/index.ts",
+        "../src/core/maybelist/index.ts",
+        "../src/core/maybelist/types.ts",
+        "../src/index.ts"
       ],
       "../src/core/maybelist/maybelist.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -1086,11 +1072,11 @@
       "../src/core/maybelist/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/classes/functor/types.ts",
-        "../src/index.ts",
         "../src/types.ts"
       ],
       "../src/core/types.ts": [
-        "../node_modules/tslib/tslib.d.ts"
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/maybelist/types.ts"
       ],
       "../src/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -1315,13 +1301,12 @@
         "../src/classes/apply/apply.ts"
       ],
       "../src/classes/apply/types.ts": [
+        "../src/classes/base/types.ts",
         "../src/classes/index.ts",
         "../src/types.ts"
       ],
       "../src/classes/base/base.ts": [
-        "../src/classes/base/types.ts",
-        "../src/classes/functor/types.ts",
-        "../src/classes/types.ts"
+        "../src/classes/base/types.ts"
       ],
       "../src/classes/base/index.ts": [
         "../src/classes/base/base.ts"
@@ -1336,30 +1321,19 @@
         "../src/classes/chain/chain.ts"
       ],
       "../src/classes/chain/types.ts": [
-        "../src/classes/index.ts",
+        "../src/classes/base/types.ts",
         "../src/types.ts"
       ],
-      "../src/classes/functor/base-functor/base-functor.ts": [
-        "../src/classes/functor/base-functor/types.ts",
-        "../src/index.ts"
-      ],
-      "../src/classes/functor/base-functor/index.ts": [
-        "../src/classes/functor/base-functor/base-functor.ts"
-      ],
-      "../src/classes/functor/base-functor/types.ts": [
-        "../src/classes/functor/types.ts",
-        "../src/index.ts"
-      ],
       "../src/classes/functor/functor.ts": [
-        "../src/classes/functor/base-functor/index.ts",
         "../src/classes/functor/types.ts",
+        "../src/classes/index.ts",
         "../src/index.ts"
       ],
       "../src/classes/functor/index.ts": [
-        "../src/classes/functor/base-functor/index.ts",
         "../src/classes/functor/functor.ts"
       ],
       "../src/classes/functor/types.ts": [
+        "../src/classes/base/types.ts",
         "../src/types.ts"
       ],
       "../src/classes/index.ts": [
@@ -1380,13 +1354,27 @@
       ],
       "../src/classes/monad/types.ts": [
         "../src/classes/index.ts",
+        "../src/classes/types.ts",
         "../src/types.ts"
       ],
       "../src/classes/types.ts": [
         "../src/classes/apply/types.ts",
+        "../src/classes/base/types.ts",
         "../src/classes/chain/types.ts",
         "../src/classes/functor/types.ts",
         "../src/classes/monad/types.ts"
+      ],
+      "../src/core/index.ts": [
+        "../src/core/maybelist/index.ts"
+      ],
+      "../src/core/maybelist/index.ts": [
+        "../src/core/maybelist/maybelist.ts"
+      ],
+      "../src/core/maybelist/mabelist-base.ts": [
+        "../src/classes/index.ts",
+        "../src/core/maybelist/index.ts",
+        "../src/core/maybelist/types.ts",
+        "../src/index.ts"
       ],
       "../src/core/maybelist/maybelist.ts": [
         "../src/classes/index.ts",
@@ -1400,8 +1388,10 @@
       ],
       "../src/core/maybelist/types.ts": [
         "../src/classes/functor/types.ts",
-        "../src/index.ts",
         "../src/types.ts"
+      ],
+      "../src/core/types.ts": [
+        "../src/core/maybelist/types.ts"
       ],
       "../src/index.ts": [
         "../src/classes/index.ts",
@@ -1528,10 +1518,7 @@
       "../src/classes/chain/chain.ts",
       "../src/classes/chain/index.ts",
       "../src/classes/chain/types.ts",
-      "../src/classes/functor/base-functor/base-functor.spec.ts",
-      "../src/classes/functor/base-functor/base-functor.ts",
-      "../src/classes/functor/base-functor/index.ts",
-      "../src/classes/functor/base-functor/types.ts",
+      "../src/classes/functor/functor.spec.ts",
       "../src/classes/functor/functor.ts",
       "../src/classes/functor/index.ts",
       "../src/classes/functor/types.ts",
@@ -1543,6 +1530,7 @@
       "../src/classes/types.ts",
       "../src/core/index.ts",
       "../src/core/maybelist/index.ts",
+      "../src/core/maybelist/mabelist-base.ts",
       "../src/core/maybelist/maybelist.ts",
       "../src/core/maybelist/maybelist3.ts",
       "../src/core/maybelist/types.ts",
@@ -1876,6 +1864,10 @@
         1
       ],
       [
+        "../src/classes/functor/functor.spec.ts",
+        1
+      ],
+      [
         "../src/classes/functor/functor.ts",
         1
       ],
@@ -1917,6 +1909,10 @@
       ],
       [
         "../src/core/maybelist/index.ts",
+        1
+      ],
+      [
+        "../src/core/maybelist/mabelist-base.ts",
         1
       ],
       [

@@ -1,5 +1,5 @@
 import { FnAtoB } from '../..';
-import { Base, Functor } from '../../classes';
+import { BaseClass, Functor } from '../../classes';
 import { IMaybelist } from './types';
 
 /*
@@ -14,7 +14,7 @@ import { IMaybelist } from './types';
  //+ Tx is an incoming type similar to `T` but not directly related to `T`.
 */
 class Maybelist<T = unknown, Ts extends Array<T> = T[]>
-  extends Base<Ts>
+  extends BaseClass<Ts>
   implements IMaybelist<T, Ts> {
   // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
   public static of = <Tx>(...values: Tx[] | [Tx[]]): Maybelist<Tx> => {

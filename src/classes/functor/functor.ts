@@ -1,21 +1,14 @@
 import { FnAtoB } from '../..';
-import { BaseFunctor } from './base-functor';
+import { BaseClass } from '..';
 import { IClone, IFork } from './types';
 
 class Functor<FVal = unknown>
-  extends BaseFunctor<FVal>
+  extends BaseClass<FVal>
   implements IFork<FVal>, IClone<FVal> {
-  // get |-···―――――――――――――――――――――――――――――――――――――――――――――――···-| fork |-···――― ~
-  public get fork(): FVal {
-    return this._value;
+  static of<TVal>(value: TVal) {
+    return new Functor(value);
   }
-
-  // public |-···―――――――――――――――――――――――――――――――――――――――――···-| clone() |-···――― ~
-  public get clone(): FVal {
-    return JSON.parse(JSON.stringify(this.fork));
-  }
-
-  public ['fantasy-land/map'] = this.fMap;
+  // public ['fantasy-land/map'] = this.fMap;
   // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
   public fMap<R>(fn: FnAtoB<FVal, R>) {
     return new Functor(fn(this.fork));

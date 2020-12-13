@@ -20,7 +20,7 @@ fantasy-land/ap must apply the function in Apply b to the value in Apply a
 No parts of return value of that function should be checked.
 The Apply returned by fantasy-land/ap must be the same as a and b
 */
-import { fantasyBaseMapTest } from '../functor/base-functor/base-functor.spec';
+import { fantasyBaseMapTest } from '../functor/functor.spec';
 
 const VALUE = 'VALUE';
 

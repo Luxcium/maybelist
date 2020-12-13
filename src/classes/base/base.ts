@@ -1,13 +1,15 @@
-import { IClone } from '../functor/types';
-import { IFork } from '../types';
 import { AbstractBase } from './types';
 
-export abstract class Base<T> implements AbstractBase<T>, IFork<T>, IClone<T> {
+/*
+~~=···~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~···= ~~
+*/
+export abstract class BaseClass<T> extends Object implements AbstractBase<T> {
   // private |-···―――――――――――――――――――――――――――――――――――――――――···-| _value |-···――― ~
   private _value: T;
 
   // constructor |-···―――――――――――――――――――――――――――――――――――――···-| Base() |-···――― ~
   protected constructor(value: T) {
+    super();
     this._value = value;
   }
 
@@ -21,11 +23,16 @@ export abstract class Base<T> implements AbstractBase<T>, IFork<T>, IClone<T> {
     return JSON.parse(JSON.stringify(this.fork)) as T;
   }
 
+  // public |-···――――――――――――――――――――――――――――――――――――――···-| toString() |-···――― ~
   public toString(): string {
     return JSON.stringify(this.fork);
   }
 
-  public toValue(): T {
+  // public |-···―――――――――――――――――――――――――――――――――――――――···-| toValue() |-···――― ~
+  public valueOf(): T {
     return this.clone;
   }
 }
+/*
+~~=···~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~···= ~~
+*/

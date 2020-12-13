@@ -1,4 +1,4 @@
-import { BaseFunctor } from './base-functor';
+import { Functor } from './functor';
 
 const VALUE = 'VALUE';
 
@@ -13,7 +13,7 @@ const g = function getStringLength(x: string): number {
 };
 
 export function fantasyBaseMapTest(Mapable: any) {
-  describe('Our BaseFunctor (Mapable) must comply with Fantasy Land Specification of a Functor.', () => {
+  describe('Our Functor (Mapable) must comply with Fantasy Land Specification of a Functor.', () => {
     describe("A Functor in Fantasy Land Specification is mapable using the ['fantasy-land/map'] method: `fantasy-land/map :: Functor f => f a ~> (a -> b) -> f b`", () => {
       describe("1. Identity: `u['fantasy-land/map'](a => a)` is equivalent to `u` (identity)", () => {
         it("[1/2] where `u = new Mapable('VALUE')`: `u['fantasy-land/map'](a => a)` must be  strictly equal to `u`", () => {
@@ -69,17 +69,17 @@ export function fantasyBaseMapTest(Mapable: any) {
                 mapable instanceof Mapable,
             ).toBe(true);
           });
-          it("[2/3] Where mapable = new Mapable(43): mapable['fantasy-land/map'] must return a value of our BaseFunctor type", () => {
+          it("[2/3] Where mapable = new Mapable(43): mapable['fantasy-land/map'] must return a value of our Functor type", () => {
             const mapable = new Mapable(43);
             const mapableMapReturnValue = mapable['fantasy-land/map'](
               (a: any) => a,
             );
-            expect(mapableMapReturnValue instanceof BaseFunctor).toBe(true);
+            expect(mapableMapReturnValue instanceof Functor).toBe(true);
           });
 
-          it("[3/3] Whre mapable = new Mapable('VALUE'): mapable must be of the BaseFunctor type", () => {
+          it("[3/3] Whre mapable = new Mapable('VALUE'): mapable must be of the Functor type", () => {
             const mapable = new Mapable('VALUE');
-            expect(mapable instanceof BaseFunctor).toBe(true);
+            expect(mapable instanceof Functor).toBe(true);
           });
         });
       });

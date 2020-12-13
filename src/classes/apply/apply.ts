@@ -13,18 +13,20 @@ class Apply<AVal = unknown> extends Functor<AVal> implements IApply<AVal> {
   }
 
   // constructor |-···――――――――――――――――――――――――――――――――――···-| Functor() |-···――― ~
-  protected constructor(_value: AVal) {
-    super(_value);
+  protected constructor(applyValue: AVal) {
+    super(applyValue);
+    // this['fantasy-land/map'] = this.fMap;
+    // this['fantasy-land/ap'] = this.ap;
   }
 
-  public ['fantasy-land/map'] = this.fMap;
+  // public declare ['fantasy-land/map'];
   public fMap<R = unknown>(fn: FnAtoB<AVal, R>): Apply<R> {
     return Apply.of<R>(
       super.fMap<R>(x => fn(x)).fork,
     );
   }
 
-  public ['fantasy-land/ap'] = this.ap;
+  // public declare ['fantasy-land/ap'];
   public ap<R = unknown>(functor: Functor<FnAtoB<AVal, R>>): Apply<R> {
     return functor.fMap<Apply<R>>((fn: (val: AVal) => R) =>
       this.fMap<R>(x => fn(x)),

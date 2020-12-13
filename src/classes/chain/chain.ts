@@ -12,19 +12,26 @@ class Chain<CVal = unknown> extends Apply<CVal> implements IChain<CVal> {
   public static fromValueOf<TVal>(value: Functor<TVal>): Chain<TVal> {
     return Chain.of<TVal>(JSON.parse(JSON.stringify(value.fork)));
   }
-  public ['fantasy-land/map'] = this.fMap;
+  // protected constructor(value: CVal) {
+  //   super(value);
+  //   // this['fantasy-land/map'] = this.fMap;
+  //   // this['fantasy-land/ap'] = this.ap;
+  //   // this['fantasy-land/map'] = this.chain;
+  // }
+
+  // public declare ['fantasy-land/map'];
   public fMap<R = unknown>(fn: FnAtoB<CVal, R>): Chain<R> {
     return Chain.of<R>(
       super.fMap<R>(x => fn(x)).fork,
     );
   }
-  public ['fantasy-land/ap'] = this.ap;
+  // public declare ['fantasy-land/ap'];
   public ap<R = unknown>(functor: Functor<FnAtoB<CVal, R>>): Chain<R> {
     return functor.fMap<Chain<R>>((fn: (val: CVal) => R) =>
       this.fMap<R>(x => fn(x)),
     ).fork;
   }
-  public ['fantasy-land/chain'] = this.chain;
+  // public declare ['fantasy-land/chain'];
   public chain<R>(fn: FnAtoB<CVal, Chain<R>>): Chain<R> {
     return Chain.of<Chain<R>>(
       this.fMap<Chain<R>>(x => fn(x)).fork,
