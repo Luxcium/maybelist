@@ -18,4 +18,8 @@ interface IMapable {
   ['fantasy-land/map']: any;
 }
 
-export type { FromArray, IMapable, MapableConstructor, Unbox };
+interface Applicative {
+  of<T>(value: T): any;
+}
+
+export type { Applicative, FromArray, IMapable, MapableConstructor, Unbox };

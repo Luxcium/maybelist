@@ -9,3 +9,4 @@ export {
   enumerable,
   writable,
 } from './decorators';
+export { log } from './logers';
