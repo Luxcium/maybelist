@@ -1,4 +1,4 @@
 import { Apply } from '../src/classes/apply';
-import { fantasyBaseMapTest } from '../src/classes/functor/base-functor/base-functor.spec';
+import { fantasyApplyTest } from '../src/classes/apply/apply.spec';
 
-fantasyBaseMapTest(Apply);
+fantasyApplyTest(Apply);

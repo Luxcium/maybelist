@@ -29,32 +29,56 @@ class Maybelist<T = unknown, Ts extends Array<T> = T[]>
   };
 
   // static |-···―――――――――――――――――――――――――――――――――――···-| fromValueOf() |-···――― ~
-  public static fromValueOf = <Tx>(
-    value: Functor<Tx> | Maybelist<Tx>,
-  ): Maybelist<Tx> => {
-    return Maybelist.of<Tx>(JSON.parse(JSON.stringify(value.fork)));
+  public static fromValueOf = <T>(
+    value: Functor<T[]> | Maybelist<T>,
+  ): Maybelist<T> => {
+    return Maybelist.of<T>(value.clone);
   };
 
   // constructor |-···――――――――――――――――――――――――――――――――···-| Maybelist() |-···――― ~
   protected constructor(value: Ts) {
     super(value);
+    // this._value = value;
   }
 
-  // public declare ['fantasy-land/map'];
+  // // private |-···―――――――――――――――――――――――――――――――――――――···-| arrayMap() |-···――― ~
+  // private arrayMap<R>(
+  //   fn: <TVal>(value: TVal, index: number, array: TVal[]) => R,
+  //   thisArg?: any,
+  // ): R[] {
+  //   return this.fork.map(fn, thisArg);
+  // }
+
+  // // private |-···―――――――――――――――――――――――――――――――――···-| arrayflatMap() |-···――― ~
+  // private arrayflatMap<R>(
+  //   callback: <TVal>(value: TVal, index: number, array: TVal[]) => R,
+  //   thisArg?: any,
+  // ): R[] {
+  //   return this.fork.flatMap(callback, thisArg);
+  // }
+
+  // // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
+  // public map<Rx>(fn: <Z>(value: Z, index: number, array: Z[]) => Rx) {
+  //   void this.arrayflatMap;
+  //   return Maybelist.of<Rx>(this.arrayMap(fn));
+  // }
+
+  // // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
+  // public flatMap<Rx>(fn: <Z>(value: Z, index: number, array: Z[]) => Rx) {
+  //   return Maybelist.of<Rx>(this.arrayflatMap(fn));
+  // }
+
   // public |-···―――――――――――――――――――――――――――――――――――――――――――···-| map() |-···――― ~
   public fMap<Rx>(fn: FnAtoB<T, Rx>) {
     return Maybelist.of<Rx>(this.fork.map(fn));
   }
 
-  // public declare ['fantasy-land/ap'];
   // public |-···――――――――――――――――――――――――――――――――――――――――――――···-| ap() |-···――― ~
   public ap<Rx>(functor: Functor<FnAtoB<T, Rx>>) {
     return functor.fMap((fn: FnAtoB<T, Rx>) => this.fMap<Rx>(x => fn(x))).fork;
   }
-
-  // public declare ['fantasy-land/chain'];
   // public |-···―――――――――――――――――――――――――――――――――――――――――···-| chain() |-···――― ~
-  public chain<Rx>(fn: FnAtoB<T, Maybelist<Rx>>) {
+  public chain<Rx>(fn: FnAtoB<T, IMaybelist<Rx>>): Maybelist<Rx, Rx[]> {
     return Maybelist.of<Rx>(this.fork.flatMap<Rx>(x => fn(x).fork));
   }
 }
@@ -65,3 +89,16 @@ class Maybelist<T = unknown, Ts extends Array<T> = T[]>
 
 export { Maybelist };
 export default null;
+
+// // protected |-···―――――――――――――――――――――――――――――――――――――――···-| _value |-···――― ~
+// protected _value: Ts;
+
+// // get |-···―――――――――――――――――――――――――――――――――――――――――――――――···-| fork |-···――― ~
+// public get fork(): Ts {
+//   return this._value;
+// }
+
+// // public |-···―――――――――――――――――――――――――――――――――――――――――···-| clone() |-···――― ~
+// public get clone(): Ts {
+//   return JSON.parse(JSON.stringify(this.fork));
+// }

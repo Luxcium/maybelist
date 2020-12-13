@@ -1,12 +1,110 @@
-import { Apply } from '.';
+/*
+Apply
+A value that implements the Apply specification must also implement the Functor specification.
 
-describe('Apply Class', () => {
-  it('should implement specs & tests for our Apply Class', () => {
-    expect(Apply);
+v['fantasy-land/ap'](u['fantasy-land/ap'](a['fantasy-land/map'](f => g => x => f(g(x))))) is equivalent to v['fantasy-land/ap'](u)['fantasy-land/ap'](a) (composition)
+
+fantasy-land/ap method
+fantasy-land/ap :: Apply f => f a ~> f (a -> b) -> f b
+A value which has an Apply must provide a fantasy-land/ap method. The fantasy-land/ap method takes one argument:
+
+a['fantasy-land/ap'](b)
+b must be an Apply of a function
+
+If b does not represent a function, the behaviour of fantasy-land/ap is unspecified.
+b must be same Apply as a.
+a must be an Apply of any value
+
+fantasy-land/ap must apply the function in Apply b to the value in Apply a
+
+No parts of return value of that function should be checked.
+The Apply returned by fantasy-land/ap must be the same as a and b
+*/
+import { fantasyBaseMapTest } from '../functor/base-functor/base-functor.spec';
+
+const VALUE = 'VALUE';
+
+/** addTen function */
+const f = function addTen(x: number): number {
+  return x + 10;
+};
+
+/** getStringLength function */
+const g = function getStringLength(x: string): number {
+  return x.length;
+};
+
+function fantasyApplyTest(ApApply: any) {
+  describe('Our Apply (ap) must comply with Fantasy Land Specification of a Apply.', () => {
+    describe('A value that implements the Apply specification must also implement the Functor specification.', () => {
+      fantasyBaseMapTest(ApApply);
+
+      describe("v['fantasy-land/ap'](u['fantasy-land/ap'](a['fantasy-land/map'](f => g => x => f(g(x))))) is equivalent to v['fantasy-land/ap'](u)['fantasy-land/ap'](a) (composition)", () => {
+        it('[1/2] Should compose.', () => {
+          const v = new ApApply(VALUE);
+          const u = new ApApply(g);
+          const a = new ApApply(f);
+
+          expect(
+            v['fantasy-land/ap'](
+              u['fantasy-land/ap'](
+                a['fantasy-land/map']((f: any) => (g: any) => (x: any) =>
+                  f(g(x)),
+                ),
+              ),
+            ),
+          ).toStrictEqual(v['fantasy-land/ap'](u)['fantasy-land/ap'](a));
+        });
+        it('[2/2] Should compose.', () => {
+          expect(
+            new ApApply(VALUE)['fantasy-land/ap'](
+              new ApApply(g)['fantasy-land/ap'](
+                new ApApply(f)[
+                  'fantasy-land/map'
+                ]((f: any) => (g: any) => (x: any) => f(g(x))),
+              ),
+            ),
+          ).toStrictEqual(
+            new ApApply(VALUE)
+              ['fantasy-land/ap'](new ApApply(g))
+              ['fantasy-land/ap'](new ApApply(f)),
+          );
+        });
+      });
+      describe('fantasy-land/ap method', () => {
+        describe('fantasy-land/ap :: Apply f => f a ~> f (a -> b) -> f b', () => {
+          describe('A value which has an Apply must provide a fantasy-land/ap method. The fantasy-land/ap method takes one argument:', () => {
+            describe("a['fantasy-land/ap'](b)", () => {
+              describe('1. `b` must be an Apply of a function', () => {
+                describe('i. If b does not represent a function, the behaviour of fantasy-land/ap is unspecified.', () => {});
+                describe("ii. `b` must be same 'Apply' as `a`.", () => {
+                  //                     If b does not represent a function, the behaviour of fantasy-land/ap is unspecified.
+                  // b must be same Apply as a.
+                });
+                // 2. a must be an Apply of any value
+
+                // 3. fantasy-land/ap must apply the function in Apply b to the value in Apply a
+
+                // i. No parts of return value of that function should be checked.
+                // 4. The Apply returned by fantasy-land/ap must be the same as a and b
+              });
+            });
+          });
+        });
+      });
+    });
   });
-});
+}
 
-export default null;
+export { fantasyApplyTest };
+
+// describe('Apply Class', () => {
+//   it('should implement specs & tests for our Apply Class', () => {
+//     expect(Apply);
+//   });
+// });
+
+// export default null;
 
 // /*
 // Apply

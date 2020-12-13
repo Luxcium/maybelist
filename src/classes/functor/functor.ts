@@ -11,7 +11,7 @@ class Functor<FVal = unknown>
   }
 
   // public |-···―――――――――――――――――――――――――――――――――――――――――···-| clone() |-···――― ~
-  public clone(): FVal {
+  public get clone(): FVal {
     return JSON.parse(JSON.stringify(this.fork));
   }
 

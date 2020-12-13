@@ -4,7 +4,7 @@ interface IFork<Ax = unknown> {
   readonly fork: Ax;
 }
 interface IClone<Ax = unknown> {
-  clone(): Ax;
+  clone: Ax;
 }
 
 type ForkType<Ax = unknown> = IFork<Ax> & IClone<Ax>;
@@ -20,7 +20,7 @@ interface IFMapAndFork<A = unknown, Ax = A>
     ForkType<Ax> {
   fMap<B, Bx>(fn: FnAtoB<A, B>): IFMapAndFork<B, Bx>;
   readonly fork: Ax;
-  clone(): Ax;
+  clone: Ax;
 }
 
 interface IFunctor<A = unknown> extends IFMap<A> {
