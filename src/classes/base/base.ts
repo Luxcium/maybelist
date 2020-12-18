@@ -1,16 +1,46 @@
-import { AbstractBase } from './types';
+import { AbstractBase, KindType } from './types';
 
+class Kind implements KindType {
+  public KIND: symbol;
+  public Name: string;
+
+  // constructor |-···―――――――――――――――――――――――――――――――――――――···-| Base() |-···――― ~
+  constructor(NAME: string) {
+    this.KIND = Symbol.for(NAME);
+    this.Name = NAME;
+  }
+}
+const BaseClassKind: KindType = new Kind('BASECLASS');
 /*
 ~~=···~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~···= ~~
 */
-export abstract class BaseClass<T> extends Object implements AbstractBase<T> {
+abstract class BaseClass<T = unknown> implements AbstractBase<T> {
   // private |-···―――――――――――――――――――――――――――――――――――――――――···-| _value |-···――― ~
   private _value: T;
 
+  protected _KINDS: KindType[];
+  protected _addKINDS(KIND?: KindType | string | null) {
+    this._KINDS = [BaseClassKind];
+    if (typeof KIND === 'string') {
+      this._KINDS.push(new Kind(KIND));
+      return this;
+    }
+    if (KIND) {
+      this._KINDS.push(KIND);
+      return this;
+    }
+    return this;
+  } //: KindType[];
+  public get KINDS() {
+    return this._KINDS;
+  }
+
   // constructor |-···―――――――――――――――――――――――――――――――――――――···-| Base() |-···――― ~
-  protected constructor(value: T) {
-    super();
+  protected constructor(value: T, KIND?: KindType | string) {
     this._value = value;
+    this._KINDS = [];
+    this._addKINDS(BaseClassKind);
+    this._addKINDS(KIND);
   }
 
   // get |-···―――――――――――――――――――――――――――――――――――――――――――――――···-| fork |-···――― ~
@@ -36,3 +66,6 @@ export abstract class BaseClass<T> extends Object implements AbstractBase<T> {
 /*
 ~~=···~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~···= ~~
 */
+
+export { BaseClass, BaseClassKind, Kind };
+export type { KindType };

@@ -1,87 +1,62 @@
-import { Functor, Monad } from '../../classes';
-import { Kind, KindType } from '../../classes/base/base';
+import { BaseClass } from '../../classes';
 
 /*
-~~===~···~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~···~=== ~~
+ ~~==~···~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~···~==~ ~
+ //+ A is a type of value `A`.
+ //+ Ax is a type similar to `A` but not directly related to `A`.
+ //+ As is a type of value `A[]`.
+ //+ B is the resulting type from a transform on `A`.
+ //+ T is a type of value `T`.
+ //+ Ts is a type of value `T[]`.
+ //+ Rx is the resulting type from a transform on `T`.
+ //+ Tx is an incoming type similar to `T` but not directly related to `T`.
 */
-class Maybelist<
-  Val = unknown,
-  MLVal extends Array<Val> = Val[]
-> extends Monad<MLVal> {
-  // static |-···――――――――――――――――――――――――――――――――――――――···-| fromTVal() |-···――― ~
-  public static of<TVal>(...values: TVal[] | [TVal[]]) {
+class Maybelist<T = unknown, Ts extends Array<T> = T[]> extends BaseClass<Ts> {
+  // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
+  public static of<TVal = unknown, TVals extends Array<TVal> = TVal[]>(
+    ...values: TVals | [TVals]
+  ): Maybelist<TVal> {
     if (values.length === 1) {
       const value = values[0];
       if (Array.isArray(value)) {
-        return new Maybelist<TVal>(value as TVal[], null);
+        // super(value);
+        // return this;
+        return new Maybelist<TVal>(value);
       }
     }
-    return new Maybelist<TVal>(values as TVal[], null);
-  }
+    const value = values as TVal[];
+    return new Maybelist<TVal>(value);
 
-  public static fromValueOf(value: Functor<any>): Maybelist<any> {
-    return Maybelist.of<any>(
-      (Monad.from<any>(value.clone).fork as unknown) as any,
-    );
+    // super(_value);
+    // return this;
   }
-
   // constructor |-···――――――――――――――――――――――――――――――――···-| Maybelist() |-···――― ~
-  protected constructor(
-    maybelistValue: MLVal,
-    KIND?: KindType | string | null,
-  ) {
-    super(maybelistValue as MLVal, 'MAYBELIST');
-    super._addKINDS(KIND);
-    return this;
+  protected constructor(value: Ts) {
+    super(value);
   }
+
+  // public fMap<R>(fn: (val: Ts) => R): Monad<R> {
+  //   return Monad.of<R>(
+  //     super.fMap<R>(x => fn(x)).fork,
+  //   );
+  // }
+
+  // public fMap<R = any, Rs extends Array<R> = R[]>(
+  //   fn: (val: Ts) => Rs,
+  // ): Maybelist<R, Rs> {
+  //   return new Maybelist(super.fMap<Rs>(fn).fork);
+  // }
+
+  // public declare ap;
+  // public declare chain;
 }
 
 /*
-~~===~···~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~···~=== ~~
+ ~~==~···~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~···~==~ ~
 */
 
-const ML = Maybelist.from([45]);
-void ML;
-
-const MaybelistKind: KindType = new Kind('MAYBELIST');
-
-export { Maybelist, MaybelistKind };
-export default Maybelist;
-
-// void new Maybelist([43])
-//  // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
-//   public static of<TVal = unknown, TVals extends Array<TVal> = TVal[]>(
-//     ...values: TVals | [TVals]
-//   ): Maybelist<TVal> {
-//     if (values.length === 1) {
-//       const value = values[0];
-//       if (Array.isArray(value)) {
-//         // super(value);
-//         // return this;
-//         return new Maybelist<TVal>(value);
-//       }
-//     }
-//     const value = values as TVal[];
-//     return new Maybelist<TVal>(value);
-
-//     // super(_value);
-//     // return this;
-//   }
-
-//   // public fMap<R>(fn: (val: Ts) => R): Monad<R> {
-//   //   return Monad.of<R>(
-//   //     super.fMap<R>(x => fn(x)).fork,
-//   //   );
-//   // }
-
-//   // public fMap<R = any, Rs extends Array<R> = R[]>(
-//   //   fn: (val: Ts) => Rs,
-//   // ): Maybelist<R, Rs> {
-//   //   return new Maybelist(super.fMap<Rs>(fn).fork);
-//   // }
-
-//   // public declare ap;
-//   // public declare chain;
+export { Maybelist };
+export default null;
 
 // implements IMaybelist<T, Ts>
 //   // static |-···――――――――――――――――――――――――――――――――――――――――――――···-| of() |-···――― ~
