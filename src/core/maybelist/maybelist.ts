@@ -19,9 +19,9 @@ class Maybelist<
     return new Maybelist<TVal>(values as TVal[], null);
   }
 
-  public static fromValueOf(value: Functor<any>): Maybelist<any> {
-    return Maybelist.of<any>(
-      (Monad.from<any>(value.clone).fork as unknown) as any,
+  public static fromValueOf<xTVal>(value: Functor<xTVal[]>): Maybelist<xTVal> {
+    return Maybelist.of<xTVal>(
+      (Monad.from<xTVal[]>(value.clone).fork as unknown) as xTVal,
     );
   }
 
