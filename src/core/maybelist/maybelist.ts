@@ -1,6 +1,8 @@
 import { Functor, Monad } from '../../classes';
 import { Kind, KindType } from '../../classes/base/base';
 
+const MaybelistKind: KindType = new Kind('MAYBELIST');
+
 /*
 ~~===~···~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~···~=== ~~
 */
@@ -30,7 +32,7 @@ class Maybelist<
     maybelistValue: MLVal,
     KIND?: KindType | string | null,
   ) {
-    super(maybelistValue as MLVal, 'MAYBELIST');
+    super(maybelistValue as MLVal, MaybelistKind);
     super._addKINDS(KIND);
     return this;
   }
@@ -40,12 +42,11 @@ class Maybelist<
 ~~===~···~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~···~=== ~~
 */
 
+export { Maybelist, MaybelistKind };
+
 const ML = Maybelist.from([45]);
 void ML;
 
-const MaybelistKind: KindType = new Kind('MAYBELIST');
-
-export { Maybelist, MaybelistKind };
 export default Maybelist;
 
 // void new Maybelist([43])
