@@ -22,9 +22,7 @@ class Maybelist<
   }
 
   public static fromValueOf<xTVal>(value: Functor<xTVal[]>): Maybelist<xTVal> {
-    return Maybelist.of<xTVal>(
-      (Monad.from<xTVal[]>(value.clone).fork as unknown) as xTVal,
-    );
+    return Maybelist.of<xTVal>(value.clone);
   }
 
   // constructor |-···――――――――――――――――――――――――――――――――···-| Maybelist() |-···――― ~
