@@ -2,9 +2,21 @@ import { Functor, Monad } from '../../classes';
 import { BaseClass, Kind, KindType } from '../../classes/base/base';
 import { FnAtoB, IMonad } from '../../types';
 import { promiseOf } from '../../util';
-import { CallbackfnT, CallbackfnU } from './types';
-import { FMapper } from './typings';
-import { ListMap_PM } from './typings/thenable-tools';
+import {
+  CallbackfnT,
+  CallbackfnU,
+  FMapper,
+  FnMapList,
+  FnMapList_PM,
+  FnMapListMP,
+  ListMap,
+  ListMap_PM,
+  ListMapMP,
+  MapList,
+  MapList_PM,
+  MapListMP,
+  T_PT_,
+} from './types';
 
 const MaybelistKind: KindType = new Kind('MAYBELIST');
 
@@ -16,6 +28,8 @@ class Maybelist<
   MLVal extends Array<Val> = Val[]
 > extends BaseClass<MLVal> {
   /* implements IMaybelist<Val> */
+  // #region =======-| constructor |-===========================================≈
+
   // static |-···――――――――――――――――――――――――――――――――――――――···-| fromTVal() |-···――― ~
   public static of<TVal>(...values: TVal[] | [TVal[]]) {
     if (values.length === 1) {
@@ -32,25 +46,25 @@ class Maybelist<
   }
 
   // readonly ==================================================-| values |-====
-  protected readonly list!: MLVal;
+  protected readonly _list!: Val[];
 
   // readonly ==================================================-| length |-====
-  protected readonly length!: number;
+  protected readonly _length!: number;
 
   // readonly =================================================-| nothing |-====
-  protected readonly isNothing!: boolean;
+  protected readonly _isNothing!: boolean;
 
   // readonly =============================================-| isUndefined |-====
-  protected readonly isLengthOne!: boolean;
+  protected readonly _isLengthOne!: boolean;
 
   // readonly =============================================-| isUndefined |-====
-  protected readonly isLengthZero!: boolean;
+  protected readonly _isLengthZero!: boolean;
 
   // readonly ==================================================-| isNull |-====
-  protected readonly isNull!: boolean;
+  protected readonly _isNull!: boolean;
 
   // readonly =============================================-| isUndefined |-====
-  protected readonly isUndefined!: boolean;
+  protected readonly _isUndefined!: boolean;
 
   // constructor ============================================-| Maybelist |-====
   // protected constructor(value: MLVal, isNothing = false) {
@@ -61,8 +75,7 @@ class Maybelist<
   ) {
     super(maybelistValue as MLVal, MaybelistKind as KindType);
     super._addKINDS(KIND as KindType);
-    this.list = maybelistValue;
-    // super(value);
+    this._list = maybelistValue;
     const maybelist = {
       _value: {
         configurable: false,
@@ -70,21 +83,6 @@ class Maybelist<
         maybelistValue,
         writable: false,
       },
-      // 'fantasy-land/ap': {
-      //   configurable: true,
-      //   enumerable: false,
-      //   writable: true,
-      // },
-      // 'fantasy-land/chain': {
-      //   configurable: true,
-      //   enumerable: false,
-      //   writable: true,
-      // },
-      // 'fantasy-land/map': {
-      //   configurable: true,
-      //   enumerable: false,
-      //   writable: true,
-      // },
       isLengthOne: {
         configurable: false,
         enumerable: maybelistValue.length === 1,
@@ -130,8 +128,6 @@ class Maybelist<
       },
     };
 
-    // maybelist.length.enumerable = value.length > 1;
-
     if (
       (maybelistValue.length === 1 && maybelistValue[0] == null) ||
       maybelistValue.length === 0
@@ -143,21 +139,101 @@ class Maybelist<
 
     Object.defineProperties(this, maybelist);
   }
-  // public declare fMap;
-  // public declare ap;
-  // public declare chain;
-  // public declare toString;
-  // public declare valueOf;
+  // #endregion =======-| constructor |-===========================================≈
+  // #region =======-| Flags |-=================================================≈
 
-  // // constructor |-···――――――――――――――――――――――――――――――――···-| Maybelist() |-···――― ~
-  // protected constructor(
-  //   maybelistValue: MLVal,
-  //   KIND?: KindType | string | null,
-  // ) {
-  //   super(maybelistValue as MLVal, MaybelistKind as KindType);
-  //   super._addKINDS(KIND as KindType);
-  //   this.list = maybelistValue;
-  // }
+  // get |-···―――――――――――――――――――――――――――――――――――――···-| length |-···――――――···-|
+  public get length(): number {
+    return this._length;
+  }
+
+  // get |-···――――――――――――――――――――――――――――――――――···-| isNothing |-···――――――···-|
+  private get isNothing(): boolean {
+    return this._isNothing;
+  }
+
+  // get |-···――――――――――――――――――――――――――――――――···-| isLengthOne |-···――――――···-|
+  private get isLengthOne(): boolean {
+    return this._isLengthOne;
+  }
+
+  // get |-···―――――――――――――――――――――――――――――――···-| isLengthZero |-···――――――···-|
+  private get isLengthZero(): boolean {
+    return this._isLengthZero;
+  }
+
+  // get |-···―――――――――――――――――――――――――――――――――――――···-| isNull |-···――――――···-|
+  private get isNull(): boolean {
+    return this._isNull;
+  }
+
+  // get |-···――――――――――――――――――――――――――――――――···-| isUndefined |-···――――――···-|
+  private get isUndefined(): boolean {
+    return this._isUndefined;
+  }
+
+  // get ==================================================-| hasSomeNull |-====
+  private get hasNull(): boolean {
+    return this.fork.some(element => element === null, this);
+  }
+
+  // get =============================================-| hasSomeUndefined |-====
+  private get hasUndefined(): boolean {
+    return this.fork.some(element => element === undefined, this);
+  }
+
+  // get =============================================-| hasSomeUndefined |-====
+  private get hasNullOrUndefined(): boolean {
+    return this.hasNull || this.hasUndefined;
+  }
+
+  // get ========================================================-| flags |-====
+  public get flags() {
+    return {
+      hasNull: this.hasNull,
+      hasNullOrUndefined: this.hasNullOrUndefined,
+      hasUndefined: this.hasUndefined,
+      isLengthOne: this.isLengthOne,
+      isLengthZero: this.isLengthZero,
+      isNothing: this.isNothing,
+      isNull: this.isNull,
+      isUndefined: this.isUndefined,
+      length: this.length,
+    };
+  }
+
+  // get =====================================================-| getFlags |-====
+  public get getFlags() {
+    // return flags;
+    // # ZUBL-NUL1
+    // # 1000-1000
+    // # 0110-1101
+    // # 0011-1011
+    // # 0110-0100
+    // # 0011-0010
+    // # 0000-0001
+    //  # 0000-0000
+    const { boolToNum } = Maybelist;
+    const flags = [
+      [
+        boolToNum(this.flags.isLengthZero),
+        boolToNum(this.flags.isUndefined),
+        boolToNum(this.flags.hasNullOrUndefined),
+        boolToNum(this.flags.isNull),
+      ],
+      [
+        boolToNum(this.flags.isNothing),
+        boolToNum(this.flags.hasUndefined),
+        boolToNum(this.flags.hasNull),
+        boolToNum(this.flags.isLengthOne),
+      ],
+    ];
+
+    return Number(`0b${flags.flatMap(t => t).join('')}`);
+  }
+
+  // #endregion ====-| Flags |-=================================================≈
+  // #region =======-| Iterator |-==============================================≈
 
   // public =================================================-| entries() |-====
 
@@ -178,12 +254,13 @@ class Maybelist<
   }
 
   // ======================================================-| [n: number] |-====
-  readonly [n: number]: MLVal;
+  readonly [n: number]: Val;
 
   // iterator ====================================-| *[Symbol.iterator]() |-====
   public *[Symbol.iterator]() {
-    yield* this.list;
+    yield* this._list;
   }
+  // #endregion =======-| Iterator |-==============================================≈
   // #region =======-| IterationMethods |-======================================≈
 
   // void Array.prototype.every; //--+
@@ -679,7 +756,7 @@ class Maybelist<
 
   // get =================================================-| theOnlyOne() |-====
   public get getTheOnlyOne(): Val | null | undefined {
-    if (!this.isLengthOne) {
+    if (!this._isLengthOne) {
       return;
     }
     if (
@@ -1417,30 +1494,6 @@ class Maybelist<
 }
 // #region =======-| Types |-===================================================≈
 
-type ListMap<T> = <R>(thenMap: FnAtoB<T, R>) => Maybelist<R>;
-type FnMapList<T, R> = (list: () => Maybelist<T>) => Maybelist<R>;
-type FnMapListMP<T, R> = (list: () => Maybelist<T>) => Maybelist<Promise<R>>;
-type ListMapMP<T> = <R>(mapFunction: FnAtoB<T, R>) => Maybelist<Promise<R>>;
-type MapListMP<T, R> = (list: Maybelist<T>) => Maybelist<Promise<R>>;
-type MapList<T, R> = (list: Maybelist<T>) => Maybelist<R>;
-// type ListMap_PM<T> = <R>(thenMap: FnAtoB<T, R>) => Promise<Maybelist<R>>;
-type MapList_PM<T, R> = (
-  list: Promise<Maybelist<T>> | Maybelist<T>,
-) => Promise<Maybelist<R>>;
-type FnMapList_PM<T, R> = (
-  list: () => Promise<Maybelist<T>> | Maybelist<T>,
-) => Promise<Maybelist<R>>;
-// type FnMapList_PMP<T, R> = (
-//   list: () => T_PT_<M_<T_PT_<T>>>,
-// ) => Promise<Maybelist<Promise<R>>>;
-type T_PT_<T> = T | Promise<T>;
-// type M_<T> = Maybelist<T>;
-export type ListMap_PMP<T> = <R>(
-  thenMap: FnAtoB<T, R>,
-) => Promise<Maybelist<Promise<R>>>;
-// type MapList_PMP<T, R> = (
-// list: T_PT_<M_<T_PT_<T>>>,
-// ) => Promise<Maybelist<Promise<R>>>;
 // #endregion =======-| Types |-================================================≈
 
 console.log(Maybelist.of([[45], 45]));

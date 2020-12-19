@@ -28,5 +28,3 @@ class Functor<FVal> extends BaseClass<FVal> implements IFunctor<FVal> {
 }
 
 export { Functor, FunctorKind };
-
-console.log(Functor.from(42));
