@@ -88,6 +88,8 @@
   "exclude": [
     "templates/either.ts",
     "templates/maybe.ts",
+    "./src/core/maybelist/maybelist3.ts",
+    "./src/core/maybelist/maybelist4.ts",
     "./.git/**/**.*",
     "./.github/**/*.*",
     "./.vscode/**/*.*",

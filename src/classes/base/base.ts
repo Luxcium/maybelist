@@ -69,3 +69,11 @@ abstract class BaseClass<T = unknown> implements AbstractBase<T> {
 
 export { BaseClass, BaseClassKind, Kind };
 export type { KindType };
+
+class Extends<Y> extends BaseClass<Y> {
+  public static from<X>(value: X) {
+    return new Extends(value);
+  }
+}
+
+console.log(Extends.from(43));

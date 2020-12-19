@@ -1,12 +1,16 @@
-import { IClone } from '../../classes/functor/types';
+import { IClone, ToString, ValueOf } from '../../classes/base/types';
 import { IFork, IMonad } from '../../types';
 
-// interface IMap<T> {
-//   temporary: T;
-// }
 interface IMaybelist<A, As extends Array<A> = A[]>
   extends IFork<As>,
-    IClone<As> {}
+    IClone<As>,
+    ValueOf<As>,
+    ToString,
+    IMonad<As> {
+  // IFMap<As>
+  // IChain<As>,
+  // IApply<As>
+}
 
 interface AbstractMaybelist<A, As extends Array<A> = A[]>
   extends IClone<As>,
@@ -15,7 +19,29 @@ interface AbstractMaybelist<A, As extends Array<A> = A[]>
 
 type ArrayMaper<B> = <A>(value: A, index: number, array: A[]) => B;
 type ArrayMaperAtoB<A, B> = (value: A, index: number, array: A[]) => B;
-export type { AbstractMaybelist, ArrayMaper, ArrayMaperAtoB, IMaybelist };
+
+type CallbackfnT<T> = (
+  previousValue: T,
+  currentValue: T,
+  currentIndex: number,
+  array: T[],
+) => T;
+
+type CallbackfnU<U, T> = (
+  previousValue: U | T,
+  currentValue: T,
+  currentIndex: number,
+  array: T[],
+) => U | T;
+
+export type {
+  AbstractMaybelist,
+  ArrayMaper,
+  ArrayMaperAtoB,
+  CallbackfnT,
+  CallbackfnU,
+  IMaybelist,
+};
 
 // IFMap<As>,
 // IMap<As>

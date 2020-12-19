@@ -247,13 +247,13 @@
         "affectsGlobalScope": false
       },
       "../src/core/maybelist/types.ts": {
-        "version": "f6bbcbaa19bd1605ed1896c3b3b11d47b493aebfd6dc26588128a8abc83f82b8",
-        "signature": "9ccf9ac242340c1700d3c186ce4943af076a7f958a18bab8185e27b103569bf6",
+        "version": "3727f34b9ba6b9560338ca38ac803c1534029fb9b537c6a63b49f6cc9bd45031",
+        "signature": "6d2c536aaa6f08596e9032a7cb51db90c615ce53751b21ec5f81e2390b11c478",
         "affectsGlobalScope": false
       },
       "../src/core/types.ts": {
-        "version": "842dae6c645e2993466352df76ba609579c38ce6c28a0de437af9a4b151e14b5",
-        "signature": "136b04bcbc7b2face5fe032b7c200464f6ddfdbe5b94b9fe5f2a697de5cdc63d",
+        "version": "16817f2153d7b01711bb3ffe06d02a10b20acca465a30193ed325c9c148763ec",
+        "signature": "4858f5e97fc6a13819d13a9157c413ccba1955d26cd673258261e3bbc8344204",
         "affectsGlobalScope": false
       },
       "../src/types.ts": {
@@ -262,12 +262,12 @@
         "affectsGlobalScope": false
       },
       "../src/classes/base/base.ts": {
-        "version": "02e9ce8fc05f1e92beb361dfccb2a5fd31241004be853b75bc2468ea2bbef5ca",
+        "version": "42338dbc300ae0dd3a53e2a66203016ecbd02379dbfaa9184a266026e05b07d4",
         "signature": "9aea0916e4f5a39692966b859252adf7a20a75fe452c0b4019175fcc1ddbab59",
         "affectsGlobalScope": false
       },
       "../src/classes/functor/functor.ts": {
-        "version": "a510887e0c0041a24ca6068f53aef2a056944b696011960ff6529066d0c56d3c",
+        "version": "56cc1fc6d54b431a21ffccde868f1e512714177642f519a66a11efc460120123",
         "signature": "b068d91e626a0de30c4724eaf6aadc1b8dd938da8192fb34ba0afaae4945cf88",
         "affectsGlobalScope": false
       },
@@ -316,9 +316,29 @@
         "signature": "03fcbafe4bc4a3c03bcd4a821d00c6a02871cddb33e5685353cc05c0dba57ac8",
         "affectsGlobalScope": false
       },
+      "../src/util/decorators.ts": {
+        "version": "f18fe169c5eaf36765aa37aa9ff747085237e58bb6491bdfd68c5ab6ad2b113b",
+        "signature": "085706aacefd3d58ef5b8d2698ceefde68d305623d51e478865ca570aa3bc119",
+        "affectsGlobalScope": false
+      },
+      "../src/util/logers.ts": {
+        "version": "3166ec59c774fe97237de616288f6362c350124bbed554cfddbc6c47689c7fb8",
+        "signature": "f351be6794f54016f2f5f0a5296b8c57567d523f371c99af8c37e331557f8f48",
+        "affectsGlobalScope": false
+      },
+      "../src/util/util.ts": {
+        "version": "c0c6c3ff319a487feccd837988a1ca4c19a777737ce9906d745db2035dfa3e57",
+        "signature": "b66102d328a00d720fa0e3ec2fe2737a338249c81c91d749c11e2ea217340ab3",
+        "affectsGlobalScope": false
+      },
+      "../src/util/index.ts": {
+        "version": "d1d9fc34f5159ee9c32af91be2a8d9ca3722a417cc980deecdfa26b7f0d36771",
+        "signature": "148fb1d7b39aeea18119a5d63c48181e45ebeb33177352ce97121f93e279f53d",
+        "affectsGlobalScope": false
+      },
       "../src/index.ts": {
-        "version": "4cc627da521caafcc76f332888938ce6a86e5962be90618ab5fedfb7128e022d",
-        "signature": "4cc627da521caafcc76f332888938ce6a86e5962be90618ab5fedfb7128e022d",
+        "version": "3d0f9cbb091735ffa0aa80ec8a05732797b0b92518368a3c7537d926331af3b1",
+        "signature": "3d0f9cbb091735ffa0aa80ec8a05732797b0b92518368a3c7537d926331af3b1",
         "affectsGlobalScope": false
       },
       "../src/classes/apply/applicative.spec.ts": {
@@ -351,9 +371,49 @@
         "signature": "4813839ff9edc01ca93bbc3486874c23f7bef91af24523caee1179248151a54f",
         "affectsGlobalScope": false
       },
+      "../src/util/fantasy/fantasy.ts": {
+        "version": "d613693aac12f93eedd6dd97a42d568dc59bc1097575bf83e7a37fb7e055e55a",
+        "signature": "2b9027a34be4380b74cf97f856b97c40808ebf31ff10debdcf04b859bf11e3d2",
+        "affectsGlobalScope": false
+      },
+      "../src/util/fantasy/i-fantasy.ts": {
+        "version": "1b66c731c53f7430ba10c62cc9f3d4843f30aad9fc1084489a0ba23df92c6c10",
+        "signature": "e36b8158ec0d653ad6c2dd3f218146460afff9b132cef8141d5bb36327261a44",
+        "affectsGlobalScope": false
+      },
+      "../src/util/fantasy/index.ts": {
+        "version": "13747cce0c1d38a38491fa3e6d7d2c3167df9c73fb347801df6600b71dba80fd",
+        "signature": "13747cce0c1d38a38491fa3e6d7d2c3167df9c73fb347801df6600b71dba80fd",
+        "affectsGlobalScope": false
+      },
+      "../src/core/maybelist/typings/concat-array.ts": {
+        "version": "482802208debad85ce1a1ff1c1c9ba5fa1424da65f0d2d43887b5b6049bcc798",
+        "signature": "53c71db12ea72f9be3a389fd6c4ecc642385285f8cc64fbd41a6f953715f7944",
+        "affectsGlobalScope": false
+      },
+      "../src/core/maybelist/typings/full-mapper.ts": {
+        "version": "a7070fbf29e466114106f62ff22677b231fc168ccbf147f5499c1f72b5e987b9",
+        "signature": "b50457a5200d5850c7dc94cec22c5474a7bb8a44faa524f2817906daee1cad03",
+        "affectsGlobalScope": false
+      },
+      "../src/core/maybelist/typings/my-types.ts": {
+        "version": "e318c6f7f32830bd6baf8a58537d7db13584d74a16b1a2d0052f74774d61be71",
+        "signature": "f0bc9f5095d9210848c4f56bef5fb3a7e031c0955ebf7e2e5488ebcf86b30de0",
+        "affectsGlobalScope": false
+      },
+      "../src/core/maybelist/typings/index.ts": {
+        "version": "d0ffb3a4fab59855fc16c52ae3abf86c819c84382930b0c34ef95e036b5009b1",
+        "signature": "91bb6b6528d13f5879d21413dd7814cee1270dc63ad5b527e899502e6486957d",
+        "affectsGlobalScope": false
+      },
+      "../src/core/maybelist/typings/thenable-tools.ts": {
+        "version": "13a38b6deb7e3869648d8fffd77784d400210d80f8324c7b1ec8a7327ad6f7e4",
+        "signature": "1a390008d09bfe2a692f78136f306cda43da77b5ab19371fbfc3927bdc9adf5a",
+        "affectsGlobalScope": false
+      },
       "../src/core/maybelist/maybelist.ts": {
-        "version": "eb943c4c011196d47553d8a2f2bd378840f8e0b12b81e2ea381a05f4f939f82b",
-        "signature": "9e36d77d1b17b20bb8b231ce8a03d28e4a0d4c31918ddbd04ebe7b4b88a3a7f6",
+        "version": "2fe07aeaf7a92ef17cc820152ab5bf0df5a68a3596a33a14ce86f2e4499dc83e",
+        "signature": "999f7ec999b1b8f0509721ba67aadc2504f6323c54cd5fb7d349702017ccd429",
         "affectsGlobalScope": false
       },
       "../src/core/maybelist/index.ts": {
@@ -371,29 +431,9 @@
         "signature": "f2c215ebcc941489d7d4d7fc83a4e76027b55f7f36fc61df913c26f70e3d1941",
         "affectsGlobalScope": false
       },
-      "../src/core/maybelist/maybelist3.ts": {
-        "version": "b33ec4d65eaa1258d493b0e684eff571711cb6db3336244968c9cf340cfd80d9",
-        "signature": "89ea4aea8ca8f706696d79c8e7baabb9aa3c9ff646b0ecb6eae6af0ad2c79473",
-        "affectsGlobalScope": false
-      },
-      "../src/core/maybelist/maybelist4.ts": {
-        "version": "cc5894d43ad7c882b86e86e72034fecc44096285cd53d7c631ba3524b3b004f6",
-        "signature": "9ddc087578b5a0d79a913be92306d259a6d7a9b068b4bace5b6c8bf99c1b6bab",
-        "affectsGlobalScope": false
-      },
-      "../src/util/decorators.ts": {
-        "version": "f18fe169c5eaf36765aa37aa9ff747085237e58bb6491bdfd68c5ab6ad2b113b",
-        "signature": "085706aacefd3d58ef5b8d2698ceefde68d305623d51e478865ca570aa3bc119",
-        "affectsGlobalScope": false
-      },
-      "../src/util/logers.ts": {
-        "version": "3166ec59c774fe97237de616288f6362c350124bbed554cfddbc6c47689c7fb8",
-        "signature": "f351be6794f54016f2f5f0a5296b8c57567d523f371c99af8c37e331557f8f48",
-        "affectsGlobalScope": false
-      },
-      "../src/util/index.ts": {
-        "version": "9b8e16ffabfd5c2a9d62a8fb655565a6df1c9449d1b1e3c19fafdfeedb432dec",
-        "signature": "0d35c4f1c02ec1102dc9039d88040d6eab369fc2b911303c1e9b1645393b7c42",
+      "../src/core/maybelist/typings/head-or-tail.ts": {
+        "version": "190346a71ee4e52381134a780878a10f2b0394757c9ba3f173ed80c0ccd6eea7",
+        "signature": "c49f2bb3aae10b8a537a448325e30e29f6ea035f3ef622c188f20df733401c88",
         "affectsGlobalScope": false
       },
       "../src/util/types.ts": {
@@ -1071,22 +1111,43 @@
       "../src/core/maybelist/maybelist.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/classes/base/base.ts",
-        "../src/classes/index.ts"
-      ],
-      "../src/core/maybelist/maybelist3.ts": [
-        "../node_modules/tslib/tslib.d.ts",
         "../src/classes/index.ts",
         "../src/core/maybelist/types.ts",
-        "../src/index.ts"
-      ],
-      "../src/core/maybelist/maybelist4.ts": [
-        "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/index.ts"
+        "../src/core/maybelist/typings/index.ts",
+        "../src/core/maybelist/typings/thenable-tools.ts",
+        "../src/types.ts",
+        "../src/util/index.ts"
       ],
       "../src/core/maybelist/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
-        "../src/classes/functor/types.ts",
+        "../src/classes/base/types.ts",
         "../src/types.ts"
+      ],
+      "../src/core/maybelist/typings/concat-array.ts": [
+        "../node_modules/tslib/tslib.d.ts"
+      ],
+      "../src/core/maybelist/typings/full-mapper.ts": [
+        "../node_modules/tslib/tslib.d.ts"
+      ],
+      "../src/core/maybelist/typings/head-or-tail.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/maybelist/typings/my-types.ts"
+      ],
+      "../src/core/maybelist/typings/index.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/maybelist/typings/concat-array.ts",
+        "../src/core/maybelist/typings/full-mapper.ts",
+        "../src/core/maybelist/typings/my-types.ts",
+        "../src/util/fantasy/index.ts"
+      ],
+      "../src/core/maybelist/typings/my-types.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/maybelist/index.ts",
+        "../src/index.ts"
+      ],
+      "../src/core/maybelist/typings/thenable-tools.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/core/maybelist/index.ts"
       ],
       "../src/core/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -1095,7 +1156,8 @@
       "../src/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/classes/index.ts",
-        "../src/types.ts"
+        "../src/types.ts",
+        "../src/util/index.ts"
       ],
       "../src/types.ts": [
         "../node_modules/tslib/tslib.d.ts",
@@ -1105,15 +1167,31 @@
       "../src/util/decorators.ts": [
         "../node_modules/tslib/tslib.d.ts"
       ],
+      "../src/util/fantasy/fantasy.ts": [
+        "../node_modules/tslib/tslib.d.ts"
+      ],
+      "../src/util/fantasy/i-fantasy.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/util/fantasy/fantasy.ts"
+      ],
+      "../src/util/fantasy/index.ts": [
+        "../node_modules/tslib/tslib.d.ts",
+        "../src/util/fantasy/fantasy.ts",
+        "../src/util/fantasy/i-fantasy.ts"
+      ],
       "../src/util/index.ts": [
         "../node_modules/tslib/tslib.d.ts",
         "../src/util/decorators.ts",
-        "../src/util/logers.ts"
+        "../src/util/logers.ts",
+        "../src/util/util.ts"
       ],
       "../src/util/logers.ts": [
         "../node_modules/tslib/tslib.d.ts"
       ],
       "../src/util/types.ts": [
+        "../node_modules/tslib/tslib.d.ts"
+      ],
+      "../src/util/util.ts": [
         "../node_modules/tslib/tslib.d.ts"
       ]
     },
@@ -1397,34 +1475,51 @@
       ],
       "../src/core/maybelist/maybelist.ts": [
         "../src/classes/base/base.ts",
-        "../src/classes/index.ts"
-      ],
-      "../src/core/maybelist/maybelist3.ts": [
         "../src/classes/index.ts",
-        "../src/core/maybelist/types.ts",
-        "../src/index.ts"
-      ],
-      "../src/core/maybelist/maybelist4.ts": [
-        "../src/classes/index.ts"
+        "../src/core/maybelist/typings/index.ts",
+        "../src/core/maybelist/typings/thenable-tools.ts",
+        "../src/types.ts"
       ],
       "../src/core/maybelist/types.ts": [
-        "../src/classes/functor/types.ts",
+        "../src/classes/base/types.ts",
         "../src/types.ts"
+      ],
+      "../src/core/maybelist/typings/head-or-tail.ts": [
+        "../src/core/maybelist/typings/my-types.ts"
+      ],
+      "../src/core/maybelist/typings/index.ts": [
+        "../src/core/maybelist/typings/concat-array.ts",
+        "../src/core/maybelist/typings/full-mapper.ts",
+        "../src/core/maybelist/typings/my-types.ts",
+        "../src/util/fantasy/index.ts"
+      ],
+      "../src/core/maybelist/typings/my-types.ts": [
+        "../src/core/maybelist/index.ts",
+        "../src/index.ts"
+      ],
+      "../src/core/maybelist/typings/thenable-tools.ts": [
+        "../src/core/maybelist/index.ts"
       ],
       "../src/core/types.ts": [
         "../src/core/maybelist/types.ts"
       ],
       "../src/index.ts": [
         "../src/classes/index.ts",
-        "../src/types.ts"
+        "../src/types.ts",
+        "../src/util/index.ts"
       ],
       "../src/types.ts": [
         "../src/classes/types.ts",
         "../src/core/types.ts"
       ],
+      "../src/util/fantasy/index.ts": [
+        "../src/util/fantasy/fantasy.ts",
+        "../src/util/fantasy/i-fantasy.ts"
+      ],
       "../src/util/index.ts": [
         "../src/util/decorators.ts",
-        "../src/util/logers.ts"
+        "../src/util/logers.ts",
+        "../src/util/util.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1553,16 +1648,24 @@
       "../src/core/maybelist/index.ts",
       "../src/core/maybelist/mabelist-base.ts",
       "../src/core/maybelist/maybelist.ts",
-      "../src/core/maybelist/maybelist3.ts",
-      "../src/core/maybelist/maybelist4.ts",
       "../src/core/maybelist/types.ts",
+      "../src/core/maybelist/typings/concat-array.ts",
+      "../src/core/maybelist/typings/full-mapper.ts",
+      "../src/core/maybelist/typings/head-or-tail.ts",
+      "../src/core/maybelist/typings/index.ts",
+      "../src/core/maybelist/typings/my-types.ts",
+      "../src/core/maybelist/typings/thenable-tools.ts",
       "../src/core/types.ts",
       "../src/index.ts",
       "../src/types.ts",
       "../src/util/decorators.ts",
+      "../src/util/fantasy/fantasy.ts",
+      "../src/util/fantasy/i-fantasy.ts",
+      "../src/util/fantasy/index.ts",
       "../src/util/index.ts",
       "../src/util/logers.ts",
-      "../src/util/types.ts"
+      "../src/util/types.ts",
+      "../src/util/util.ts"
     ],
     "affectedFilesPendingEmit": [
       [
@@ -1926,15 +2029,31 @@
         1
       ],
       [
-        "../src/core/maybelist/maybelist3.ts",
-        1
-      ],
-      [
-        "../src/core/maybelist/maybelist4.ts",
-        1
-      ],
-      [
         "../src/core/maybelist/types.ts",
+        1
+      ],
+      [
+        "../src/core/maybelist/typings/concat-array.ts",
+        1
+      ],
+      [
+        "../src/core/maybelist/typings/full-mapper.ts",
+        1
+      ],
+      [
+        "../src/core/maybelist/typings/head-or-tail.ts",
+        1
+      ],
+      [
+        "../src/core/maybelist/typings/index.ts",
+        1
+      ],
+      [
+        "../src/core/maybelist/typings/my-types.ts",
+        1
+      ],
+      [
+        "../src/core/maybelist/typings/thenable-tools.ts",
         1
       ],
       [
@@ -1954,6 +2073,18 @@
         1
       ],
       [
+        "../src/util/fantasy/fantasy.ts",
+        1
+      ],
+      [
+        "../src/util/fantasy/i-fantasy.ts",
+        1
+      ],
+      [
+        "../src/util/fantasy/index.ts",
+        1
+      ],
+      [
         "../src/util/index.ts",
         1
       ],
@@ -1963,6 +2094,10 @@
       ],
       [
         "../src/util/types.ts",
+        1
+      ],
+      [
+        "../src/util/util.ts",
         1
       ]
     ]

@@ -10,3 +10,4 @@ export {
   writable,
 } from './decorators';
 export { log } from './logers';
+export { promiseOf } from './util';

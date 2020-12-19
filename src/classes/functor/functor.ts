@@ -24,8 +24,9 @@ class Functor<FVal> extends BaseClass<FVal> implements IFunctor<FVal> {
   protected constructor(functorVal: FVal, KIND?: KindType | string | null) {
     super(functorVal as FVal, FunctorKind as KindType);
     super._addKINDS(KIND);
-    return this;
   }
 }
 
 export { Functor, FunctorKind };
+
+console.log(Functor.from(42));

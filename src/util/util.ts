@@ -1,8 +1,3 @@
-type FnAtoB<A, B> = (val: A) => B;
-type FnAB<B> = <A>(val: A) => B;
-export type { IMaybelist } from './maybelist/types';
-export type { FnAB, FnAtoB };
-
 // ==== function ==========================================| promisseOf<V> |====≈
 /**
  *  Value<V> | Promise<Value<V>>: value or Promise of value: Either a
