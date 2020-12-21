@@ -9,13 +9,6 @@
 //+ after I get the copyright holder(s) the permission to use the
 //+ code under CC BY 4.0 or under MIT...
 
-//+ © 2020 Basarat Ali * Used without authorization from the author(s) this part
-//+ of the code may be removed in future releases it will be your responsibility
-//+ to make sure this part of code is still usable under
-//+ the interim license CC BY 4.0 in the future... I will remove this comment
-//+ after I get the copyright holder(s) the permission to use the
-//+ code under CC BY 4.0 or under MIT...
-
 type Class = new (...args: any[]) => any;
 
 function DisposableMixin<Base extends Class>(base: Base) {
