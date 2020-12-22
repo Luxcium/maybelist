@@ -1,5 +1,6 @@
 import type { FnAtoB } from '../../types';
-import { Kind, KindType } from '../base/base';
+import { Kind } from '../base';
+import { KindType } from '../base/types';
 import { Functor } from '../functor';
 import type { IApply } from './types';
 

@@ -1,6 +1,7 @@
 import { FnAtoB } from '../..';
 import { BaseClass } from '..';
-import { Kind, KindType } from '../base/base';
+import { Kind } from '../base';
+import { KindType } from '../base/types';
 import { IFunctor } from './types';
 
 const FunctorKind: KindType = new Kind('FUNCTOR');

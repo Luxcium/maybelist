@@ -1,1 +1,1 @@
-export { BaseClass } from './base';
+export { BaseClass, Kind } from './base';

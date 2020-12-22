@@ -1,7 +1,8 @@
 import type { FnAtoB } from '../../types';
 import { Functor } from '..';
-import { Kind, KindType } from '../base/base';
-import { Chain } from '../chain/chain';
+import { Kind } from '../base';
+import { KindType } from '../base/types';
+import { Chain } from '../chain';
 import { IMonad } from './types';
 
 const MonadKind: KindType = new Kind('MONAD');

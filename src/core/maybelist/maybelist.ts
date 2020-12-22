@@ -1,5 +1,6 @@
 import { Functor, Monad } from '../../classes';
-import { BaseClass, Kind, KindType } from '../../classes/base/base';
+import { BaseClass, Kind } from '../../classes/base';
+import { KindType } from '../../classes/base/types';
 import { FnAtoB, IMonad } from '../../types';
 import { promiseOf } from '../../util';
 import {

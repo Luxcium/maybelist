@@ -22,4 +22,5 @@ interface Applicative {
   of<T>(value: T): any;
 }
 
+export type { Class } from './mixins';
 export type { Applicative, FromArray, IMapable, MapableConstructor, Unbox };

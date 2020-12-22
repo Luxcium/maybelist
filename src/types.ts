@@ -8,3 +8,4 @@ export type {
   IMonad,
 } from './classes/types';
 export type { FnAtoB } from './core/types';
+export type { Class } from './util/types';

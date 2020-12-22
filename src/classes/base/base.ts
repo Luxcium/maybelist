@@ -68,4 +68,3 @@ abstract class BaseClass<T = unknown> implements AbstractBase<T> {
 */
 
 export { BaseClass, BaseClassKind, Kind };
-export type { KindType };
