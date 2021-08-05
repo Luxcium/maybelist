@@ -75,7 +75,6 @@
   "prettier.requireConfig": true,
   "prettier.trailingComma": "all",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.packageManager": "yarn",
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
   ―― ESLINT
@@ -148,7 +147,21 @@
     "errorLens.hintForeground": "#39CF",
     "errorLens.hintBackground": "#39C4",
     "errorLens.hintMessageBackground": "#39C4",
-    "errorLens.statusBarHintForeground": "#39CF"
+    "errorLens.statusBarHintForeground": "#39CF",
+    "activityBar.activeBackground": "#982b44",
+    "activityBar.activeBorder": "#43952a",
+    "activityBar.background": "#982b44",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#43952a",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#702032",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#982b44",
+    "titleBar.activeBackground": "#702032",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#70203299",
+    "titleBar.inactiveForeground": "#e7e7e799"
   },
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
@@ -1768,6 +1781,7 @@
     "vscode-userdata",
     "output"
   ],
+  "peacock.color": "#702032",
   // "Toggle activity bar": true,
   // "Toggle line comment": true,
   // "Toggle render whitespace": true,

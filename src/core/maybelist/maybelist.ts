@@ -7,16 +7,7 @@ import {
   CallbackfnT,
   CallbackfnU,
   FMapper,
-  FnMapList,
-  FnMapList_PM,
-  FnMapListMP,
-  ListMap,
-  ListMap_PM,
-  ListMapMP,
-  MapList,
-  MapList_PM,
-  MapListMP,
-  T_PT_,
+  FnMapList, FnMapListMP, FnMapList_PM, ListMap, ListMapMP, ListMap_PM, MapList, MapListMP, MapList_PM, T_PT_
 } from './types';
 
 const MaybelistKind: KindType = new Kind('MAYBELIST');
@@ -829,14 +820,14 @@ class Maybelist<
   }
 
   // get ===============================================-| getHeadAndTail |-====
-  public get getHeadAndTail() {
+  public get getHeadAndTail():[Maybelist,Maybelist] {
     const { head } = this;
     const { tail } = this;
     return [head, tail];
   }
 
   // get ===========================================-| forkHeadAndGetTail |-====
-  public get forkHeadAndGetTail() {
+  public get forkHeadAndGetTail():[Val | null,Maybelist] {
     const head = this.head.fork[0];
     const { tail } = this;
     return [head, tail];

@@ -92,7 +92,7 @@
     "noResolve": false,
     "noStrictGenericChecks": false,
     "noUncheckedIndexedAccess": false,
-    "preserveConstEnums": false,
+    "preserveConstEnums": true,
     "preserveSymlinks": false,
     "stripInternal": false,
     // "baseUrl": "./"
