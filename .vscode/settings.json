@@ -89,7 +89,7 @@
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
   ―― ERRORLENS
   */
-  "errorLens.annotationPrefix": [
+  "errorLens.severityText": [
     "🍒 ~~> ", // ―1 error
     "🧩 ==> ", // ―2 warning
     "✨ -> ", // ―3 info
@@ -105,32 +105,27 @@
     "may be converted to an ES6 module",
     "is declared but its value is never read"
   ],
-  "errorLens.addAnnotationTextPrefixes": true,
-  "errorLens.addNumberOfDiagnostics": true,
   "errorLens.borderRadius": "10px",
-  "errorLens.delay": 0,
-  "errorLens.errorGutterIconPath": "",
+  "errorLens.enabled": true,
+  "errorLens.errorGutterIconColor": "#F36F",
   "errorLens.followCursor": "allLines",
   "errorLens.followCursorMore": 0,
+  "errorLens.fontFamily": "'VictorMono Nerd Font',Victor Mono, Fira Code iScript",
+  "errorLens.fontSize": "1.1rem",
+  "errorLens.fontStyleItalic": true,
+  "errorLens.fontWeight": "bold",
   "errorLens.gutterIconsEnabled": true,
   "errorLens.gutterIconSet": "defaultOutline",
   "errorLens.gutterIconsFollowCursorOverride": true,
-  "errorLens.gutterIconSize": "80%",
-  "errorLens.infoGutterIconPath": "",
-  "errorLens.light": {},
+  "errorLens.gutterIconSize": "75%",
+  "errorLens.infoGutterIconColor": "#4AEF",
   "errorLens.margin": "0.75rem",
-  "errorLens.messageEnabled": true,
-  "errorLens.onSave": false,
-  "errorLens.onSaveTimeout": 1000,
+  "errorLens.messageTemplate": "$severity $message [$source #$code] ($count)",
   "errorLens.padding": "0rem 0.5rem",
-  "errorLens.scrollbarHackEnabled": false,
   "errorLens.statusBarColorsEnabled": true,
   "errorLens.statusBarMessageEnabled": true,
   "errorLens.statusBarMessageType": "closestProblem",
-  "errorLens.warningGutterIconPath": "",
-  "errorLens.errorGutterIconColor": "#F36F",
   "errorLens.warningGutterIconColor": "#BF2",
-  "errorLens.infoGutterIconColor": "#4AEF",
   "workbench.colorCustomizations": {
     "errorLens.errorForeground": "#F36F",
     "errorLens.errorBackground": "#F364",
@@ -161,12 +156,16 @@
     "titleBar.activeBackground": "#702032",
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#70203299",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "sash.hoverBorder": "#982b44",
+    "statusBarItem.remoteBackground": "#702032",
+    "statusBarItem.remoteForeground": "#e7e7e7"
   },
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
   ―― BETTER COMMENTS
   */
+  // #region: BETTER COMMENTS                                                   !
   // "#F36F"
   // "#F80B"
   // "#FF0B"
@@ -1359,10 +1358,12 @@
       "backgroundColor": "transparent"
     },
   ],
+  // #endregion: BETTER COMMENTS                                                !
   /*
   |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
   ―― EDITOR RULERS
   */
+  // #region: EDITOR RULERS                                                     !
   "editor.rulers": [
     {
       "column": 2,
@@ -1625,31 +1626,12 @@
       "color": "#90BCFFDD"
     }
   ],
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono",
-    // "editor.fontSize": 26,
-    // "editor.fontWeight": "400",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono",
-    // "editor.fontSize": 22,
-    // "editor.fontWeight": "500",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono",
-    // "editor.fontSize": 22,
-    // "editor.fontWeight": "500",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
+  // #endregion: EDITOR RULERS                                                     !
+  /*
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+  ―― TODO TREE
+  */
+  // #region: TODO TREE                                                         !
   "todo-tree.highlights.backgroundColourScheme": [
     "#F15", //BUG:
     "#4B9", //CONSOLE:
@@ -1716,12 +1698,12 @@
       "icon": "law",
     },
   },
-  "todo-tree.highlights.schemes": [
-    "file",
-    "untitled",
-    "vscode-userdata",
-    "output",
-  ],
+  // "todo-tree.highlights.schemes": [
+  //   "file",
+  //   "untitled",
+  //   "vscode-userdata",
+  //   "output",
+  // ],
   "todo-tree.filtering.ignoreGitSubmodules": false,
   "todo-tree.filtering.includeHiddenFiles": false,
   "todo-tree.filtering.passGlobsToRipgrep": true,
@@ -1743,14 +1725,14 @@
   "todo-tree.tree.expanded": true,
   "todo-tree.tree.filterCaseSensitive": false,
   "todo-tree.tree.flat": false,
-  "todo-tree.tree.grouped": true,
+  // "todo-tree.tree.grouped": true,
   "todo-tree.tree.hideIconsWhenGroupedByTag": false,
   "todo-tree.tree.hideTreeWhenEmpty": false,
   "todo-tree.tree.scanAtStartup": true,
   "todo-tree.tree.showBadges": true,
   "todo-tree.tree.showCountsInTree": true,
   "todo-tree.tree.showCurrentScanMode": true,
-  "todo-tree.tree.showScanModeButton": false,
+  // "todo-tree.tree.showScanModeButton": false,
   "todo-tree.tree.sort": true,
   "todo-tree.tree.sortTagsOnlyViewAlphabetically": false,
   "todo-tree.tree.tagsOnly": true,
@@ -1781,12 +1763,44 @@
     "vscode-userdata",
     "output"
   ],
+  // #endregion: TODO TREE                                                      !
+  /*
+  |-···――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――···-|
+  ―― CUSTOMS RULES
+  */
+  // #region: CUSTOMS RULES                                                     !
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono",
+    // "editor.fontSize": 26,
+    // "editor.fontWeight": "400",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono",
+    // "editor.fontSize": 22,
+    // "editor.fontWeight": "500",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.fontFamily": "'VictorMono Nerd Font', 'hurmit Nerd Font mono','ProFontWindows Nerd Font mono','meslolgl Nerd Font mono','Iosevka Nerd Font Mono','SauceCodePro Nerd Font','ProFontIIx Nerd Font',mono",
+    // "editor.fontSize": 22,
+    // "editor.fontWeight": "500",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  // #endregion: CUSTOMS RULES                                                  !
   "peacock.color": "#702032",
-  // "Toggle activity bar": true,
-  // "Toggle line comment": true,
-  // "Toggle render whitespace": true,
-  // "Toggle terminal": true,
 }
+// "Toggle activity bar": true,
+// "Toggle line comment": true,
+// "Toggle render whitespace": true,
+// "Toggle terminal": true,
 // Scientia es lux principium ✨
 // "#41E2F4",
 // "#98C379",
